@@ -24,6 +24,10 @@ class FirstPage extends StatelessWidget {
               child: Text("Go to Quiz!"),
               onPressed: () => Navigator.pushNamed(context, '/quiz'),
             ),
+            RaisedButton(
+              child: Text("Go to MascotPage!"),
+              onPressed: () => Navigator.pushNamed(context, '/mascot'),
+            ),
             Image.asset("assets/images/logo.png"),
           ],
         ),
