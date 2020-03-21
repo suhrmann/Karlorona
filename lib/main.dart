@@ -8,7 +8,7 @@ import './app-container.dart';
 import './pages/first-page.dart';
 import './pages/second-page.dart';
 import './pages/database-tester.dart';
-import './pages/quiz-flow.dart';
+import './pages/init-quiz-page.dart';
 
 void main() => runApp(IchMacheEsRichtigODER());
 
@@ -38,7 +38,7 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/secondpage': (context) => AppContainer(body: SecondPage()),
             '/dbtester': (context) => AppContainer(body: DatabaseTester()),
             '/quiz': (context) => AppContainer(
-                  body: QuizFlow(),
+                  body: InitQuizPage(),
                 )
           },
         ));
