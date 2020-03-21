@@ -19,13 +19,11 @@ class _QuizFlowState extends State<QuizFlow> {
         form: TextField(),
       ),
     ),
-
     QuestionPage(
       question: "What is 2+2?",
       answerForm: AnswerForm(form: TextField()),
     )
   ];
-
   Widget buildPages() {
     return questionFlow[currentPage];
   }
