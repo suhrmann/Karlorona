@@ -52,8 +52,10 @@ class _AnswerFormState extends State<AnswerForm> {
             return RaisedButton(
               child: Text("Beantworten"),
               onPressed: () {
-                if (model.currentQuizPage + 1 < model.questionFlowLength)
+                if (model.currentQuizPage + 1 < model.questionFlowLength) {
+                  _selectedAnswer = null;
                   model.incrementCurrentQuizPage();
+                }
               },
             );
           }),
