@@ -1,4 +1,6 @@
 import 'package:scoped_model/scoped_model.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:audioplayers/audio_cache.dart';
 import './database-model.dart';
 import './sub-model.dart';
 
@@ -15,5 +17,20 @@ class MainModel extends Model with SubModel, DatabaseModel {
   void changeTestValue(bool newValue) {
     _testValue = newValue;
     notifyListeners();
+  }
+
+  AudioCache _audioCache = new AudioCache(
+      fixedPlayer: AudioPlayer(), respectSilence: false, prefix: 'sounds/');
+
+  AudioCache get audioPlayer {
+    return _audioCache;
+  }
+
+  play(String filename) {
+    _audioCache.play(filename);
+  }
+
+  stop() {
+    _audioCache.play("silence.mp3");
   }
 }
