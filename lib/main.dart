@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:scoped_model/scoped_model.dart';
 
 import './scoped-model/main-model.dart';
@@ -7,6 +8,7 @@ import './app-container.dart';
 import './pages/first-page.dart';
 import './pages/second-page.dart';
 import './pages/database-tester.dart';
+import './pages/quiz-flow.dart';
 
 void main() => runApp(IchMacheEsRichtigODER());
 
@@ -35,6 +37,9 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/': (context) => AppContainer(body: FirstPage()),
             '/secondpage': (context) => AppContainer(body: SecondPage()),
             '/dbtester': (context) => AppContainer(body: DatabaseTester()),
+            '/quiz': (context) => AppContainer(
+                  body: QuizFlow(),
+                )
           },
         ));
   }

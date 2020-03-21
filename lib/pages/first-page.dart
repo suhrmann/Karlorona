@@ -18,7 +18,11 @@ class FirstPage extends StatelessWidget {
           RaisedButton(
             child: Text("Go to database tester!"),
             onPressed: () => Navigator.pushNamed(context, '/dbtester'),
-          )
+          ),
+          RaisedButton(
+            child: Text("Go to Quiz!"),
+            onPressed: () => Navigator.pushNamed(context, '/quiz'),
+          ),
         ],
       ),
     );
