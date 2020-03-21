@@ -9,6 +9,8 @@ class FirstPage extends StatelessWidget {
           Center(
             child: Text("This is the first Page :)"),
           ),
+
+          /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
           RaisedButton(
             child: Text("Go to second page!"),
             onPressed: () => Navigator.pushNamed(context, '/secondpage'),

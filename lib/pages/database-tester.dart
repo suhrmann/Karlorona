@@ -6,6 +6,8 @@ class DatabaseTester extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      /// Hier wird auf den State zugegriffen. Alle Subwigets in dieser Datei können zugreifen
+      /// Das Model kann theoretisch auch an Funktionen oder anderer Wigets als Parameter weitergegeben werden.
       child: ScopedModelDescendant<MainModel>(
         builder: (BuildContext context, Widget child, MainModel model) {
           return Column(

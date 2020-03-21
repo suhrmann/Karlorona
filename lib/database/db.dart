@@ -3,11 +3,13 @@ import 'package:path/path.dart';
 
 class DB {
   String tableName = 'ichmacheesrichtigoder';
-  Database _database;
+  Database _database; // aus dem Package sqflite
 
+  /// Singleton Pattern, um nur eine Datenbank zu erstellen
   DB._();
   static final DB db = DB._();
 
+  /// getter, der bei fehlender Datenbank gleich eine neue erstellt
   Future<Database> get database async {
     if (_database != null) {
       return _database;
@@ -25,6 +27,7 @@ class DB {
     Database database = await openDatabase(
       path,
       onCreate: (Database db, int version) async {
+        /// Mehrere tables können erstellt werden
         await db.execute(
           '''create table $tableName (
           id integer primary key autoincrement,
