@@ -1,6 +1,8 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
+/// SQFLite Dokumentation/API:
+/// https://pub.dev/packages/sqflite
 class DB {
   String tableName = 'ichmacheesrichtigoder';
   Database _database; // aus dem Package sqflite

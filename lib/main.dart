@@ -13,15 +13,18 @@ void main() => runApp(IchMacheEsRichtigODER());
 class IchMacheEsRichtigODER extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    /// ScopedModel wird zum Statemanagement verwendet.
+    /// ScopedModel wird für Statemanagement verwendet.
     /// Das Widget ScopedModelDescendant<MainModel>
     /// und seine Subwidget können auf den State zugreifen
-    /// Das ScopedModel wird in ./scoped-model definiert
+    /// Das ScopedModel wird im Ordner /lib/scoped-model definiert
     /// "Ausgangspunkt" dabei ist das MainModel
+    ///
+    /// Scoped Model Dokumentation/API:
+    /// https://pub.dev/packages/scoped_model
     return ScopedModel<MainModel>(
         model: MainModel(),
         child: MaterialApp(
-          title: 'Flutter Demo',
+          title: 'Ich Mache es richtig, ODER?',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
