@@ -29,7 +29,7 @@ class HygienePage extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/sneeze'),
             ),
             RaisedButton(
-              child: Text("Hande nicht im Gesicht"),
+              child: Text("Mit den Händen nicht ins Gesicht fassen"),
               onPressed: () => Navigator.pushNamed(context, '/handsface'),
             ),
             //Image.asset("assets/images/logo.png"),

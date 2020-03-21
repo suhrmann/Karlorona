@@ -21,6 +21,15 @@ import './pages/info-distance-page.dart';
 import './pages/info-sneeze-page.dart';
 import './pages/sneeze-page.dart';
 import './pages/handsface-page.dart';
+import './pages/psych-page.dart';
+import './pages/health-page.dart';
+import './pages/gym-page.dart';
+import './pages/run-page.dart';
+import './pages/walk-page.dart';
+import './pages/drink-page.dart';
+import './pages/eat-page.dart';
+import './pages/sleep-page.dart';
+import './pages/ventilate-page.dart';
 
 void main() => runApp(IchMacheEsRichtigODER());
 
@@ -53,13 +62,20 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/mascot': (context) => AppContainer(body: MascotPage()),
             '/activity':(context) => AppContainer(body: ActivityPage()),
             '/infect':(context) => AppContainer(body: HygienePage()),
-            '/health':(context) => AppContainer(body: ActivityPage()),
-            '/psych':(context) => AppContainer(body: ActivityPage()),
+            '/health':(context) => AppContainer(body: HealthPage()),
+            '/psych':(context) => AppContainer(body: PsychPage()),
             '/hand':(context) => AppContainer(body: HandPage()),
             '/distance':(context) => AppContainer(body: DistancePage()),
             '/smartdes':(context) => AppContainer(body: SmartdesPage()),
             '/sneeze':(context) => AppContainer(body: SneezePage()),
             '/handsface':(context) => AppContainer(body: HandsFacePage()),
+            '/gym':(context) => AppContainer(body: GymPage()),
+            '/run':(context) => AppContainer(body: RunPage()),
+            '/walk':(context) => AppContainer(body: WalkPage()),
+            '/sleep':(context) => AppContainer(body: SleepPage()),
+            '/ventilate':(context) => AppContainer(body: VentilatePage()),
+            '/drink':(context) => AppContainer(body: DrinkPage()),
+            '/eat':(context) => AppContainer(body: EatPage()),
             '/info_hand':(context) => AppContainer(body: InfoHandPage()),
             '/info_distance':(context) => AppContainer(body: InfoDistancePage()),
             '/info_smartdes':(context) => AppContainer(body: InfoSmartdesPage()),
