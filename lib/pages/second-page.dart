@@ -11,7 +11,7 @@ class SecondPage extends StatelessWidget {
         child: 1 == 1
             ? Row(
                 children: <Widget>[
-                  Text("This is the second page!"),
+                  Text("Dies ist die zweite Seite!"),
                   RaisedButton(
                     child: Text("Play Sound"),
                     onPressed: () {
