@@ -20,7 +20,7 @@ class _AnswerFormState extends State<AnswerForm> {
     answerButtons = List.generate(
       answers.length,
       (index) => Container(
-        padding: EdgeInsets.only(right: 20, left: 20, top: 30, bottom: 30),
+        padding: EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 20),
         child: RaisedButton(
           child: Text(answers[index]),
           color: _selectedAnswer == index ? _selectedColor : _unselectedColor,
