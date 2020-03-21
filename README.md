@@ -32,6 +32,7 @@ samples, guidance on mobile development, and a full API reference.
 -----
 
 ### Team
+- Tobias Luderer
 - Christiane Terlinden
 - Simon Uhrmann
 - Hannah Uhrmann
