@@ -5,7 +5,7 @@ import '../quiz/question-page.dart';
 import 'dart:convert';
 
 class QuizWidget extends StatefulWidget {
-  String datasetName;
+  final String datasetName;
 
   QuizWidget({this.datasetName});
 
