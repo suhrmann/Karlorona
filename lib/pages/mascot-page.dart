@@ -25,7 +25,13 @@ class MascotPage extends StatelessWidget {
         ),
         Flexible(
           flex: 8,
-          child: Container(child: Image.asset("assets/images/logo.png")),
+          child: Container(
+              child: GestureDetector(
+            child: Image.asset("assets/images/logo.png"),
+            onTap: () {
+              print("change page!");
+            },
+          )),
         ),
         Flexible(
           flex: 2,
