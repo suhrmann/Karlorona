@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import './app-container.dart';
+import './pages/first-page.dart';
+import './pages/second-page.dart';
+
 void main() => runApp(IchMacheEsRichtigODER());
 
 class IchMacheEsRichtigODER extends StatelessWidget {
@@ -10,11 +14,12 @@ class IchMacheEsRichtigODER extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Test"),
-        ),
-      ),
+      routes: {
+        '/': (context) => AppContainer(
+              body: FirstPage(),
+            ),
+        '/secondpage': (context) => AppContainer(body: SecondPage()),
+      },
     );
   }
 }
