@@ -1,0 +1,33 @@
+{
+    "questiondata": [{
+            "question": "Wie wasche ich mir richtig die Hände?",
+            "answers": [
+                "Mit Wasser und Seife, fertig",
+                "Mindestens 20 Sekunden lang mit Seife und gut mit Wasser abspülen"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig. Mindestens 20 Sekunden solltest du deine Hände waschen. Die Seife braucht die Zeit, um die Fettzellen der Außenschicht des Virus zu zerstören. Ohne seine Fettschicht, stirbt das Virus ab."
+        },
+        {
+            "question": "Wie viel soll ich pro Tag mindestens trinken?",
+            "answers": [
+                "0,5 L",
+                "1 L",
+                "1,5 L"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Antwort c ist richtig! Erwachsene sollen jeden Tag rund 1,5 Liter Wasser trinken. Regelmäßiges Trinken, am besten zu jeder Mahlzeit und auch zwischendurch, schützt den Körper vor Wassermangel.In einigen Situationen benötigt der Körper besonders viel Flüssigkeit, etwa bei großer Hitze, extremer Kälte, Fieber, Erbrechen und Durchfall [...] dann können schon mal zusätzlich 0,5–1,0 Liter Wasser pro Stunde nötig sein."
+        },
+        {
+            "question": "Welche Erkrankungen aufgrund falscher Ernährung sorgen für ein zusätzliches Risiko bei einer Corona-Infektion?",
+            "answers": [
+                "Herz-Kreislauferkrankungen",
+                "Diabetes",
+                "bestimmte Krebsarten",
+                "alle oben genannten Erkrankungen"
+            ],
+            "correct_answer_index": 3,
+            "explanation": "Antwort d ist richtig! Durch den übermäßigen Konsum von gesättigten Fetten, Transfettsäuren, Zucker und Salz erhöht sich das Risiko in Bezug auf Übergewicht und Adipositas, Herz-Kreislauf-Erkrankungen, Diabetes und bestimmte Arten von Krebs."
+        }
+    ]
+}

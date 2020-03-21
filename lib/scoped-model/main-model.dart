@@ -1,12 +1,14 @@
+import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:audioplayers/audio_cache.dart';
 import './database-model.dart';
 import './sub-model.dart';
+import './quiz-model.dart';
 
 /// Die Klassen SubModel und DatabaseModel werden als Mixins "eingebunden"
 /// Beachte: Namen können nicht doppelt vergeben werden => wg. Mixin
-class MainModel extends Model with SubModel, DatabaseModel {
+class MainModel extends Model with SubModel, DatabaseModel, QuizModel {
   /// Showcase, um die Verwendung des ScopedModels zu demonstrieren
   bool _testValue = false;
 
@@ -18,6 +20,9 @@ class MainModel extends Model with SubModel, DatabaseModel {
     _testValue = newValue;
     notifyListeners();
   }
+
+  static MainModel of(BuildContext context) =>
+      ScopedModel.of<MainModel>(context);
 
   AudioCache _audioCache = new AudioCache(
       fixedPlayer: AudioPlayer(), respectSilence: false, prefix: 'sounds/');
@@ -31,6 +36,6 @@ class MainModel extends Model with SubModel, DatabaseModel {
   }
 
   stop() {
-    _audioCache.play("silence.mp3");
+    _audioCache.fixedPlayer.stop();
   }
 }

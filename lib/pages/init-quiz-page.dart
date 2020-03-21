@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
+import 'package:scoped_model/scoped_model.dart';
 import '../quiz/question-page.dart';
-import '../quiz/answer.dart';
+import 'dart:convert';
 
 class InitQuizPage extends StatefulWidget {
   @override
@@ -8,50 +10,44 @@ class InitQuizPage extends StatefulWidget {
 }
 
 class _InitQuizPageState extends State<InitQuizPage> {
-  int currentPage = 0;
-
-  List<QuestionPage> questionFlow = [
-    /// Fragen werden hier eingefügt inklusive Antwortformular
-    /// Diese List wird automatisch gerendert
-    QuestionPage(
-      question: "What is 1+1?",
-      answerForm: AnswerForm(
-        answer1: "lol",
-        answer2: "lol",
-        answer3: "lol",
-        answer4: "lol",
-      ),
-    ),
-    QuestionPage(
-      question: "What is 2+2?",
-      answerForm: AnswerForm(
-        answer1: "lol",
-        answer2: "lol",
-        answer3: "lol",
-        answer4: "lol",
-      ),
-    )
-  ];
-  Widget buildPages() {
-    return questionFlow[currentPage];
+  _buildQuestionFlow(Map<String, List<dynamic>> questiondata) {
+    List<QuestionPage> questionFlow = [];
+    questionFlow = questiondata['questiondata'].map((questionset) {
+      return QuestionPage(
+          question: questionset['question'],
+          answers: List.castFrom(questionset['answers']),
+          correctAnswerIndex: questionset['correct_answer_index']);
+    }).toList();
+    return questionFlow;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: ListView(
-      children: <Widget>[
-        questionFlow[currentPage],
-        RaisedButton(
-          child: Text("Beantworten"),
-          onPressed: () {
-            print("do sth");
-            setState(() {
-              if (currentPage + 1 < questionFlow.length) currentPage++;
-            });
-          },
-        )
-      ],
-    ));
+    Future<String> questions =
+        DefaultAssetBundle.of(context).loadString('assets/questions.json');
+    return FutureBuilder(
+      future: questions,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (snapshot.hasData) {
+          Map<String, List<dynamic>> decodedData =
+              Map<String, List<dynamic>>.from(json.decode(snapshot.data));
+          List<QuestionPage> questionFlow = _buildQuestionFlow(decodedData);
+          ScopedModel.of<MainModel>(context)
+              .updateQuestionFlowLength(questionFlow.length);
+          return Container(
+            child: ScopedModelDescendant<MainModel>(
+                builder: (BuildContext context, Widget child, MainModel model) {
+              return ListView(
+                children: <Widget>[
+                  questionFlow[model.currentQuizPage],
+                ],
+              );
+            }),
+          );
+        } else {
+          return Center(child: CircularProgressIndicator());
+        }
+      },
+    );
   }
 }

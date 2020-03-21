@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'answer.dart';
 
 class QuestionPage extends StatelessWidget {
-  String question;
-  AnswerForm answerForm;
+  final String question;
+  final List<String> answers;
+  final int correctAnswerIndex;
 
-  QuestionPage({this.question, this.answerForm});
+  QuestionPage({this.question, this.answers, this.correctAnswerIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +15,17 @@ class QuestionPage extends StatelessWidget {
       child: ListView(
         shrinkWrap: true,
         children: <Widget>[
-          Title(
-            color: Colors.black,
-            child: Text(question),
+          Container(
+            margin: EdgeInsets.only(top: 20),
+            alignment: Alignment.center,
+            child: Title(
+              color: Colors.black,
+              child: Text(question),
+            ),
           ),
-          answerForm,
+          AnswerForm(
+            answers: answers,
+          )
         ],
       ),
     );
