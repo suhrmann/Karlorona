@@ -1,5 +1,5 @@
 {
-    "questiondata": [{
+    "init_quiz": [{
             "question": "Wie wasche ich mir richtig die Hände?",
             "answers": [
                 "Mit Wasser und Seife, fertig",
@@ -29,5 +29,16 @@
             "correct_answer_index": 3,
             "explanation": "Antwort d ist richtig! Durch den übermäßigen Konsum von gesättigten Fetten, Transfettsäuren, Zucker und Salz erhöht sich das Risiko in Bezug auf Übergewicht und Adipositas, Herz-Kreislauf-Erkrankungen, Diabetes und bestimmte Arten von Krebs."
         }
+    ],
+    "quiz_on_demand": [{
+            "question": "Wie niese und huste ich richtig?",
+            "answers": [
+                "In die Ellenbeuge",
+                "In die Hand"
+            ],
+            "correct_answer_index": 0,
+            "explanation": "Antwort a ist richtig! In der Ellenbeuge werden die Tröpfchen eher aufgehalten. Wenn du in die Hand niest, zerstäuben die Tröpfchen zu allen Seiten und treffen so potentiell auf deine Mitmenschen."
+        }
+
     ]
 }

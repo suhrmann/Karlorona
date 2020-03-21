@@ -20,6 +20,7 @@ mixin QuizModel on Model {
 
   resetCurrentQuizPage() {
     _currentQuizPage = 0;
+    _questionFlowLength = null;
     notifyListeners();
   }
 

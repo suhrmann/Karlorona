@@ -16,15 +16,19 @@ class QuestionPage extends StatelessWidget {
         shrinkWrap: true,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             alignment: Alignment.center,
             child: Title(
               color: Colors.black,
-              child: Text(question),
+              child: Text(
+                question,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           AnswerForm(
             answers: answers,
+            correctAnswerIndex: correctAnswerIndex,
           )
         ],
       ),
