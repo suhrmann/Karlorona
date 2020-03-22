@@ -14,15 +14,9 @@ class DoneButton extends StatelessWidget {
     return RaisedButton(
       child: Text("Erledigt"),
       onPressed: () {
-        ScopedModel.of<MainModel>(context).addActivity(
-          Activity(
-              activity: Activities.washhands,
-              healthscore: 20,
-              hygienescore: 40,
-              psychscore: 20),
-        );
+        ScopedModel.of<MainModel>(context).addActivity(activityToAdd);
         //model.visibleIcon(true);
-        ScopedModel.of<MainModel>(context).setVisibleHandIcon(true);
+        onTap();
         Navigator.pop(context);
       },
     );
