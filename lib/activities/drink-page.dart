@@ -14,13 +14,17 @@ class DrinkPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("Drinke mindestens 2 Liter pro Tag!!!"),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                "Drinke mindestens 1,5 Liter pro Tag!!!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
-
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
-              activityToAdd: Activity(
+              color: Colors.lime,
+                  activityToAdd: Activity(
                   activity: Activities.washhands,
                   healthscore: 20,
                   hygienescore: 10,

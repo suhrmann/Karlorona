@@ -12,14 +12,18 @@ class WalkPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                  "Gehe Spazieren, schnappe frische Luft und genieße die Natur!!"),
+                "Gehe Spazieren, schnappe frische Luft und genieße die Natur!!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
 
             DoneButton(
+              color: Colors.lime,
               activityToAdd: Activity(
                   activity: Activities.walk,
                   healthscore: 20,

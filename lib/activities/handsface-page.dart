@@ -12,13 +12,17 @@ class HandsFacePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                  "Versuche Dir so wenig wie möglich in Dein Gesicht zu fassen!!!"),
+                "Versuche Dir so wenig wie möglich in Dein Gesicht zu fassen!!!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
+              color: Colors.orange,
               activityToAdd: Activity(
                   activity: Activities.touchface,
                   healthscore: 20,

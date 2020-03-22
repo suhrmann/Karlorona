@@ -51,6 +51,7 @@ class _HandPageState extends State<HandPage> {
                     },
                   ),
                   DoneButton(
+                    color:Colors.orange,
                     activityToAdd: Activity(
                         activity: Activities.washhands,
                         healthscore: 20,
