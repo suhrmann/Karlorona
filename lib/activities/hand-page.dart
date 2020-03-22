@@ -3,6 +3,7 @@ import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
 import '../model/activity.dart';
+import 'activity-start-button.dart';
 
 class HandPage extends StatelessWidget {
   @override
@@ -13,7 +14,14 @@ class HandPage extends StatelessWidget {
         child: 1 == 1
             ? Column(
                 children: <Widget>[
-                  Text("Bitte wasche Deine Hände für mindestens 20 Sekunden!"),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    child: Text(
+                      "Bitte wasche Deine Hände für mindestens 20 Sekunden!",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  //Text("Bitte wasche Deine Hände für mindestens 20 Sekunden!"),
                   RaisedButton(
                     child: Text("Play Sound"),
                     onPressed: () {
