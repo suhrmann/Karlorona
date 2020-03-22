@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 enum Activities {
+  login,
   washhands,
   safetydistance,
   smartphonedisinfect,
