@@ -14,8 +14,18 @@ class AboutPage extends StatelessWidget {
               child: Image.asset("assets/images/wirvsvirus_logo.png"),
             ),
             Text(''),
-            Center(
-              child: Text('Dieses Projekt wurde im Rahmen des Hackathons #WirvsVirus am Wochenende vom 20. bis 22.03.2020 erstellt.'),
+            Container(
+              margin: EdgeInsets.only(left: 10, right: 10),
+              child: Text.rich(
+                  TextSpan(
+                    text: 'Dieses Projekt wurde im Rahmen des Hackathons ', // default text style
+                    children: <TextSpan>[
+                      TextSpan(text: '#WirvsVirus ', style: TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(text: 'vom 20. bis 22.03.2020 erstellt.'),
+                    ],
+                  ),
+                  textAlign: TextAlign.center,
+              ),
             ),
 
             Text(''),
