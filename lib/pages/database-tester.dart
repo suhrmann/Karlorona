@@ -23,6 +23,11 @@ class DatabaseTester extends StatelessWidget {
                     model.retrieveData().then((e) => print(e));
                   }),
               RaisedButton(
+                  child: Text("retrieve meta_data and print to console"),
+                  onPressed: () {
+                    model.retrieveMetaData().then((e) => print(e));
+                  }),
+              RaisedButton(
                   child: Text("retrieve last activity"),
                   onPressed: () {
                     model.getLast().then((e) => print(e));

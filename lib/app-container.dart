@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/pages/welcome-page.dart';
+import 'package:scoped_model/scoped_model.dart';
+import './scoped-model/main-model.dart';
 
-class AppContainer extends StatelessWidget {
+class AppContainer extends StatefulWidget {
   final Widget body;
 
   AppContainer({this.body});
+
+  @override
+  _AppContainerState createState() => _AppContainerState();
+}
+
+class _AppContainerState extends State<AppContainer> {
+  @override
+  void initState() {
+    ScopedModel.of<MainModel>(context).determineFirstStartup();
+    super.initState();
+  }
 
   navigateTo(String route, BuildContext context) {
     Navigator.pop(context); // Close drawer for back-button
@@ -44,7 +58,7 @@ class AppContainer extends StatelessWidget {
             leading: Icon(Icons.info),
             title: Text('Über uns'),
             onTap: () => navigateTo('/about', context),
-           ),
+          ),
 
           // DEBUGGING Shit
           Divider(),
@@ -53,7 +67,6 @@ class AppContainer extends StatelessWidget {
             title: Text('DEBUGGING'),
             onTap: () => navigateTo('/test_page', context),
           ),
-
         ],
       ),
     );
@@ -65,9 +78,12 @@ class AppContainer extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Ich Mache es richtig, ODER?"),
       ),
-
-      body: body,
-
+      body: ScopedModelDescendant<MainModel>(
+          builder: (BuildContext context, Widget child, MainModel model) {
+        return model.isFirstStartup == null
+            ? CircularProgressIndicator()
+            : model.isFirstStartup ? WelcomePage() : widget.body;
+      }),
       drawer: buildDrawer(context),
     );
   }

@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 
 import './notification-manager.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import './scoped-model/main-model.dart';
 
 import './app-container.dart';
 import './pages/test-page.dart';
 import './pages/about-page.dart';
-import './pages/first-page.dart';
 import './pages/second-page.dart';
 import './pages/database-tester.dart';
 import './pages/mascot-page.dart';
@@ -43,7 +41,6 @@ import './activities/info-ventilate-page.dart';
 void main() => runApp(IchMacheEsRichtigODER());
 
 class IchMacheEsRichtigODER extends StatelessWidget {
-
   final NotificationManager notificationManager = NotificationManager();
 
   @override
@@ -53,7 +50,6 @@ class IchMacheEsRichtigODER extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // Init notifications
     notificationManager.initNotifications(context);
 
@@ -76,12 +72,11 @@ class IchMacheEsRichtigODER extends StatelessWidget {
           /// Eindeutige "Addressen" für die jeweiligen pages
           /// Bitte diese Struktur bei allen Standardpages mit dem AppContainer beibehalten, um eine Abstraktion des Layouts zu ermöglichen
           routes: {
-            '/': (context) => AppContainer(body: FirstPage()),
-            '/about': (context) => AppContainer( body: AboutPage() ),
+            '/': (context) => AppContainer(body: MascotPage()),
+            '/about': (context) => AppContainer(body: AboutPage()),
             '/secondpage': (context) => AppContainer(body: SecondPage()),
             '/dbtester': (context) => AppContainer(body: DatabaseTester()),
             '/quiz': (context) => AppContainer(body: InitQuizPage()),
-            '/mascot': (context) => AppContainer(body: MascotPage()),
             '/activity': (context) => AppContainer(body: ActivityPage()),
             '/infect': (context) => AppContainer(body: HygienePage()),
             '/health': (context) => AppContainer(body: HealthPage()),
@@ -99,14 +94,17 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/drink': (context) => AppContainer(body: DrinkPage()),
             '/eat': (context) => AppContainer(body: EatPage()),
             '/info_hand': (context) => AppContainer(body: InfoHandPage()),
-            '/info_distance': (context) => AppContainer(body: InfoDistancePage()),
-            '/info_smartdes': (context) => AppContainer(body: InfoSmartdesPage()),
+            '/info_distance': (context) =>
+                AppContainer(body: InfoDistancePage()),
+            '/info_smartdes': (context) =>
+                AppContainer(body: InfoSmartdesPage()),
             '/info_sneeze': (context) => AppContainer(body: InfoSneezePage()),
             '/info_gym': (context) => AppContainer(body: InfoGymPage()),
             //'/info_run':(context) => AppContainer(body: InfoDistancePage()),
             //'/info_walk':(context) => AppContainer(body: InfoSmartdesPage()),
             '/info_sleep': (context) => AppContainer(body: InfoSleepPage()),
-            '/info_ventilate': (context) => AppContainer(body: InfoVentilatePage()),
+            '/info_ventilate': (context) =>
+                AppContainer(body: InfoVentilatePage()),
             '/info_drink': (context) => AppContainer(body: InfoDrinkPage()),
             '/info_eat': (context) => AppContainer(body: InfoEatPage()),
 
