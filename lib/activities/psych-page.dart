@@ -13,11 +13,11 @@ class PsychPage extends StatelessWidget {
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             RaisedButton(
-              child: Text("Soziale Interaktion"),
+              child: Text("Sozialer Kontakt"),
               onPressed: () => Navigator.pushNamed(context, '/social'),
             ),
             RaisedButton(
-              child: Text("Handynutzung"),
+              child: Text("Medienkonsum"),
               onPressed: () => Navigator.pushNamed(context, '/dbtester'),
             ),
             RaisedButton(
