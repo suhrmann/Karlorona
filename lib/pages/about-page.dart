@@ -32,17 +32,17 @@ class AboutPage extends StatelessWidget {
                   ),
                   Text(''),
 
-                  Text('Entwickler', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text('Entwicklung', style: TextStyle(fontWeight: FontWeight.bold)),
                   Text('Tobias Luderer'),
                   Text('Simon Uhrmann'),
                   Text('Marcel Zimmermann'),
                   Text(''),
 
-                  Text('Designerin', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text('Design', style: TextStyle(fontWeight: FontWeight.bold)),
                   Text('Ksenija Perovic'),
                   Text(''),
 
-                  Text('Fachliches Konzept', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text('Konzept', style: TextStyle(fontWeight: FontWeight.bold)),
                   Text('Christiane Terlinden'),
                   Text('Hannah Uhrmann'),
                   Text('Luise Wagner'),
