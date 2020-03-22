@@ -15,6 +15,7 @@ class AnswerForm extends StatefulWidget {
 class _AnswerFormState extends State<AnswerForm> {
   int _selectedAnswer;
   bool _answerGiven = false;
+  bool _explanationDismissed = false;
 
   Color UNSELECTED_COLOR = Colors.grey[800];
   Color CORRECT_ANSWERE_COLOR = Colors.green;
@@ -65,7 +66,12 @@ class _AnswerFormState extends State<AnswerForm> {
     // set up the button
     Widget okButton = FlatButton(
       child: Text("Verstanden"),
-      onPressed: () { Navigator.of(context).pop(); }, // Close Dialog
+      onPressed: () {
+        Navigator.of(context).pop();
+        setState(() {
+          _explanationDismissed = true;
+        });
+        }, // Close Dialog
     );
 
     // set up the AlertDialog
@@ -77,13 +83,15 @@ class _AnswerFormState extends State<AnswerForm> {
       ],
     );
 
-    // show the dialog
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return alert;
-      },
-    );
+    Future.delayed(const Duration(milliseconds: 1000), () {
+      // show the dialog
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alert;
+        },
+      );
+    });
   }
 
   Color getColor(int answerIndex) {
@@ -127,6 +135,22 @@ class _AnswerFormState extends State<AnswerForm> {
               children: _buildAnswerButtons(widget.answers),
             ),
 
+          (_answerGiven
+              ? RaisedButton(
+                shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(20.0),
+                ),
+                child: Text(
+                  'Erklärung anzeigen',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.blue[100],
+                onPressed: () => showAnswereDetailsDialog()
+              )
+              : Container()
+          ),
+
             ScopedModelDescendant<MainModel>(
                 builder: (BuildContext context, Widget child, MainModel model) {
               // Next question button
@@ -141,9 +165,10 @@ class _AnswerFormState extends State<AnswerForm> {
                         style: TextStyle(color: Colors.white),
                       ),
                       color: Colors.blue,
-                      onPressed: () {
-                        nextQuestion(model);
-                      },
+                      onPressed: _explanationDismissed ? () {
+                          nextQuestion(model);
+                        }
+                        : null,
                     )
                   : Container());
             })
@@ -157,6 +182,7 @@ class _AnswerFormState extends State<AnswerForm> {
     // Reset variables
     _selectedAnswer = null;
     _answerGiven = false;
+    _explanationDismissed = false;
 
     // Next page
     model.incrementCurrentQuizPage();
