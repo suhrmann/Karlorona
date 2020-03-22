@@ -24,16 +24,19 @@ class _QuizWidgetState extends State<QuizWidget> {
     List<QuestionPage> questionFlow = [];
     questionFlow = questiondata[widget.datasetName].map((questionset) {
       return QuestionPage(
-          question: questionset['question'],
-          answers: List.castFrom(questionset['answers']),
-          correctAnswerIndex: questionset['correct_answer_index']);
+        question: questionset['question'],
+        answers: List.castFrom(questionset['answers']),
+        correctAnswerIndex: questionset['correct_answer_index'],
+        explanation: questionset['explanation'],
+      );
     }).toList();
     return questionFlow;
   }
 
   @override
   Widget build(BuildContext context) {
-    Future<String> questions = DefaultAssetBundle.of(context).loadString('assets/questions.json');
+    Future<String> questions =
+        DefaultAssetBundle.of(context).loadString('assets/questions.json');
 
     return FutureBuilder(
       future: questions,
