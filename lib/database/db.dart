@@ -27,7 +27,7 @@ class DB {
     String path = await getDatabasesPath();
     //print(path)
     path = join(path, 'ichmacheesrichtigoder.db');
-    //deleteDatabase(path); // delete on production :)
+    deleteDatabase(path); // delete on production :)
 
     Database database = await openDatabase(
       path,

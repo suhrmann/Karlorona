@@ -76,7 +76,7 @@ class _AppContainerState extends State<AppContainer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Ich Mache es richtig, ODER?"),
+        title: const Text("Karlorona"),
       ),
       body: ScopedModelDescendant<MainModel>(
           builder: (BuildContext context, Widget child, MainModel model) {
