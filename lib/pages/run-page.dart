@@ -20,7 +20,7 @@ class RunPage extends StatelessWidget {
             ),
             RaisedButton(
               child: Text("Info"),
-              onPressed: () => Navigator.pushNamed(context, '/info_walk'),
+              onPressed: () => Navigator.pushNamed(context, '/info_gym'),
             ),
           ],
         ),
