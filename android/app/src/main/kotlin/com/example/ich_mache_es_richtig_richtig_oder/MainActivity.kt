@@ -1,4 +1,4 @@
-package com.example.ich_mache_es_richtig_richtig_oder
+package org.wirvsvirushackathon.karlorona
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
