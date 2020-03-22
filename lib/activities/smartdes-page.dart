@@ -12,12 +12,17 @@ class SmartdesPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("Desinfiziere bitte Dein Handy oder Tablet!"),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                "Desinfiziere bitte Dein Handy oder Tablet!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
+              color: Colors.orange,
               activityToAdd: Activity(
                   activity: Activities.smartphonedisinfect,
                   healthscore: 0,

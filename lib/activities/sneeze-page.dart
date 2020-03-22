@@ -12,13 +12,17 @@ class SneezePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                  "Wenn Du Niesen oder Husten mußt, dann benutze nicht Deine Hände, sondern die Armbeuge!!!\nBeim Naseputzen nimm ein Papiertaschentuch!!"),
+                "Wenn Du Niesen oder Husten mußt, dann benutze nicht Deine Hände, sondern die Armbeuge!!!\nBeim Naseputzen nimm ein Papiertaschentuch!!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
+              color: Colors.orange,
               activityToAdd: Activity(
                   activity: Activities.sneeze,
                   healthscore: 0,

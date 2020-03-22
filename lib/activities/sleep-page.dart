@@ -12,13 +12,17 @@ class SleepPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                  "Schlafe mindestens 7 Stunden und gehe nicht zu spät ins Bett!!"),
+                "Schlafe mindestens 7 Stunden und gehe nicht zu spät ins Bett!!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
+              color: Colors.lime,
               activityToAdd: Activity(
                   activity: Activities.sleep,
                   healthscore: 20,

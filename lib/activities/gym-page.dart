@@ -12,11 +12,15 @@ class GymPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                  "Mache ein paar anstrengende Übungen, wie Liegestütze. Besitz Du handeln, dann benutze diese."),
+                "Mache ein paar anstrengende Übungen, wie Liegestütze. Besitz Du handeln, dann benutze diese.",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
             DoneButton(
+              color: Colors.lime,
               activityToAdd: Activity(
                   activity: Activities.eatVeggies,
                   healthscore: 20,

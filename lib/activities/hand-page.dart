@@ -37,6 +37,7 @@ class HandPage extends StatelessWidget {
                     },
                   ),
                   DoneButton(
+                    color:Colors.orange,
                     activityToAdd: Activity(
                         activity: Activities.washhands,
                         healthscore: 20,

@@ -12,13 +12,17 @@ class EatPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                  "Achte auf eine ausgewogene Ernährung mit Obst und Gemüse!!"),
+                "Achte auf eine ausgewogene Ernährung mit Obst und Gemüse!!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
+              color: Colors.lime,
               activityToAdd: Activity(
                   activity: Activities.washhands,
                   healthscore: 20,
