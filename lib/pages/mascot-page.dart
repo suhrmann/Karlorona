@@ -16,6 +16,8 @@ class _MascotPageState extends State<MascotPage> {
     super.initState();
   }
 
+  Color bottomColor = Colors.brown[200];
+
   String _getRightCat(double score) {
     String caturl = "assets/images/kater/";
 
@@ -27,6 +29,25 @@ class _MascotPageState extends State<MascotPage> {
       caturl = caturl + "kater-5-glücklich@0.1x.png";
 
     return caturl;
+  }
+
+  Widget _wellBeingIndicator(
+      {Color color, String indicatorText, double value, bool applyMargin}) {
+    return Container(
+      margin: applyMargin
+          ? EdgeInsets.only(left: MediaQuery.of(context).size.width / 11)
+          : null,
+      child: LinearPercentIndicator(
+        width: MediaQuery.of(context).size.width / 1.6,
+        animation: true,
+        lineHeight: 30.0,
+        animationDuration: 2500,
+        percent: value / 100,
+        center: Text("$indicatorText: $value%"),
+        linearStrokeCap: LinearStrokeCap.roundAll,
+        progressColor: color,
+      ),
+    );
   }
 
   @override
@@ -69,36 +90,87 @@ class _MascotPageState extends State<MascotPage> {
                   Flexible(
                     flex: 16,
                     child: Container(
-                        child: GestureDetector(
-                      child: Image.asset(_getRightCat(
-                          ScopedModel.of<MainModel>(context).currentWellScore)),
-                      onTap: () {
-                        Navigator.pushNamed(context, "/activity");
-                      },
-                    )),
+                      child: GestureDetector(
+                        child: Image.asset(_getRightCat(
+                            ScopedModel.of<MainModel>(context)
+                                .currentWellScore)),
+                        onTap: () {
+                          Navigator.pushNamed(context, "/activity");
+                        },
+                      ),
+                    ),
                   ),
                   Flexible(
                     flex: 4,
                     child: Container(
-                      decoration: BoxDecoration(color: Colors.grey),
+                      decoration: BoxDecoration(
+                        color: bottomColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          LinearPercentIndicator(
-                            width: MediaQuery.of(context).size.width / 2,
-                            animation: true,
-                            lineHeight: 20.0,
-                            animationDuration: 2500,
-                            percent: model.currentWellScore / 100,
-                            center: Text(
-                                "Wohlbefinden: ${model.currentWellScore}%"),
-                            linearStrokeCap: LinearStrokeCap.roundAll,
-                            progressColor: Colors.green,
+                          GestureDetector(
+                            onTap: () => showModalBottomSheet(
+                              backgroundColor: bottomColor,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
+                              context: context,
+                              builder: (context) => Container(
+                                height: MediaQuery.of(context).size.height / 3,
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    _wellBeingIndicator(
+                                      indicatorText: "Infektionsschutz",
+                                      value: model.currentHygieneScore,
+                                      color: Colors.orange,
+                                      applyMargin: true,
+                                    ),
+                                    _wellBeingIndicator(
+                                      indicatorText: "Allgemeine Gesundheit",
+                                      value: model.currentHealthScore,
+                                      color: Colors.lime,
+                                      applyMargin: true,
+                                    ),
+                                    _wellBeingIndicator(
+                                      indicatorText: "Psych. Wohlbefinden",
+                                      value: model.currentPsychScore,
+                                      color: Colors.teal,
+                                      applyMargin: true,
+                                    ),
+                                    _wellBeingIndicator(
+                                      indicatorText: "Wohlbefinden",
+                                      value: model.currentWellScore,
+                                      color: Colors.lightBlue,
+                                      applyMargin: true,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            child: _wellBeingIndicator(
+                              indicatorText: "Wohlbefinden",
+                              value: model.currentWellScore,
+                              color: Colors.lightBlue,
+                              applyMargin: false,
+                            ),
                           ),
                           CircleAvatar(
-                            minRadius: 35,
+                            minRadius: 25,
                             backgroundColor: Colors.yellow,
-                            child: Text("Level 5"),
+                            child: Text(
+                              "Level 5",
+                              style: TextStyle(fontSize: 12),
+                            ),
                           )
                         ],
                       ),

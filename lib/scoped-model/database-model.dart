@@ -5,6 +5,9 @@ import '../database/db.dart';
 /// Wird von MainModel "importiert"
 mixin DatabaseModel on Model {
   double _currentWellScore = 0;
+  double _currentPsychScore = 0;
+  double _currentHealthScore = 0;
+  double _currentHygieneScore = 0;
   bool _isFirstStartup;
   String _username = "";
   bool _loadingWellScore;
@@ -23,6 +26,18 @@ mixin DatabaseModel on Model {
 
   double get currentWellScore {
     return _currentWellScore;
+  }
+
+  double get currentPsychScore {
+    return _currentPsychScore;
+  }
+
+  double get currentHealthScore {
+    return _currentHealthScore;
+  }
+
+  double get currentHygieneScore {
+    return _currentHygieneScore;
   }
 
   Future<Null> changeFirstStartupState(bool newValue) async {
@@ -82,8 +97,14 @@ mixin DatabaseModel on Model {
     Activity lastActivity = await getLast();
     if (lastActivity == null) {
       _currentWellScore = 0;
+      _currentPsychScore = 0;
+      _currentHealthScore = 0;
+      _currentHygieneScore = 0;
     } else {
       _currentWellScore = lastActivity.calculateScore();
+      _currentPsychScore = lastActivity.psychscore.toDouble();
+      _currentHealthScore = lastActivity.healthscore.toDouble();
+      _currentHygieneScore = lastActivity.hygienescore.toDouble();
     }
     _loadingWellScore = false;
     notifyListeners();
