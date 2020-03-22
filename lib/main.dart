@@ -83,23 +83,18 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/drink': (context) => AppContainer(body: DrinkPage()),
             '/eat': (context) => AppContainer(body: EatPage()),
             '/info_hand': (context) => AppContainer(body: InfoHandPage()),
-            '/info_distance': (context) =>
-                AppContainer(body: InfoDistancePage()),
-            '/info_smartdes': (context) =>
-                AppContainer(body: InfoSmartdesPage()),
+            '/info_distance': (context) => AppContainer(body: InfoDistancePage()),
+            '/info_smartdes': (context) => AppContainer(body: InfoSmartdesPage()),
             '/info_sneeze': (context) => AppContainer(body: InfoSneezePage()),
             '/info_gym': (context) => AppContainer(body: InfoGymPage()),
             //'/info_run':(context) => AppContainer(body: InfoDistancePage()),
             //'/info_walk':(context) => AppContainer(body: InfoSmartdesPage()),
             '/info_sleep': (context) => AppContainer(body: InfoSleepPage()),
-            '/info_ventilate': (context) =>
-                AppContainer(body: InfoVentilatePage()),
+            '/info_ventilate': (context) => AppContainer(body: InfoVentilatePage()),
             '/info_drink': (context) => AppContainer(body: InfoDrinkPage()),
             '/info_eat': (context) => AppContainer(body: InfoEatPage()),
 
-            '/about': (context) => AppContainer(
-                  body: AboutPage(),
-                )
+            '/about': (context) => AppContainer( body: AboutPage() )
           },
         ));
   }
