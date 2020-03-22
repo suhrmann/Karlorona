@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/activity-start-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class HygienePage extends StatefulWidget {
-
-  const HygienePage({ Key key }) : super(key: key);
+  const HygienePage({Key key}) : super(key: key);
 
   @override
   _HygienePageState createState() => _HygienePageState();
 }
 
 class _HygienePageState extends State<HygienePage> {
-
   bool _checkHand = false;
   bool get checkHand => _checkHand;
-  set checkHand (bool value) {
+  set checkHand(bool value) {
     _checkHand = value;
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,46 +26,39 @@ class _HygienePageState extends State<HygienePage> {
             Center(
               child: Text("Infektionsschutz:"),
             ),
-
-            /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
-            Container(
-              child: RaisedButton(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Visibility(
-                      child: Icon(Icons.check),
-                      visible: ScopedModel.of<MainModel>(context).getvisibleHandIcon,
-                    ),
-                    Text("Hände waschen"),
-                  ],
-                ),
-                onPressed: () => Navigator.pushNamed(context, '/hand'),
-              ),
+            ActivityStartButton(
+              label: "Hände waschen",
+              route: '/hand',
+              visibilityStateVariable:
+                  ScopedModel.of<MainModel>(context).getvisibleHandIcon,
             ),
-
-            RaisedButton(
-              child: Text("Sicherheitsabstand"),
-              onPressed: () => Navigator.pushNamed(context, '/distance'),
+            ActivityStartButton(
+              label: "Sicherheitsabstand",
+              route: '/distance',
+              visibilityStateVariable:
+                  ScopedModel.of<MainModel>(context).getvisibleHandIcon,
             ),
-            RaisedButton(
-              child: Text("Smartphone Desinfektion"),
-              onPressed: () => Navigator.pushNamed(context, '/smartdes'),
+            ActivityStartButton(
+              label: "Smartphone Desinfektion",
+              route: '/smartdes',
+              visibilityStateVariable:
+                  ScopedModel.of<MainModel>(context).getVisibleSmartDesIcon,
             ),
-            RaisedButton(
-              child: Text("Niesen / Husten"),
-              onPressed: () => Navigator.pushNamed(context, '/sneeze'),
+            ActivityStartButton(
+              label: "Niesen / Husten",
+              route: '/sneeze',
+              visibilityStateVariable:
+                  ScopedModel.of<MainModel>(context).getVisibleSneezeIcon,
             ),
-            RaisedButton(
-              child: Text("Mit den Händen nicht ins Gesicht fassen"),
-              onPressed: () => Navigator.pushNamed(context, '/handsface'),
+            ActivityStartButton(
+              label: "Nicht ins Gesicht fassen",
+              route: '/handsface',
+              visibilityStateVariable:
+                  ScopedModel.of<MainModel>(context).getVisibleHandfaceIcon,
             ),
-            //Image.asset("assets/images/logo.png"),
           ],
         ),
       ),
     );
-
-
   }
 }
