@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/pages/about-page.dart';
 
 import 'package:scoped_model/scoped_model.dart';
 
@@ -92,6 +93,8 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/info_ventilate':(context) => AppContainer(body: InfoVentilatePage()),
             '/info_drink':(context) => AppContainer(body: InfoDrinkPage()),
             '/info_eat':(context) => AppContainer(body: InfoEatPage()),
+
+            '/about':(context) => AppContainer(body: AboutPage(),)
           },
         ));
   }
