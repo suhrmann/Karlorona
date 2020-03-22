@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HygienePage extends StatefulWidget {
+
+  const HygienePage({ Key key }) : super(key: key);
+
+  @override
+  _HygienePageState createState() => _HygienePageState();
+}
+
+class _HygienePageState extends State<HygienePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -49,11 +57,5 @@ class HygienePage extends StatefulWidget {
         ),
       ),
     );
-  }
-
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return null;
   }
 }
