@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/notification-manager.dart';
 
+import './notification-manager.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import './scoped-model/main-model.dart';
 
 import './app-container.dart';
+import './pages/test-page.dart';
 import './pages/about-page.dart';
 import './pages/first-page.dart';
 import './pages/second-page.dart';
@@ -76,6 +77,7 @@ class IchMacheEsRichtigODER extends StatelessWidget {
           /// Bitte diese Struktur bei allen Standardpages mit dem AppContainer beibehalten, um eine Abstraktion des Layouts zu ermöglichen
           routes: {
             '/': (context) => AppContainer(body: FirstPage()),
+            '/about': (context) => AppContainer( body: AboutPage() ),
             '/secondpage': (context) => AppContainer(body: SecondPage()),
             '/dbtester': (context) => AppContainer(body: DatabaseTester()),
             '/quiz': (context) => AppContainer(body: InitQuizPage()),
@@ -108,7 +110,8 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/info_drink': (context) => AppContainer(body: InfoDrinkPage()),
             '/info_eat': (context) => AppContainer(body: InfoEatPage()),
 
-            '/about': (context) => AppContainer( body: AboutPage() )
+            // DEBUGGIN
+            '/test_page': (context) => AppContainer(body: TestPage()),
           },
         ));
   }

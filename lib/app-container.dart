@@ -45,6 +45,15 @@ class AppContainer extends StatelessWidget {
             title: Text('Über uns'),
             onTap: () => navigateTo('/about', context),
            ),
+
+          // DEBUGGING Shit
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.warning),
+            title: Text('DEBUGGING'),
+            onTap: () => navigateTo('/test_page', context),
+          ),
+
         ],
       ),
     );
