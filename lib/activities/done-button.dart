@@ -13,10 +13,10 @@ class DoneButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       child: Text("Erledigt"),
-      onPressed: () {
+      onPressed: () async {
         ScopedModel.of<MainModel>(context).addActivity(activityToAdd);
         //model.visibleIcon(true);
-        onTap();
+        await onTap();
         Navigator.pushReplacementNamed(context, '/');
       },
     );

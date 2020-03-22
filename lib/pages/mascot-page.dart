@@ -19,11 +19,12 @@ class _MascotPageState extends State<MascotPage> {
   String _getRightCat(double score) {
     String caturl = "assets/images/kater/";
 
-    if (score < 20 && score >= 0) caturl = caturl + "kater-1-krank.png";
-    if (score < 40 && score >= 20) caturl = caturl + "kater-2-traurig.png";
-    if (score < 60 && score >= 40) caturl = caturl + "kater-3-besorgt.png";
-    if (score < 80 && score >= 60) caturl = caturl + "kater-4-ok.png";
-    if (score < 100 && score >= 80) caturl = caturl + "kater-5-glücklich.png";
+    if (score < 20 && score >= 0) caturl = caturl + "kater-1-krank@0.1x.png";
+    if (score < 40 && score >= 20) caturl = caturl + "kater-2-traurig@0.1x.png";
+    if (score < 60 && score >= 40) caturl = caturl + "kater-3-besorgt@0.1x.png";
+    if (score < 80 && score >= 60) caturl = caturl + "kater-4-ok@0.1x.png";
+    if (score < 100 && score >= 80)
+      caturl = caturl + "kater-5-glücklich@0.1x.png";
 
     return caturl;
   }
