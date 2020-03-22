@@ -4,21 +4,36 @@ class ActivityStartButton extends StatelessWidget {
   bool visibilityStateVariable;
   String label;
   String route;
+  String iconfilename;
 
-  ActivityStartButton({this.visibilityStateVariable, this.label, this.route});
+  ActivityStartButton(
+      {this.visibilityStateVariable,
+      this.label,
+      this.route,
+      this.iconfilename});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: RaisedButton(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Visibility(
-              child: Icon(Icons.check),
-              visible: visibilityStateVariable,
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/images/icons/$iconfilename'),
             ),
-            Text(label),
+            Row(children: <Widget>[
+              Container(child: Text(label)),
+              SizedBox(
+                width: 5,
+              ),
+              Container(
+                child: Visibility(
+                  child: Icon(Icons.check),
+                  visible: visibilityStateVariable,
+                ),
+              ),
+            ])
           ],
         ),
         onPressed: () => Navigator.pushNamed(context, route),

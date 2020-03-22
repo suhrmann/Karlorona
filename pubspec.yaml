@@ -51,6 +51,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/kater/
+    - assets/images/icons/
     - assets/sounds/
     - assets/questions.json
   # The following line ensures that the Material Icons font is
