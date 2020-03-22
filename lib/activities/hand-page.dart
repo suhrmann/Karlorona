@@ -36,7 +36,7 @@ class HandPage extends StatelessWidget {
                             psychscore: 20),
                       );
                       //model.visibleIcon(true);
-                      ScopedModel.of<MainModel>(context).setVisibleIcon(true);
+                      ScopedModel.of<MainModel>(context).setVisibleHandIcon(true);
                     },
                   ),
                   RaisedButton(

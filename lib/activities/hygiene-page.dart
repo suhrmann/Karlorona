@@ -35,7 +35,7 @@ class _HygienePageState extends State<HygienePage> {
                   children: <Widget>[
                     Visibility(
                       child: Icon(Icons.check),
-                      visible: ScopedModel.of<MainModel>(context).getvisibleIcon,
+                      visible: ScopedModel.of<MainModel>(context).getvisibleHandIcon,
                     ),
                     Text("Hände waschen"),
                   ],
