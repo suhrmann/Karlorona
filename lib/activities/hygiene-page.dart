@@ -31,21 +31,21 @@ class _HygienePageState extends State<HygienePage> {
               route: '/hand',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getvisibleHandIcon,
-              iconfilename: "Icons_Hande.png",
+              iconfilename: "Icons_Hande_400.png",
             ),
             ActivityStartButton(
               label: "Sicherheitsabstand",
               route: '/distance',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleDistanceIcon,
-              iconfilename: "Icons_Abstand.png",
+              iconfilename: "Icons_Abstand_400px.png",
             ),
             ActivityStartButton(
               label: "Smartphone Desinfektion",
               route: '/smartdes',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleSmartDesIcon,
-              iconfilename: "Icons_Handy.png",
+              iconfilename: "Icons_Handy_400px.png",
             ),
             ActivityStartButton(
               label: "Niesen / Husten",
@@ -59,7 +59,7 @@ class _HygienePageState extends State<HygienePage> {
               route: '/handsface',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleHandfaceIcon,
-              iconfilename: "Icons_Schlagen.png",
+              iconfilename: "Icons_Schlafen.png",
             ),
           ],
         ),

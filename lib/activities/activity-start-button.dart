@@ -15,28 +15,47 @@ class ActivityStartButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: RaisedButton(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/images/icons/$iconfilename'),
-            ),
-            Row(children: <Widget>[
-              Container(child: Text(label)),
-              SizedBox(
-                width: 5,
-              ),
-              Container(
-                child: Visibility(
-                  child: Icon(Icons.check),
-                  visible: visibilityStateVariable,
+      margin: EdgeInsets.symmetric(horizontal: 25),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          CircleAvatar(
+            backgroundImage: AssetImage('assets/images/icons/$iconfilename'),
+          ),
+          SizedBox(
+            width: 5,
+          ),
+          Expanded(
+            child: Container(
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                color: Colors.green,
+                onPressed: () => Navigator.pushNamed(context, route),
+                child: Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Container(child: Text(label)),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.yellow[200],
+                        ),
+                        child: visibilityStateVariable
+                            ? Icon(Icons.check)
+                            : Icon(Icons.add),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ])
-          ],
-        ),
-        onPressed: () => Navigator.pushNamed(context, route),
+            ),
+          )
+        ],
       ),
     );
   }
