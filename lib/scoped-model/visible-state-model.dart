@@ -12,7 +12,19 @@ mixin VisibleStateModel on Model {
   bool _checkVentilate = false;
   bool _checkSleep = false;
   bool _checkDistance = false;
+  bool _checkRun = false;
 
+
+void setVisibleRunIcon(bool newValue) {
+  print("SetVisible");
+  _checkRun = newValue;
+}
+
+bool get getVisibleRunIcon {
+  print("GetVisible");
+  return _checkRun;
+  //_checkHand = newValue;
+}
 
 
 void setVisibleDistanceIcon(bool newValue) {

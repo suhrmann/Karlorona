@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import 'activity-start-button.dart';
+
 class HealthPage extends StatefulWidget {
 
   const HealthPage({ Key key }) : super(key: key);
@@ -21,46 +23,57 @@ class _HealthPageState extends State<HealthPage> {
               child: Text("Allgemeine Gesundheit:"),
             ),
 
-            Container(
-              child: RaisedButton(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Visibility(
-                      child: Icon(Icons.check),
-                      visible: ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
-                    ),
-                    Text("Spaziergang"),
-                  ],
-                ),
-                onPressed: () => Navigator.pushNamed(context, '/walk'),
-              ),
+            ActivityStartButton(
+              label: "Spaziergang",
+              route: '/walk',
+              visibilityStateVariable:
+              ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
+              iconfilename: "Icons_Hande.png",
             ),
-            /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
-            RaisedButton(
-              child: Text("Kraftübungen"),
-              onPressed: () => Navigator.pushNamed(context, '/gym'),
+            ActivityStartButton(
+              label: "Kraftübungen",
+              route: '/gym',
+              visibilityStateVariable:
+              ScopedModel.of<MainModel>(context).getVisibleGymIcon,
+              iconfilename: "Icons_Abstand.png",
             ),
-            RaisedButton(
-              child: Text("Ausdauerübungen"),
-              onPressed: () => Navigator.pushNamed(context, '/run'),
+            ActivityStartButton(
+              label: "Ausdauerübungen",
+              route: '/run',
+              visibilityStateVariable:
+              ScopedModel.of<MainModel>(context).getVisibleRunIcon,
+              iconfilename: "Icons_Handy.png",
             ),
-            RaisedButton(
-              child: Text("Schlafen"),
-              onPressed: () => Navigator.pushNamed(context, '/sleep'),
+            ActivityStartButton(
+              label: "Schlafen",
+              route: '/sleep',
+              visibilityStateVariable:
+              ScopedModel.of<MainModel>(context).getVisibleSleepIcon,
+              iconfilename: "Icons_Obst.png",
             ),
-            RaisedButton(
-              child: Text("Lüften"),
-              onPressed: () => Navigator.pushNamed(context, '/ventilate'),
+            ActivityStartButton(
+              label: "Lüften",
+              route: '/ventilate',
+              visibilityStateVariable:
+              ScopedModel.of<MainModel>(context).getVisibleVentilateIcon,
+              iconfilename: "Icons_Schlagen.png",
             ),
-            RaisedButton(
-              child: Text("Trinken"),
-              onPressed: () => Navigator.pushNamed(context, '/drink'),
+            ActivityStartButton(
+              label: "Trinken",
+              route: '/drink',
+              visibilityStateVariable:
+              ScopedModel.of<MainModel>(context).getVisibleDrinkIcon,
+              iconfilename: "Icons_Obst.png",
             ),
-            RaisedButton(
-              child: Text("Obst / Gemüse essen"),
-              onPressed: () => Navigator.pushNamed(context, '/eat'),
+            ActivityStartButton(
+              label: "Obst / Gemüse essen",
+              route: '/eat',
+              visibilityStateVariable:
+              ScopedModel.of<MainModel>(context).getVisibleEatIcon,
+              iconfilename: "Icons_Schlagen.png",
             ),
+
+
             //Image.asset("assets/images/logo.png"),
           ],
         ),
