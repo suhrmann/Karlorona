@@ -12,17 +12,20 @@ class HygienePage extends StatelessWidget {
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
-
-            Row(
-              children: <Widget>[
-                RaisedButton(
-                  child: Text("Hände waschen"),
-                  onPressed: () => Navigator.pushNamed(context, '/hand'),
+            Container(
+              child: RaisedButton(
+                child: Row(
+                  children: <Widget>[
+                    Visibility(
+                      child: Icon(Icons.check),
+                      visible: true,
+                    ),
+                    Text("Hände waschen"),
+                  ],
                 ),
-                Icon(Icons.check),
-              ],
+                onPressed: () => Navigator.pushNamed(context, '/hand'),
+              ),
             ),
-
 
             RaisedButton(
               child: Text("Sicherheitsabstand"),
