@@ -35,7 +35,7 @@ class ActivityPage extends StatelessWidget {
               label: "Psychisches Wohlbefinden",
               route: '/psych',
               visibilityStateVariable:
-              ScopedModel.of<MainModel>(context).getVisibleSmartDesIcon,
+              null,
               iconfilename: "Icons_Schlafen_400px.png",
               color: Colors.teal,
             ),
