@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
+import 'package:scoped_model/scoped_model.dart';
+import '../scoped-model/main-model.dart';
 import '../model/activity.dart';
+
 
 class DistancePage extends StatelessWidget {
   @override
@@ -21,7 +24,8 @@ class DistancePage extends StatelessWidget {
                   healthscore: 20,
                   hygienescore: 40,
                   psychscore: 0),
-              onTap: () => null,
+              onTap: () => ScopedModel.of<MainModel>(context)
+                  .setVisibleDistanceIcon(true),
             ),
 
             RaisedButton(

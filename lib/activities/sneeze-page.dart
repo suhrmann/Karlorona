@@ -23,7 +23,7 @@ class SneezePage extends StatelessWidget {
                   hygienescore: 20,
                   psychscore: 0),
               onTap: () => ScopedModel.of<MainModel>(context)
-                  .setVisibleSmartDesIcon(true),
+                  .setVisibleSneezeIcon(true),
             ),
             RaisedButton(
               child: Text("Info"),
