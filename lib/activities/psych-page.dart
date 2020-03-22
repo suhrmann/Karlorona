@@ -5,23 +5,26 @@ import 'package:scoped_model/scoped_model.dart';
 import 'activity-start-button.dart';
 
 class PsychPage extends StatelessWidget {
-  Color buttonColor = Colors.teal;
+  final Color buttonColor = Colors.teal;
   @override
   Widget build(BuildContext context) {
     return Container(
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("Psychisches Wohlbefinden:"),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                "Psych. Wohlbefinden:",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
-
 
             ActivityStartButton(
               label: "Spaziergang",
               route: '/social',
               visibilityStateVariable:
-              ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
+                  ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
               iconfilename: "Icons_Abstand_400px.png",
               color: buttonColor,
             ),
@@ -29,7 +32,7 @@ class PsychPage extends StatelessWidget {
               label: "Medienkonsum",
               route: '/gym',
               visibilityStateVariable:
-              ScopedModel.of<MainModel>(context).getVisibleGymIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleGymIcon,
               iconfilename: "Icons_Abstand_400px.png",
               color: buttonColor,
             ),
@@ -37,7 +40,7 @@ class PsychPage extends StatelessWidget {
               label: "Yoga",
               route: '/run',
               visibilityStateVariable:
-              ScopedModel.of<MainModel>(context).getVisibleRunIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleRunIcon,
               iconfilename: "Icons_Abstand_400px.png",
               color: buttonColor,
             ),
@@ -45,7 +48,7 @@ class PsychPage extends StatelessWidget {
               label: "Alltag strukturieren",
               route: '/sleep',
               visibilityStateVariable:
-              ScopedModel.of<MainModel>(context).getVisibleSleepIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleSleepIcon,
               iconfilename: "Icons_Schlafen_400px.png",
               color: buttonColor,
             ),
@@ -53,7 +56,7 @@ class PsychPage extends StatelessWidget {
               label: "Tagesziel",
               route: '/ventilate',
               visibilityStateVariable:
-              ScopedModel.of<MainModel>(context).getVisibleVentilateIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleVentilateIcon,
               iconfilename: "Icons_Obst_400px.png",
               color: buttonColor,
             ),

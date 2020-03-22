@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ActivityStartButton extends StatelessWidget {
-  bool visibilityStateVariable;
-  String label;
-  String route;
-  String iconfilename;
-  Color color;
+  final bool visibilityStateVariable;
+  final String label;
+  final String route;
+  final String iconfilename;
+  final Color color;
 
   ActivityStartButton({
     this.visibilityStateVariable,
@@ -48,9 +48,11 @@ class ActivityStartButton extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.yellow[200],
                         ),
-                        child: visibilityStateVariable
-                            ? Icon(Icons.check)
-                            : Icon(Icons.add),
+                        child: visibilityStateVariable == null
+                            ? Container()
+                            : visibilityStateVariable
+                                ? Icon(Icons.check)
+                                : Icon(Icons.add),
                       ),
                     ],
                   ),

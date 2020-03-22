@@ -19,8 +19,12 @@ class _HealthPageState extends State<HealthPage> {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("Allgemeine Gesundheit:"),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                "Allg. Gesundheit:",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             ActivityStartButton(

@@ -12,11 +12,6 @@ class HygienePage extends StatefulWidget {
 
 class _HygienePageState extends State<HygienePage> {
   Color buttonColor = Colors.orange;
-  bool _checkHand = false;
-  bool get checkHand => _checkHand;
-  set checkHand(bool value) {
-    _checkHand = value;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +19,12 @@ class _HygienePageState extends State<HygienePage> {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("Infektionsschutz:"),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                "Infektionsschutz:",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
             ActivityStartButton(
               label: "Hände waschen",
