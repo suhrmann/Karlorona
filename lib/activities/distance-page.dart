@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 
 class DistancePage extends StatelessWidget {
   @override
@@ -8,15 +9,15 @@ class DistancePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Center(
-              child: Text("Bleib Zuhause!!\nWenn Du raus mußt, halte mindestens einen Abstand von 2 Metern zu anderen Menschen!!"),
+              child: Text(
+                  "Bleib Zuhause!!\nWenn Du raus mußt, halte mindestens einen Abstand von 2 Metern zu anderen Menschen!!"),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
+
             RaisedButton(
               child: Text("Erledigt"),
-              onPressed: () {
-
-              },
+              onPressed: () {},
             ),
             RaisedButton(
               child: Text("Info"),

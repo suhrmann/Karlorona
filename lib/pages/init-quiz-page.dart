@@ -8,7 +8,7 @@ class InitQuizPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return QuizWidget(
-      datasetName: 'init_quiz',
+      datasetName: 'quiz_on_demand',
     );
   }
 }

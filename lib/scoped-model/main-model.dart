@@ -18,7 +18,7 @@ class MainModel extends Model with SubModel, DatabaseModel, QuizModel {
     return _testValue;
   }
 
-  void setVisibleHandIcon(bool newValue){
+  void setVisibleHandIcon(bool newValue) {
     print("SetVisible");
     _checkHand = newValue;
   }
@@ -29,7 +29,7 @@ class MainModel extends Model with SubModel, DatabaseModel, QuizModel {
     //_checkHand = newValue;
   }
 
-  void setVisibleWalkIcon(bool newValue){
+  void setVisibleWalkIcon(bool newValue) {
     print("SetVisible");
     _checkWalk = newValue;
   }

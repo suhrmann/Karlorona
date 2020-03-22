@@ -28,6 +28,88 @@
             ],
             "correct_answer_index": 3,
             "explanation": "Antwort d ist richtig! Durch den übermäßigen Konsum von gesättigten Fetten, Transfettsäuren, Zucker und Salz erhöht sich das Risiko in Bezug auf Übergewicht und Adipositas, Herz-Kreislauf-Erkrankungen, Diabetes und bestimmte Arten von Krebs."
+        },
+        {
+            "question": "Wie viel Sicherheitsabstand zwischen zwei Menschen wird empfohlen, um das Übertragungsrisiko zu minimieren?",
+            "answers": [
+                "a) 10-20 Zentimeter",
+                "b) ½ Meter",
+                "c) 1-2 Meter"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Antwort c stimmt. Das Virus wird durch kleinste erregerhaltige Tröpfchen übertragen, die z.B. beim Husten, Niesen und Sprechen in die Luft gelangen. Durch 1-2 Meter Sicherheitsabstand wird das Risiko reduziert, dass diese Tröpfchen von einem Menschen direkt zum nächsten gelangen. Generell gilt jedoch: Je mehr Abstand, desto sicherer."
+        },
+        {
+            "question": "Welche Art der Fortbewegung sollte vermieden werden, um das Risiko einer Ansteckung zu reduzieren?",
+            "answers": [
+                "a) Fahrradfahren",
+                "b) Auto fahren",
+                "c) Bus fahren"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Antwort c ist richtig. Bei der Nutzung der öffentlichen Verkehrsmittel kann oft der Sicherheitsabstand nicht gewährleistet werden. Wenn es sich absolut nicht vermeiden lässt, Bus oder Bahn zu nutzen, ist es besonders wichtig zu versuchen, einen Abstand von mindestens 1-2 Meter zu anderen Fahrgästen einzuhalten - sowohl an der Haltestelle als auch im Fahrzeug. Nach der Fahrt solltest du dir unbedingt die Hände waschen, vor allem wenn du Druckknöpfe und Haltestangen angefasst hast. Auto fahren ist unbedenklich, sofern nur Menschen mit im Auto sitzen, mit denen du ohnehin täglich Kontakt hast - z.B. deine Haushaltsmitglieder."
+        },
+        {
+            "question": "Was muss ich beim Husten und Niesen in der Nähe von anderen Menschen beachten?",
+            "answers": [
+                "a) Ich muss mich wegdrehen",
+                "b) Ich benutze ein Einwegtaschentuch oder ein Stofftaschentuch",
+                "c) Ich wasche mir nach dem Husten oder Niesen die Hände",
+                "d) Alle drei Optionen sind richtig"
+            ],
+            "correct_answer_index": 3,
+            "explanation": "Tatsächlich sind alle drei Optionen richtig. Beim Husten und Niesen drehst du dich am besten von anderen menschen weg und hältst mindestens einen Meter Abstand. Verwende Einwegtaschentücher oder Stofftaschentücher jeweils nur einmal und entsorge die Einwegtaschentücher in einem Mülleimer mit Deckel und wasche das Stofftaschentuch bei 60 °C. Nach dem Naseputzen, Niesen oder Husten musst du dir gründlich die Hände waschen. Diese Verhalten ist besonders wichtig, da das Coronavirus über Tröpfcheninfektion und somit durch Niesen und Husten von Mensch zu Mensch weitergegeben wird."
+        },
+        {
+            "question": "Wann soll man sich unter anderem die Händewaschen?",
+            "answers": [
+                "a) Nachdem Rausgehen",
+                "b) Vor dem Essen zubereiten",
+                "c) Nach dem Niesen bzw. Husten",
+                "d) Alles zutreffend"
+            ],
+            "correct_answer_index": 3,
+            "explanation": "Alles ist zutreffend! Die Hände sollten immer nach dem nach Hause kommen dem Besuch der Toilette, dem Naseputzen, Husten oder Niesen, dem Kontakt mit Tieren, Tierfutter oder tierischem Abfall und vor den Mahlzeiten gewaschen werden. Vor und nach der Zubereitung von Speisen dem Kontakt mit Kranken und der Behandlung von Wunden ist das Waschen der Hände auch sehr wichtig."
+        },
+        {
+            "question": "Wie lange soll man sich die Hände waschen?",
+            "answers": [
+                "a) 10 Sekunden",
+                "b) 20-30 Sekunden",
+                "c) nur kurz"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Am besten wäscht du deine Hände für 20-30 Sekunden! Um einen keimreduzierenden Effekt zu erzielen, muss man die Hände gründlich waschen. Zum einen ist dabei die Zeit ein wichtiger Faktor - etwa 20 bis 30 Sekunden, bei starker Verschmutzung auch mehr - sowie das gründliche Einreiben der Fingerkuppen, Nagelbetten und Fingerzwischenräume mit Seife. Dort finden wir in der Regel die höchsten Keimzahlen."
+        },
+        {
+            "question": "Ist eine Infektion über ein Handydisplay möglich?",
+            "answers": [
+                "a) Ja",
+                "b) Nein",
+                "c) Noch nicht 100% bekannt"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Es ist noch nicht 100% bekannt. Bis jetzt wurde auch noch keine Infektion über ein Handy festgestellt. Die Möglichkeit einer Infektion kann aber noch nicht ausgeschlossen werden, da laut einer vorab veröffentlichten Studie aus den USA das Coronavirus immerhin bis zu 72 Stunden auf Oberflächen aktiv bleiben kann. Dementsprechend ist eine gute Idee die Handybildschirme und auch Computer- und Laptopbildschirme sowie -tastaturen sauber zu machen."
+        },
+        {
+            "question": "Die ersten Symptome - was tun?",
+            "answers": [
+                "a) Ich gehe sofort zum Arzt",
+                "b) Ich rufe meinen Hausarzt an oder die Hotline und erkundige mich nach dem weiteren Vorgehen",
+                "c) Ich melde mich sofort in der Rettungsstelle des nächsten Krankenhauses."
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig. Bevor du losgehst und dich oder andere gefährdest und dich in einer Arztpraxis oder im Krankenhaus untersuchen lässt, ist es besser den Hausarzt/Ärztin anzurufen oder sich bei Symptomen an das zuständige Gesundheitsamt zu wenden. Bundesweite Hotline: 116117"
+        },
+        {
+            "question": "Sind bei dieser Pandemie Hamsterkäufe nötig?",
+            "answers": [
+                "a) Klar, man weiß ja nie",
+                "b) Nein, schließlich sind Lebensmittel und Hygieneartikel wie immer auf Lager",
+                "c) Ja, dann muss ich nicht so häufig einkaufen gehen"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Die Antwort ist hier b. Es macht keinen Sinn sich mit Lebensmitteln und Toilettenpapier einzudecken, da selbst bei Ausgangsbeschränkungen die Supermärkte geöffnet bleiben. Eine Pandemie klingt zwar bedrohlich aber bedeutet noch lange nicht, dass es zu Lieferengpässen kommt. Das Bundesamt für Katastrophenschutz und Bevölkerungshilfe rät einen Vorrat für ca. 10 Tage anzulegen."
         }
     ],
     "quiz_on_demand": [{
@@ -38,6 +120,246 @@
             ],
             "correct_answer_index": 0,
             "explanation": "Antwort a ist richtig! In der Ellenbeuge werden die Tröpfchen eher aufgehalten. Wenn du in die Hand niest, zerstäuben die Tröpfchen zu allen Seiten und treffen so potentiell auf deine Mitmenschen."
+        },
+
+        {
+            "question": "Wie warm sollte das Wasser beim Händewaschen sein?",
+            "answers": [
+                "a) Sehr warm",
+                "b) Unwichtig für die Entfernung der Keime",
+                "c) Eiskalt"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort c sit korrekt. Die Temperatur ist tatsächlich unwichtig! Die Wassertemperatur hat keinen Einfluss auf die Reduktion der Mikroorganismen. Daher sollte die individuell angenehme Wassertemperatur gewählt werden. Viel wichtiger sind die Dauer des Händewaschens und das Maß der Reibung beim Einseifen der Hände. Wichtig ist es, gerade auch in der kalten Jahreszeit, die Hände gut zu pflegen. Das Waschen mit Wasser und Seife schädigt die Schutzbarriere der Haut und Fette werden aus der Haut ausgespült. Deshalb sollten die Hände auch regelmäßig eingecremt werden."
+        },
+        {
+            "question": "Reicht es aus sich die Hände ohne Seife zu waschen?",
+            "answers": [
+                "a) Ja",
+                "b) Nein"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Natürlich ist Antwort b richtig. Am besten wäscht du deine Hände mit Seife! Mit Seife die Hände zu waschen, ist deutlich wirksamer als mit Wasser alleine, denn Seife lösen Schmutz und Keime von der Haut ab. Zudem neigt man dazu, bei Verwendung von Seife die Hände gründlicher einzureiben und abzuwaschen als ohne, was zur zusätzlichen mechanischen Entfernung von Keimen führt. Auch befinden sich bestimmte Keime im natürlichen Fettfilm der Haut und lassen sich mit Wasser alleine kaum entfernen. Ist keine Seife vorhanden, sollte man dennoch auf das Händewaschen mit bloßem Wasser nicht verzichten."
+        },
+        {
+            "question": "Ist gründliches Abtrocknen wichtig?",
+            "answers": [
+                "a) Ja",
+                "b) Nein"
+            ],
+            "correct_answer_index": 0,
+            "explanation": "a ist richtig. Am besten trocknest du deine Hände gründlich ab! In einer feuchten Umgebung können sich Keime besser halten und vermehren. Daher sollten die Hände nach dem Waschen zügig trocken werden. Außerdem entfernt das Abtrocknen der Hände mit einem Handtuch durch Reibung zusätzlich die Keime, die noch an den Händen oder im Wasser an den Händen haften."
+        },
+        {
+            "question": "Strapaziert häufiges Händewaschen die Haut?",
+            "answers": [
+                "a) Ja",
+                "b) Nein"
+            ],
+            "correct_answer_index": 0,
+            "explanation": "Häufiges Händewaschen strapaziert tatsächlich die Haut!  Falsches oder sehr häufiges Händewaschen, vor allem bei hohen Wassertemperaturen oder mit scharfen Reinigungsmitteln, greift die Haut an. Deshalb sollten die Hände auch regelmäßig gepflegt und eingecremt werden."
+        },
+        {
+            "question": "Wann ist zusätzlich zum Händewaschen eine Händedesinfektion sinnvoll?",
+            "answers": [
+                "a) Immer und überall",
+                "b) Normalerweise nicht im privaten Umfeld",
+                "c) Niemals"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "b ist richtig. Im privaten Umfeld ist eine Händedesinfektion im Allgemeinen nicht erforderlich. Bei erhöhtem Infektionsrisiko kann es sinnvoll sein, nach dem Händewaschen die Hände zu desinfizieren. Dazu zählen erkrankte Familienmitglieder, abwehrgeschwächte Menschen mit erhöhtem Infektionsrisiko, ältere und pflegebedürftige Angehörige."
+        },
+        {
+            "question": "Wie kann ich mein Handydisplay am besten säubern?",
+            "answers": [
+                "a) Mit einem Mikrofasertuch",
+                "b) In der Waschmaschine bei 30°C",
+                "c) Im Spülbecken mit fließendem Wasser und Spülmittel",
+                "d) Mit Spucke und dem Pulloverärmel"
+            ],
+            "correct_answer_index": 0,
+            "explanation": "a ist richtig. Die effektive Reinigung eines Handydisplays funktioniert durch kreisende Bewegungen mit einem (angefeuchteten) Mikrofaser-Tuch! Vorsicht ist bei der Reinigung von Kunststoffdisplays geboten, da diese durch scharfe Reinigungsmittel, Glasreiniger oder Alkohol beschädigt werden können. Eine Schutzfolie lässt sich nicht nur feucht abwischen, sondern auch nach längerem Gebrauch auswechseln, dadurch werden auch Krankheitserreger und Schmutz entfernt."
+        },
+        {
+            "question": "Was bedeutet COVID-19?",
+            "answers": [
+                "a) Das ist ein anderer Name für das Coronavirus",
+                "b) Das ist die wissenschaftliche Kurzform für das Virus",
+                "c) Corona heißt das Virus und COVID-19 die Lungenkrankheit, die es auslöst"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Die Antwort c ist richtig. Corona (SARS-CoV-2) ist der Name des Virus und COVID-19 heißt die Lungenkrankheit, die es auslöst. Aber warum haben Viren und die Krankheiten, die sie auslösen unterschiedliche Namen? Nun, der Virus wird häufig nach seiner genetischen Struktur benannt, damit man ihn gleich einordnen kann. Corona gehört beispielsweise zum SARS-Virus. Zur Abgrenzung bekommen die Krankheiten also andere Namen von der WHO."
+        },
+        {
+            "question": "Was ist der Unterschied zwischen einer Epidemie und einer Pandemie?",
+            "answers": [
+                "a) Es gibt keinen",
+                "b) Eine Epidemie ist auf ein Region und zeitlich begrenzt und eine Pandemie breitet sich überregional und unkontrolliert aus",
+                "c) Eine Pandemie tritt immer wieder auf"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig. Da sich das Coronavirus zuerst auf die chinesische Region Hubei beschränkte, ging die WHO von einer Epidemie aus mit einem eher regionalen Verlauf, ähnlich wie bei der SARS Epidemie 2003. Nach dem rapiden Ausbruch auf mehreren Kontinenten hat die WHO am 11.März 2020 den Ausbruch des Coronavirus als Pandemie bezeichnet."
+        },
+        {
+            "question": "Was ist der Unterschied zwischen Viren und Bakterien?",
+            "answers": [
+                "a) Bakterien können sich im Gegensatz zu Viren nicht selbst vermehren",
+                "b) Viren sind kleiner als Bakterien und brauchen zum Leben immer einen “Wirt”",
+                "c) Viren sind im Gegensatz zu Bakterien wichtig für unsere Gesundheit",
+                "d) Alle Antworten sind richtig"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig. Bakterien sind selbstständige, kleine Einzeller, die uns überall umgeben: In der Luft, im Wasser und auf unserer Haut. Ohne sie gäbe es kein Leben. Viren sind viel kleiner als Bakterien und bestehen aus Molekülen, manchmal mit einer Proteinschicht um sich herum. Um sich zu vermehren brauchen Sie eine Wirtszelle, die sie befallen. Ein eigenständiges Leben ist für eine Viruszelle nicht möglich."
+        },
+        {
+            "question": "Wie kann das Coronavirus laut Robert-Koch-Institut übertragen werden?",
+            "answers": [
+                "a) Durch Händeschütteln",
+                "b) Durch Niesen, Husten und 15 Minuten Gespräch mit einer infizierten Person",
+                "c) Über Gegenstände",
+                "d) Alle drei Antworten"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Alle drei Antworten sind richtig. Oder besser: können richtig sein. Experten forschen noch nach einer eindeutigen Übertragung von Mensch zu Mensch. Dabei gilt die sogenannte Tröpfcheninfektion als eine der Hauptübertragungswege. Es können bei der Begrüßung oder Unterhaltung winzige Tröpfchen von einer Person auf die andere übergehen. Diese können von Mund-, Augen- und Nasenschleimhäuten aufgenommen werden. Das ist das Einfallstor für den Virus. Deshalb gilt es, wenn immer es möglich ist Hände zu waschen, Sicherheitsabstand halten und sich nicht ins Gesicht zu fassen!"
+        },
+        {
+            "question": "Was bedeutet “social distancing”?",
+            "answers": [
+                "a) Wir teilen kein Toilettenpapier",
+                "b) Es fliegen keine Flugzeuge mehr",
+                "c) Wir bleiben zu Hause, um die Risikogruppen zu schützen"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Antwort c ist richtig. In Zeiten, wo sich ein Virus rasant ausbreitet, der für Teile der Bevölkerung tödlich sein kann, ist es für jeden nötig sich zu vor dem Virus zu schützen. Warum? Weil man nicht wissen kann, ob man den Virus unwissend weiterträgt. Nicht alle Menschen zeigen die typischen Symptome und das Virus verbreitet sich über persönlichen Kontakt. Also ist es nur logisch seine sozialen Kontakte für eine Zeit einzuschränken, um niemanden zu gefährden."
+        },
+        {
+            "question": "Gehören ausschließlich Menschen ab 60 Jahren zur Risikogruppe?",
+            "answers": [
+                "a) Ja",
+                "b) Nein"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig. Zur Risikogruppe gehören viele unterschiedliche Menschen. Ältere Menschen gehören dazu, aber auch Menschen mit Behinderung, Menschen mit chronischen Krankheiten und Menschen mit Vorerkrankungen. Man sieht es den Menschen nicht an, ob sie gefährdet sind oder nicht. Das bedeutet: zu Hause bleiben, Hygienemaßnahmene inhalten, draußen Sicherheitsabstand halten und Händewaschen!"
+        },
+        {
+            "question": "Kann Corona von Haustieren übertragen werden?",
+            "answers": [
+                "a) Ja",
+                "b) Nein",
+                "c) Kann man noch nicht beurteilen"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Antwort c ist richtig. Die Datenlage zur Übertragung von Haustieren zum Menschen ist noch nicht eindeutig. Laut Friedrich-Löffler-Institut ist noch kein einziger Fall bekannt, bei dem das Virus vom Haustier zum Menschen übertragen wurde."
+        },
+        {
+            "question": "Wie sieht eine Ausgangsbeschränkung aus?",
+            "answers": [
+                "a) Einkaufen gehen, Spaziergänge mit der Familie, Arbeit und Arztbesuche sind erlaubt ",
+                "b) Ich darf nicht mehr die Wohnung verlassen",
+                "c) Ich darf nur noch mit Genehmigung Einkaufen gehen"
+            ],
+            "correct_answer_index": 0,
+            "explanation": "Antwort a stimmt. Bei den jetzigen Ausgangsbeschränkungen in den einzelnen Bundesländern werden Dienstleister, wie Friseure, Baumärkte und Floristen geschlossen. Menschenansammlungen sind verboten. Man darf weiterhin raus aber nur einzeln und mit Sicherheitsabstand von mindestens 1,5 m. Ärzte und weitere Gesundheitseinrichtungen bleiben geöffnet, wie auch Supermärkte."
+        },
+        {
+            "question": "Die ersten Symptome - was tun?",
+            "answers": [
+                "a) Ich gehe sofort zum Arzt",
+                "b) Ich rufe meinen Hausarzt an oder die Hotline und erkundige mich nach dem weiteren Vorgehen",
+                "c) Ich melde mich sofort in der Rettungsstelle des nächsten Krankenhauses."
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig. Bevor du losgehst und dich oder andere gefährdest und dich in einer Arztpraxis oder im Krankenhaus untersuchen lässt, ist es besser den Hausarzt/Ärztin anzurufen oder sich bei Symptomen an das zuständige Gesundheitsamt zu wenden. Bundesweite Hotline: 116117"
+        },
+        {
+            "question": "Sind bei dieser Pandemie Hamsterkäufe nötig?",
+            "answers": [
+                "a) Klar, man weiß ja nie",
+                "b) Nein, schließlich sind Lebensmittel und Hygieneartikel wie immer auf Lager",
+                "c) Ja, dann muss ich nicht so häufig einkaufen gehen"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Die Antwort ist hier b. Es macht keinen Sinn sich mit Lebensmitteln und Toilettenpapier einzudecken, da selbst bei Ausgangsbeschränkungen die Supermärkte geöffnet bleiben. Eine Pandemie klingt zwar bedrohlich aber bedeutet noch lange nicht, dass es zu Lieferengpässen kommt. Das Bundesamt für Katastrophenschutz und Bevölkerungshilfe rät einen Vorrat für ca. 10 Tage anzulegen."
+        },
+        {
+            "question": "Wie häufig sollte man lüften?",
+            "answers": [
+                "a) Einmal in der Woche",
+                "b) Einmal am Tag",
+                "c) Mehrmals am Tag"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Antwort c ist korrekt. Es sollte mehrmals täglich gelüftet werden."
+        },
+        {
+            "question": "Wie hilft Lüften gegen das Virus?",
+            "answers": [
+                "a) Das Virus wird durch frische Luft getötet",
+                "b) Lüften verringert die Menge erregerhaltiger Tröpfchen in der Luft",
+                "c) Durch frische Luft gelangen Antikörper ins Zimmer"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig. Durch das Lüften gelangen im Raum befindliche erregerhaltige Tröpfchen nach draußen und frische Luft nach drinnen. Dadurch wird das Risiko einer Ansteckung in den eigenen vier Wänden reduziert. Das ist vor allem dann wichtig, wenn ein Haushaltsmitglied erkrankt ist."
+        },
+        {
+            "question": "Wie sollte gelüftet werden?",
+            "answers": [
+                "a) Stoßlüften: Heizung aus und alle Fenster für mehrere Minuten weit öffnen",
+                "b) Dauerlüften: alle Fenster über mehrere Stunden ankippen",
+                "c) Sparlüften: Heizung aus und ein Fenster nach dem anderen für mehrere Minuten ankippen"
+            ],
+            "correct_answer_index": 0,
+            "explanation": "Antwort a ist richtig. Beim Stoßlüften funktioniert der Luftaustausch am besten. Außerdem kühlt der Raum dadurch nicht aus, wodurch der Raum schnell wieder warm ist und Heizkosten gespart werden"
+        },
+        {
+            "question": "Welche Aktivitäten solltest du zur Reduzierung des Ansteckungsrisikos vermeiden?",
+            "answers": [
+                "a) Allein joggen gehen",
+                "b) Freunde treffen",
+                "c) Haushaltsmitglieder umarmen"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b stimmt. So schwer es auch fällt - um die Ausbreitung des Virus zu verlangsamen, ist es wichtig, den direkten Kontakt zu anderen Menschen zu reduzieren. Zum Glück gibt es Möglichkeiten, über die sozialen Medien oder per Post weiterhin in Kontakt zu bleiben! Solltest du es gar nicht mehr ohne deine Freunde aushalten, kannst du dich für einen Spaziergang draußen verabreden - dabei solltest du aber unbedingt einen Sicherheitsabstand von mindestens 1-2 Metern einhalten! Mit den Menschen, mit denen du zusammen wohnst, kannst du jedoch - sofern sie nicht erkrankt sind und du auch gesund bist - weiterhin ganz normalen Kontakt haben."
+        },
+        {
+            "question": "Welche Art von Sport ist besonders hilfreich zur Prävention eines erschwerten CoVid-19 Krankheitsverlaufs?",
+            "answers": [
+                "a) Kraftsport",
+                "b) Ausdauersport",
+                "c) Yoga"
+            ],
+            "correct_answer_index": 1,
+            "explanation": "Antwort b ist richtig! Jede Art von Sport ist präventionstechnisch sinnvoll, da sportliche Aktivität zu erhöhter Herz-Kreislauf-Zirkulation führt, dadurch kommen Immunzellen häufiger zur infizierten Lunge bei einer CoVid-19 Erkrankung. Die Ausdauer ist aber die wichtigste Komponente, weil sie den Puls hochtreibt und schon durch die schnellere Atmung die Lungenbelüftung begünstigt. Bei Inaktivität werden die Lungen nur zu zwei Dritteln belüftet, die unteren Anteile nicht. Wenn die Lunge nicht belüftet ist, wird sie auch nicht durchblutet. Kommen nun die Immunzellen da nicht hin, kann sich Schleim in diesen nicht belüfteten Partien der Lunge absetzen. Das erhöht die Infektionsgefahr. Meist ist eine Infektion eine Kombination aus Viren und Bakterien, die sich dann nachfolgend auf die von den Viren geschädigten Stellen der Lunge draufsetzen, deshalb ist es sehr wichtig, dass die Lunge immer gut belüftet ist, weil sie dann auch gut durchblutet ist."
+        },
+        {
+            "question": "Wofür ist ausreichend Schlaf wichtig?",
+            "answers": [
+                "a) Herz-Kreislauf-System",
+                "b) Immunsystem",
+                "c) Psychische Gesundheit",
+                "d) Alle Antworten treffen zu"
+            ],
+            "correct_answer_index": 3,
+            "explanation": "Antwort d ist richtig. Ausreichend Schlaf ist für viele Prozesse wichtig, die uns gesund und leistungsfähig halten. Zu wenig oder schlechter Schlaf hingegen kann sowohl lang- als auch kurzfristig dazu führen, dass wir krank werden. Kurzfristig wird vor allem das Immunsystem geschwächt, wodurch das Risiko für Infektionen steigt. Langfristig steigt aber auch das Risiko für Herz-Kreislauf-Erkrankungen und psychische Erkrankungen wie z.B. Depressionen, wenn ein Mensch dauerhaft zu wenig oder schlecht schläft."
+        },
+        {
+            "question": "Wie viel Schlaf braucht ein Mensch, um gesund und leistungsfähig zu bleiben?",
+            "answers": [
+                "a) 8 Stunden",
+                "b) 6-9 Stunden, wobei alte Menschen weniger Schlaf brauchen als junge",
+                "c) individuell 4-10 Stunden, abhängig vom Alter und der Situation"
+            ],
+            "correct_answer_index": 2,
+            "explanation": "Antwort c stimmt. Das Schlafbedürfnis ist sehr individuell und kann zwischen 4 und 10 Stunden pro Nacht liegen. Zudem verändert es sich im Laufe des Lebens. Während Kinder und Jugendliche mehr Schlaf brauchen, benötigen ältere Menschen häufig weniger. Auch besondere Situationen, wie z.B. Krankheit oder Stress, wirken sich auf das aktuelle Schlafbedürfnis aus."
+        },
+        {
+            "question": "Was bedeutet “flatten the curve”?",
+            "answers": [
+                "a) Es bedeutet Maßnahmen zu ergreifen, um damit Neuansteckungen zu verlangsamen",
+                "b) Es bedeutet Neuansteckungen komplett zu verhindern"
+            ],
+            "correct_answer_index": 0,
+            "explanation": "Antwort a ist richtig. Mit “flatten the curve” auf deutsch “Die Kurve abflachen” ist gemeint den rasanten Anstieg der Corona-Infektionen zu verlangsamen. Sonst ist der Ansturm auf die Krankenhäuser zu groß und es können nicht mehr alle Menschen behandelt werden. Deshalb soll jeder Mensch Maßnahmen ergreifen, um sich und andere zu schützen. Zum Beispiel sich erstmal nicht mit Freunden treffen."
         }
 
     ]

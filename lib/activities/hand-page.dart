@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
 import '../model/activity.dart';
@@ -25,19 +26,14 @@ class HandPage extends StatelessWidget {
                       model.stop();
                     },
                   ),
-                  RaisedButton(
-                    child: Text("Erledigt"),
-                    onPressed: () {
-                      ScopedModel.of<MainModel>(context).addActivity(
-                        Activity(
-                            activity: Activities.washhands,
-                            healthscore: 20,
-                            hygienescore: 40,
-                            psychscore: 20),
-                      );
-                      //model.visibleIcon(true);
-                      ScopedModel.of<MainModel>(context).setVisibleHandIcon(true);
-                    },
+                  DoneButton(
+                    activityToAdd: Activity(
+                        activity: Activities.washhands,
+                        healthscore: 20,
+                        hygienescore: 40,
+                        psychscore: 20),
+                    onTap: () => ScopedModel.of<MainModel>(context)
+                        .setVisibleHandIcon(true),
                   ),
                   RaisedButton(
                     child: Text("Info"),
