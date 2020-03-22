@@ -17,7 +17,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="Ich mache es richtig, ODER?"
+        android:label="Karlorona"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
