@@ -61,15 +61,15 @@ class DB {
         (activity) => activityData['activity'] == activity.toString());
     return Activity(
         activity: enumedActivity,
-        hygienescore: activityData['currentHealthscore'],
-        healthscore: activityData['currentHygienescore'],
+        hygienescore: activityData['currentHygienescore'],
+        healthscore: activityData['currentHealthscore'],
         psychscore: activityData['currentPsychscore'],
         timestamp: activityData['timestamp']);
   }
 
   Future<Null> insertActivity(Activity activity) async {
-    int currentHealthScore = 0;
     int currentHygienescore = 0;
+    int currentHealthScore = 0;
     int currentPsychscore = 0;
     final Database db = await database;
     List<Map<String, dynamic>> lastActivityData = await getLastActivity();
@@ -79,7 +79,6 @@ class DB {
       currentHealthScore = lastActivity.healthscore;
       currentPsychscore = lastActivity.psychscore;
     }
-
     activity.hygienescore = activity.hygienescore + currentHygienescore < 100
         ? activity.hygienescore += currentHygienescore
         : 100;
@@ -90,7 +89,6 @@ class DB {
     activity.psychscore = activity.psychscore + currentPsychscore < 100
         ? activity.psychscore += currentPsychscore
         : 100;
-
     await db.insert(activityTable, activity.toMap());
   }
 

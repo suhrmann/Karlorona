@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
+import '../model/activity.dart';
 
 class HandPage extends StatelessWidget {
   @override
@@ -27,9 +28,13 @@ class HandPage extends StatelessWidget {
                   RaisedButton(
                     child: Text("Erledigt"),
                     onPressed: () {
-                      model.addActivity();
-                      //ODER
-                      ScopedModel.of<MainModel>(context).addActivity();
+                      ScopedModel.of<MainModel>(context).addActivity(
+                        Activity(
+                            activity: Activities.cardio,
+                            healthscore: 20,
+                            hygienescore: 40,
+                            psychscore: 20),
+                      );
                     },
                   ),
                   RaisedButton(
