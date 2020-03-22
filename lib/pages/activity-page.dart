@@ -3,7 +3,6 @@ import 'package:ich_mache_es_richtig_richtig_oder/activities/activity-start-butt
 import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-
 class ActivityPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,31 +10,31 @@ class ActivityPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("Aktivitäten:"),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                "Aktivitäten",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
-
             ActivityStartButton(
               label: "Infektionsschutz",
               route: '/infect',
-              visibilityStateVariable:
-              null,
+              visibilityStateVariable: null,
               iconfilename: "Icons_Hande_400.png",
               color: Colors.orange,
             ),
             ActivityStartButton(
               label: "Allgemeine Gesundheit",
               route: '/health',
-              visibilityStateVariable:
-              null,
+              visibilityStateVariable: null,
               iconfilename: "Icons_Obst_400px.png",
               color: Colors.lime,
             ),
             ActivityStartButton(
               label: "Psychisches Wohlbefinden",
               route: '/psych',
-              visibilityStateVariable:
-              null,
+              visibilityStateVariable: null,
               iconfilename: "Icons_Schlafen_400px.png",
               color: Colors.teal,
             ),
