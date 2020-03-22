@@ -33,7 +33,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Team
 
-**Entwickler**
+**Entwicklung**
 - Tobias Luderer [@tluderer](https://github.com/tluderer)
 - Simon Uhrmann [@suhrmann](https://github.com/suhrmann)
 - Marcel Zimmermann [@marcellus1978](https://github.com/marcellus1978)
@@ -41,7 +41,7 @@ samples, guidance on mobile development, and a full API reference.
 **Design**
 - Ksenija Perovic
 
-**Fachlicher Input**
+**Konzept**
 - Christiane Terlinden
 - Hannah Uhrmann
 - Luise Wagner
