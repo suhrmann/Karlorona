@@ -38,6 +38,10 @@ class Activity {
     }
   }
 
+  void setVisible(){
+    print("SetVisible");
+  }
+
   double calculateScore() {
     return double.parse(
         ((hygienescore + healthscore + psychscore) / 3).toStringAsFixed(2));

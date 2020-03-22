@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class HygienePage extends StatefulWidget {
 
@@ -9,6 +11,12 @@ class HygienePage extends StatefulWidget {
 }
 
 class _HygienePageState extends State<HygienePage> {
+
+  bool _checkHand = false;
+  bool get checkHand => _checkHand;
+  set checkHand (bool value) {
+    _checkHand = value;
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +35,7 @@ class _HygienePageState extends State<HygienePage> {
                   children: <Widget>[
                     Visibility(
                       child: Icon(Icons.check),
-                      visible: true,
+                      visible: ScopedModel.of<MainModel>(context).getvisibleIcon,
                     ),
                     Text("Hände waschen"),
                   ],
@@ -57,5 +65,7 @@ class _HygienePageState extends State<HygienePage> {
         ),
       ),
     );
+
+
   }
 }

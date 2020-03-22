@@ -30,11 +30,13 @@ class HandPage extends StatelessWidget {
                     onPressed: () {
                       ScopedModel.of<MainModel>(context).addActivity(
                         Activity(
-                            activity: Activities.cardio,
+                            activity: Activities.washhands,
                             healthscore: 20,
                             hygienescore: 40,
                             psychscore: 20),
                       );
+                      //model.visibleIcon(true);
+                      ScopedModel.of<MainModel>(context).setVisibleIcon(true);
                     },
                   ),
                   RaisedButton(
