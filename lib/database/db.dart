@@ -1,4 +1,4 @@
-import 'package:ich_mache_es_richtig_richtig_oder/model/activity.dart';
+import 'package:Karlorona/model/activity.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 

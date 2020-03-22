@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
+import 'package:Karlorona/activities/designed-button.dart';
+import 'package:Karlorona/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
 import '../model/activity.dart';

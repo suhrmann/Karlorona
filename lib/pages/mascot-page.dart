@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
+import 'package:Karlorona/scoped-model/main-model.dart';
 
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:scoped_model/scoped_model.dart';

@@ -1,4 +1,4 @@
-import 'package:ich_mache_es_richtig_richtig_oder/model/activity.dart';
+import 'package:Karlorona/model/activity.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../database/db.dart';
 

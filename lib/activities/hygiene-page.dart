@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/activities/activity-start-button.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
+import 'package:Karlorona/activities/activity-start-button.dart';
+import 'package:Karlorona/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class HygienePage extends StatefulWidget {

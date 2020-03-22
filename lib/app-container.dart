@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/pages/welcome-page.dart';
+import 'package:Karlorona/pages/welcome-page.dart';
 import 'package:scoped_model/scoped_model.dart';
 import './scoped-model/main-model.dart';
 
