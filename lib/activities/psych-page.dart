@@ -21,15 +21,15 @@ class PsychPage extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/dbtester'),
             ),
             RaisedButton(
-              child: Text("Smartphone Desinfektion"),
+              child: Text("Yoga"),
               onPressed: () => Navigator.pushNamed(context, '/quiz'),
             ),
             RaisedButton(
-              child: Text("Niesen / Husten"),
+              child: Text("Alltag strukturieren"),
               onPressed: () => Navigator.pushNamed(context, '/mascot'),
             ),
             RaisedButton(
-              child: Text("Hande nicht im Gesicht"),
+              child: Text("Tagesziel"),
               onPressed: () => Navigator.pushNamed(context, '/mascot'),
             ),
             //Image.asset("assets/images/logo.png"),

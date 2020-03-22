@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HygienePage extends StatelessWidget {
+class HygienePage extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +15,7 @@ class HygienePage extends StatelessWidget {
             Container(
               child: RaisedButton(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Visibility(
                       child: Icon(Icons.check),
@@ -49,5 +49,11 @@ class HygienePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return null;
   }
 }
