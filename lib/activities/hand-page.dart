@@ -45,7 +45,7 @@ class HandPage extends StatelessWidget {
                     onTap: () => ScopedModel.of<MainModel>(context)
                         .setVisibleHandIcon(true),
                   ),
-                  RaisedButton(
+                  DesignedButton(
                     child: Text("Info"),
                     onPressed: () => Navigator.pushNamed(context, '/info_hand'),
                   ),

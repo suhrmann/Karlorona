@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
@@ -24,10 +25,10 @@ class DrinkPage extends StatelessWidget {
                   healthscore: 20,
                   hygienescore: 10,
                   psychscore: 10),
-              onTap: () => ScopedModel.of<MainModel>(context)
-                  .setVisibleDrinkIcon(true),
+              onTap: () =>
+                  ScopedModel.of<MainModel>(context).setVisibleDrinkIcon(true),
             ),
-            RaisedButton(
+            DesignedButton(
               child: Text("Info"),
               onPressed: () => Navigator.pushNamed(context, '/info_drink'),
             ),

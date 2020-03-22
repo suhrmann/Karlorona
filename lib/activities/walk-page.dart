@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -27,7 +28,7 @@ class WalkPage extends StatelessWidget {
               onTap: () =>
                   ScopedModel.of<MainModel>(context).setVisibleWalkIcon(true),
             ),
-            RaisedButton(
+            DesignedButton(
               child: Text("Info"),
               onPressed: () => Navigator.pushNamed(context, '/info_gym'),
             ),

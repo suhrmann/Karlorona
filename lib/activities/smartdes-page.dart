@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
 import '../model/activity.dart';
-
 
 class SmartdesPage extends StatelessWidget {
   @override
@@ -26,11 +26,7 @@ class SmartdesPage extends StatelessWidget {
               onTap: () => ScopedModel.of<MainModel>(context)
                   .setVisibleSmartDesIcon(true),
             ),
-            RaisedButton(
-              child: Text("Info"),
-              onPressed: () => Navigator.pushNamed(context, '/info_sneeze'),
-            ),
-            RaisedButton(
+            DesignedButton(
               child: Text("Info"),
               onPressed: () => Navigator.pushNamed(context, '/info_smartdes'),
             ),

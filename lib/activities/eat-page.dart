@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
@@ -12,7 +13,8 @@ class EatPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Center(
-              child: Text("Achte auf eine ausgewogene Ernährung mit Obst und Gemüse!!"),
+              child: Text(
+                  "Achte auf eine ausgewogene Ernährung mit Obst und Gemüse!!"),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
@@ -22,10 +24,10 @@ class EatPage extends StatelessWidget {
                   healthscore: 20,
                   hygienescore: 0,
                   psychscore: 20),
-              onTap: () => ScopedModel.of<MainModel>(context)
-                  .setVisibleEatIcon(true),
+              onTap: () =>
+                  ScopedModel.of<MainModel>(context).setVisibleEatIcon(true),
             ),
-            RaisedButton(
+            DesignedButton(
               child: Text("Info"),
               onPressed: () => Navigator.pushNamed(context, '/info_eat'),
             ),

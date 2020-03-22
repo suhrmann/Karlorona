@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
@@ -12,7 +13,8 @@ class HandsFacePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Center(
-              child: Text("Versuche Dir so wenig wie möglich in Dein Gesicht zu fassen!!!"),
+              child: Text(
+                  "Versuche Dir so wenig wie möglich in Dein Gesicht zu fassen!!!"),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
@@ -25,7 +27,7 @@ class HandsFacePage extends StatelessWidget {
               onTap: () => ScopedModel.of<MainModel>(context)
                   .setVisibleHandfaceIcon(true),
             ),
-            RaisedButton(
+            DesignedButton(
               child: Text("Info"),
               onPressed: () => Navigator.pushNamed(context, '/info_sneeze'),
             ),
