@@ -1,6 +1,8 @@
 # Ich Mache es richtig, ODER?
 
-Unsere App "Ich Mache es richtig, ODER?" im Rahmen des Hackathon #WirvsVirus im Jahr 2020 gegen COVID-19
+Unsere App *"Ich Mache es richtig, ODER?"* im Rahmen des Hackathon **#WirvsVirus** im Jahr 2020 gegen COVID-19
+
+[![Link to DevPost project](https://raw.githubusercontent.com/suhrmann/IchMacheEsRichtig-ODER/master/DOCS/devpost-project.png)](https://devpost.com/software/ich-mache-es-richtig-oder)
 
 
 ### Problem Beschreibung
