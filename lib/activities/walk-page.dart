@@ -20,9 +20,9 @@ class WalkPage extends StatelessWidget {
 
             DoneButton(
               activityToAdd: Activity(
-                  activity: Activities.washhands,
+                  activity: Activities.walk,
                   healthscore: 20,
-                  hygienescore: 40,
+                  hygienescore: 05,
                   psychscore: 20),
               onTap: () =>
                   ScopedModel.of<MainModel>(context).setVisibleWalkIcon(true),
