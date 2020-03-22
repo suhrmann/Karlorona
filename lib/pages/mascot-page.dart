@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
 
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class MascotPage extends StatelessWidget {
   const MascotPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    ScopedModel.of<MainModel>(context).getCurrentWellScore();
     return Flex(
       direction: Axis.vertical,
       children: <Widget>[
@@ -34,31 +37,33 @@ class MascotPage extends StatelessWidget {
           )),
         ),
         Flexible(
-          flex: 2,
-          child: Container(
-            decoration: BoxDecoration(color: Colors.grey),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                LinearPercentIndicator(
-                  width: MediaQuery.of(context).size.width / 2,
-                  animation: true,
-                  lineHeight: 20.0,
-                  animationDuration: 2500,
-                  percent: 0.8,
-                  center: Text("Wohlbefinden: 80.0%"),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
-                  progressColor: Colors.green,
+            flex: 2,
+            child: ScopedModelDescendant<MainModel>(
+                builder: (BuildContext context, Widget child, MainModel model) {
+              return Container(
+                decoration: BoxDecoration(color: Colors.grey),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    LinearPercentIndicator(
+                      width: MediaQuery.of(context).size.width / 2,
+                      animation: true,
+                      lineHeight: 20.0,
+                      animationDuration: 2500,
+                      percent: model.currentWellScore / 100,
+                      center: Text("Wohlbefinden: ${model.currentWellScore}%"),
+                      linearStrokeCap: LinearStrokeCap.roundAll,
+                      progressColor: Colors.green,
+                    ),
+                    CircleAvatar(
+                      minRadius: 35,
+                      backgroundColor: Colors.yellow,
+                      child: Text("Level 5"),
+                    )
+                  ],
                 ),
-                CircleAvatar(
-                  minRadius: 35,
-                  backgroundColor: Colors.yellow,
-                  child: Text("Level 5"),
-                )
-              ],
-            ),
-          ),
-        ),
+              );
+            })),
       ],
     );
   }
