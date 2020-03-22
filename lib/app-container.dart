@@ -60,6 +60,7 @@ class _AppContainerState extends State<AppContainer> {
             onTap: () => navigateTo('/about', context),
           ),
 
+/*
           // DEBUGGING Shit
           Divider(),
           ListTile(
@@ -67,6 +68,7 @@ class _AppContainerState extends State<AppContainer> {
             title: Text('DEBUGGING'),
             onTap: () => navigateTo('/test_page', context),
           ),
+ */
         ],
       ),
     );
