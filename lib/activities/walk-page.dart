@@ -20,13 +20,13 @@ class WalkPage extends StatelessWidget {
               onPressed: () {
                 ScopedModel.of<MainModel>(context).addActivity(
                   Activity(
-                      activity: Activities.washhands,
-                      healthscore: 20,
-                      hygienescore: 40,
-                      psychscore: 20),
+                      activity: Activities.walk,
+                      healthscore: 10,
+                      hygienescore: 0,
+                      psychscore: 10),
                 );
                 //model.visibleIcon(true);
-                ScopedModel.of<MainModel>(context).setVisibleWalkIcon(true);
+                //ScopedModel.of<MainModel>(context).setVisibleWalkIcon(true);
               },
             ),
             RaisedButton(

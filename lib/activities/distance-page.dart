@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
+import 'package:scoped_model/scoped_model.dart';
+import '../model/activity.dart';
 
 class DistancePage extends StatelessWidget {
   @override
@@ -15,7 +18,15 @@ class DistancePage extends StatelessWidget {
             RaisedButton(
               child: Text("Erledigt"),
               onPressed: () {
-
+                ScopedModel.of<MainModel>(context).addActivity(
+                  Activity(
+                      activity: Activities.safetydistance,
+                      healthscore: 20,
+                      hygienescore: 40,
+                      psychscore: 20),
+                );
+                //model.visibleIcon(true);
+                //ScopedModel.of<MainModel>(context).setVisibleHandIcon(true);
               },
             ),
             RaisedButton(
