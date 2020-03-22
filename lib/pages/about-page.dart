@@ -27,9 +27,10 @@ class AboutPage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    'Mitwirkende:',
+                    'Mitwirkende',
                     style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
                   ),
+                  Text(''),
 
                   Text('Entwickler', style: TextStyle(fontWeight: FontWeight.bold)),
                   Text('Tobias Luderer'),
