@@ -12,20 +12,31 @@ class MainModel extends Model with SubModel, DatabaseModel, QuizModel {
   /// Showcase, um die Verwendung des ScopedModels zu demonstrieren
   bool _testValue = false;
   bool _checkHand = false;
+  bool _checkWalk = false;
 
   bool get testValue {
     return _testValue;
   }
 
-  void setVisibleIcon(bool newValue){
+  void setVisibleHandIcon(bool newValue){
     print("SetVisible");
     _checkHand = newValue;
   }
 
-  bool get getvisibleIcon {
+  bool get getvisibleHandIcon {
     print("GetVisible");
-
     return _checkHand;
+    //_checkHand = newValue;
+  }
+
+  void setVisibleWalkIcon(bool newValue){
+    print("SetVisible");
+    _checkWalk = newValue;
+  }
+
+  bool get getvisibleWalkIcon {
+    print("GetVisible");
+    return _checkWalk;
     //_checkHand = newValue;
   }
 

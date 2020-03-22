@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/scoped-model/main-model.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-class HealthPage extends StatelessWidget {
+class HealthPage extends StatefulWidget {
+
+  const HealthPage({ Key key }) : super(key: key);
+
+  @override
+  _HealthPageState createState() => _HealthPageState();
+}
+
+class _HealthPageState extends State<HealthPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,11 +21,22 @@ class HealthPage extends StatelessWidget {
               child: Text("Allgemeine Gesundheit:"),
             ),
 
-            /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
-            RaisedButton(
-              child: Text("Spaziergang"),
-              onPressed: () => Navigator.pushNamed(context, '/walk'),
+            Container(
+              child: RaisedButton(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Visibility(
+                      child: Icon(Icons.check),
+                      visible: ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
+                    ),
+                    Text("Spaziergang"),
+                  ],
+                ),
+                onPressed: () => Navigator.pushNamed(context, '/walk'),
+              ),
             ),
+            /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             RaisedButton(
               child: Text("Kraftübungen"),
               onPressed: () => Navigator.pushNamed(context, '/gym'),
