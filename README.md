@@ -44,4 +44,7 @@ samples, guidance on mobile development, and a full API reference.
 **Fachlicher Input**
 - Christiane Terlinden
 - Hannah Uhrmann
+- Luise Wagner
+- Linda Waitz
 - Lars Weidner
+- Marcel Zimmermann
