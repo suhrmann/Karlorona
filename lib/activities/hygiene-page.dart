@@ -52,14 +52,14 @@ class _HygienePageState extends State<HygienePage> {
               route: '/sneeze',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleSneezeIcon,
-              iconfilename: "Icons_Obst.png",
+              iconfilename: "Icons_Handy_400px.png",
             ),
             ActivityStartButton(
               label: "Nicht ins Gesicht fassen",
               route: '/handsface',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleHandfaceIcon,
-              iconfilename: "Icons_Schlafen.png",
+              iconfilename: "Icons_Handy_400px.png",
             ),
           ],
         ),

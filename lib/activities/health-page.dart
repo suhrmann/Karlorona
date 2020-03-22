@@ -28,49 +28,49 @@ class _HealthPageState extends State<HealthPage> {
               route: '/walk',
               visibilityStateVariable:
               ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
-              iconfilename: "Icons_Hande.png",
+              iconfilename: "Icons_Abstand_400px.png",
             ),
             ActivityStartButton(
               label: "Kraftübungen",
               route: '/gym',
               visibilityStateVariable:
               ScopedModel.of<MainModel>(context).getVisibleGymIcon,
-              iconfilename: "Icons_Abstand.png",
+              iconfilename: "Icons_Abstand_400px.png",
             ),
             ActivityStartButton(
               label: "Ausdauerübungen",
               route: '/run',
               visibilityStateVariable:
               ScopedModel.of<MainModel>(context).getVisibleRunIcon,
-              iconfilename: "Icons_Handy.png",
+              iconfilename: "Icons_Abstand_400px.png",
             ),
             ActivityStartButton(
               label: "Schlafen",
               route: '/sleep',
               visibilityStateVariable:
               ScopedModel.of<MainModel>(context).getVisibleSleepIcon,
-              iconfilename: "Icons_Obst.png",
+              iconfilename: "Icons_Schlafen_400px.png",
             ),
             ActivityStartButton(
               label: "Lüften",
               route: '/ventilate',
               visibilityStateVariable:
               ScopedModel.of<MainModel>(context).getVisibleVentilateIcon,
-              iconfilename: "Icons_Schlagen.png",
+              iconfilename: "Icons_Obst_400px.png",
             ),
             ActivityStartButton(
               label: "Trinken",
               route: '/drink',
               visibilityStateVariable:
               ScopedModel.of<MainModel>(context).getVisibleDrinkIcon,
-              iconfilename: "Icons_Obst.png",
+              iconfilename: "Icons_Obst_400px.png",
             ),
             ActivityStartButton(
               label: "Obst / Gemüse essen",
               route: '/eat',
               visibilityStateVariable:
               ScopedModel.of<MainModel>(context).getVisibleEatIcon,
-              iconfilename: "Icons_Schlagen.png",
+              iconfilename: "Icons_Obst_400px.png",
             ),
 
 
