@@ -11,6 +11,7 @@ class HygienePage extends StatefulWidget {
 }
 
 class _HygienePageState extends State<HygienePage> {
+  Color buttonColor = Colors.orange;
   bool _checkHand = false;
   bool get checkHand => _checkHand;
   set checkHand(bool value) {
@@ -32,6 +33,7 @@ class _HygienePageState extends State<HygienePage> {
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getvisibleHandIcon,
               iconfilename: "Icons_Hande_400.png",
+              color: buttonColor,
             ),
             ActivityStartButton(
               label: "Sicherheitsabstand",
@@ -39,6 +41,7 @@ class _HygienePageState extends State<HygienePage> {
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleDistanceIcon,
               iconfilename: "Icons_Abstand_400px.png",
+              color: buttonColor,
             ),
             ActivityStartButton(
               label: "Smartphone Desinfektion",
@@ -46,6 +49,7 @@ class _HygienePageState extends State<HygienePage> {
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleSmartDesIcon,
               iconfilename: "Icons_Handy_400px.png",
+              color: buttonColor,
             ),
             ActivityStartButton(
               label: "Niesen / Husten",
@@ -53,6 +57,7 @@ class _HygienePageState extends State<HygienePage> {
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleSneezeIcon,
               iconfilename: "Icons_Handy_400px.png",
+              color: buttonColor,
             ),
             ActivityStartButton(
               label: "Nicht ins Gesicht fassen",
@@ -60,6 +65,7 @@ class _HygienePageState extends State<HygienePage> {
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleHandfaceIcon,
               iconfilename: "Icons_Handy_400px.png",
+              color: buttonColor,
             ),
           ],
         ),

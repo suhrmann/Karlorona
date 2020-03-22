@@ -5,12 +5,15 @@ class ActivityStartButton extends StatelessWidget {
   String label;
   String route;
   String iconfilename;
+  Color color;
 
-  ActivityStartButton(
-      {this.visibilityStateVariable,
-      this.label,
-      this.route,
-      this.iconfilename});
+  ActivityStartButton({
+    this.visibilityStateVariable,
+    this.label,
+    this.route,
+    this.iconfilename,
+    this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class ActivityStartButton extends StatelessWidget {
               child: RaisedButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
-                color: Colors.green,
+                color: color,
                 onPressed: () => Navigator.pushNamed(context, route),
                 child: Container(
                   child: Row(
