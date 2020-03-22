@@ -20,7 +20,7 @@ class DistancePage extends StatelessWidget {
                   activity: Activities.safetydistance,
                   healthscore: 20,
                   hygienescore: 40,
-                  psychscore: 20),
+                  psychscore: 0),
               onTap: () => null,
             ),
 

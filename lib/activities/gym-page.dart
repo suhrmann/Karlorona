@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
+import 'package:scoped_model/scoped_model.dart';
+import '../scoped-model/main-model.dart';
 import '../model/activity.dart';
 
 class GymPage extends StatelessWidget {
@@ -15,11 +17,12 @@ class GymPage extends StatelessWidget {
             ),
             DoneButton(
               activityToAdd: Activity(
-                  activity: Activities.exercise,
+                  activity: Activities.eatVeggies,
                   healthscore: 20,
                   hygienescore: 0,
-                  psychscore: 10),
-              onTap: () => {},
+                  psychscore: 20),
+              onTap: () => ScopedModel.of<MainModel>(context)
+                  .setVisibleGymIcon(true),
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden

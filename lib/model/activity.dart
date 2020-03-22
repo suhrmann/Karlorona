@@ -14,6 +14,7 @@ enum Activities {
   ventilate, //Lüften
   drink,
   eatVeggies, //Obst,Gemüse essen
+  sneeze,
 }
 
 class Activity {

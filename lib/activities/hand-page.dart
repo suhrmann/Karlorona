@@ -31,7 +31,7 @@ class HandPage extends StatelessWidget {
                         activity: Activities.washhands,
                         healthscore: 20,
                         hygienescore: 40,
-                        psychscore: 20),
+                        psychscore: 10),
                     onTap: () => ScopedModel.of<MainModel>(context)
                         .setVisibleHandIcon(true),
                   ),

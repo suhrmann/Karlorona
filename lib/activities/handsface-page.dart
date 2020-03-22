@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
+import 'package:scoped_model/scoped_model.dart';
+import '../scoped-model/main-model.dart';
+import '../model/activity.dart';
 
 class HandsFacePage extends StatelessWidget {
   @override
@@ -12,11 +16,14 @@ class HandsFacePage extends StatelessWidget {
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
-            RaisedButton(
-              child: Text("Erledigt"),
-              onPressed: () {
-
-              },
+            DoneButton(
+              activityToAdd: Activity(
+                  activity: Activities.touchface,
+                  healthscore: 20,
+                  hygienescore: 20,
+                  psychscore: 10),
+              onTap: () => ScopedModel.of<MainModel>(context)
+                  .setVisibleHandfaceIcon(true),
             ),
             RaisedButton(
               child: Text("Info"),
