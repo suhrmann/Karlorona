@@ -17,7 +17,7 @@ class DoneButton extends StatelessWidget {
         ScopedModel.of<MainModel>(context).addActivity(activityToAdd);
         //model.visibleIcon(true);
         onTap();
-        Navigator.pop(context);
+        Navigator.pushReplacementNamed(context, '/');
       },
     );
   }

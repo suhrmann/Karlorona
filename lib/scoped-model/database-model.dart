@@ -7,9 +7,14 @@ mixin DatabaseModel on Model {
   double _currentWellScore = 0;
   bool _isFirstStartup;
   String _username = "";
+  bool _loadingWellScore;
 
   bool get isFirstStartup {
     return _isFirstStartup;
+  }
+
+  bool get isLoadingWellScore {
+    return _loadingWellScore;
   }
 
   String get username {
@@ -72,12 +77,15 @@ mixin DatabaseModel on Model {
   }
 
   getCurrentWellScore() async {
+    _loadingWellScore = true;
+    notifyListeners();
     Activity lastActivity = await getLast();
     if (lastActivity == null) {
       _currentWellScore = 0;
     } else {
       _currentWellScore = lastActivity.calculateScore();
     }
+    _loadingWellScore = false;
     notifyListeners();
   }
 }
