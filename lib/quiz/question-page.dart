@@ -15,17 +15,31 @@ class QuestionPage extends StatelessWidget {
       child: ListView(
         shrinkWrap: true,
         children: <Widget>[
+
+          // Question
           Container(
-            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-            alignment: Alignment.center,
-            child: Title(
-              color: Colors.black,
-              child: Text(
-                question,
-                style: TextStyle(fontWeight: FontWeight.bold),
+            margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+            child: Card(
+              color: Colors.blue[100],
+              child: InkWell(
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        question,
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  )
+                ),
               ),
             ),
           ),
+
           AnswerForm(
             answers: answers,
             correctAnswerIndex: correctAnswerIndex,
