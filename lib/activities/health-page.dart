@@ -32,7 +32,7 @@ class _HealthPageState extends State<HealthPage> {
               route: '/walk',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
-              iconfilename: "Icons_Sport_400px.png",
+              iconfilename: "Icons_Sport_px.png",
               color: buttonColor,
             ),
             ActivityStartButton(
@@ -40,7 +40,7 @@ class _HealthPageState extends State<HealthPage> {
               route: '/gym',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleGymIcon,
-              iconfilename: "Icons_Sport_400px.png",
+              iconfilename: "Icons_Sport_px.png",
               color: buttonColor,
             ),
             ActivityStartButton(
@@ -48,7 +48,7 @@ class _HealthPageState extends State<HealthPage> {
               route: '/run',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleRunIcon,
-              iconfilename: "Icons_Sport_400px.png",
+              iconfilename: "Icons_Sport_px.png",
               color: buttonColor,
             ),
             ActivityStartButton(
