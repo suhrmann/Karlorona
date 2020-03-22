@@ -6,8 +6,11 @@ import '../model/activity.dart';
 class DoneButton extends StatelessWidget {
   final Activity activityToAdd;
   final Function onTap;
+  Color color;
 
-  DoneButton({this.activityToAdd, this.onTap});
+  DoneButton({this.activityToAdd, this.onTap, this.color}) {
+    if (this.color == null) this.color = Colors.yellow[200];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,7 @@ class DoneButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 2,
       child: RaisedButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        color: Colors.yellow[200],
+        color: color,
         onPressed: () async {
           await ScopedModel.of<MainModel>(context).addActivity(activityToAdd);
           //model.visibleIcon(true);
