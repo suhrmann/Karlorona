@@ -47,6 +47,11 @@ class _AnswerFormState extends State<AnswerForm> {
   }
 
   answerSelected(int selectedAnswerIndex) {
+    if(_answerGiven) {
+      // Answere already given -> do nothing
+      return;
+    }
+
     // Store selected answer
     setState(() {
       _selectedAnswer = selectedAnswerIndex;
@@ -128,6 +133,7 @@ class _AnswerFormState extends State<AnswerForm> {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+
             GridView.count(
               shrinkWrap: true,
               crossAxisCount: 2,
@@ -135,21 +141,20 @@ class _AnswerFormState extends State<AnswerForm> {
               children: _buildAnswerButtons(widget.answers),
             ),
 
-          (_answerGiven
-              ? RaisedButton(
-                shape: new RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(20.0),
-                ),
-                child: Text(
-                  'Erklärung anzeigen',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white),
-                ),
-                color: Colors.blue[100],
-                onPressed: () => showAnswereDetailsDialog()
-              )
-              : Container()
-          ),
+            (_answerGiven
+                ? RaisedButton(
+                  shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(20.0),
+                  ),
+                  child: Text(
+                    'Erklärung anzeigen',
+                    textAlign: TextAlign.center,
+                  ),
+                  color: Colors.blue[100],
+                  onPressed: () => showAnswereDetailsDialog()
+                )
+                : Container()
+            ),
 
             ScopedModelDescendant<MainModel>(
                 builder: (BuildContext context, Widget child, MainModel model) {
@@ -172,6 +177,7 @@ class _AnswerFormState extends State<AnswerForm> {
                     )
                   : Container());
             })
+
           ],
         ),
       ),
