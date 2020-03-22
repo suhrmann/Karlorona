@@ -33,8 +33,8 @@ class _QuizWidgetState extends State<QuizWidget> {
 
   @override
   Widget build(BuildContext context) {
-    Future<String> questions =
-        DefaultAssetBundle.of(context).loadString('assets/questions.json');
+    Future<String> questions = DefaultAssetBundle.of(context).loadString('assets/questions.json');
+
     return FutureBuilder(
       future: questions,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -44,6 +44,7 @@ class _QuizWidgetState extends State<QuizWidget> {
           List<QuestionPage> questionFlow = _buildQuestionFlow(decodedData);
           ScopedModel.of<MainModel>(context)
               .updateQuestionFlowLength(questionFlow.length);
+
           return Container(
             child: ScopedModelDescendant<MainModel>(
                 builder: (BuildContext context, Widget child, MainModel model) {

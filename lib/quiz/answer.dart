@@ -9,12 +9,16 @@ class AnswerForm extends StatefulWidget {
   AnswerForm({this.answers, this.correctAnswerIndex});
   @override
   _AnswerFormState createState() => _AnswerFormState();
+
 }
 
 class _AnswerFormState extends State<AnswerForm> {
   int _selectedAnswer;
-  Color _selectedColor = Colors.blue;
-  Color _unselectedColor = Colors.grey[300];
+  bool _answerGiven = false;
+
+  Color UNSELECTED_COLOR = Colors.grey[800];
+  Color CORRECT_ANSWERE_COLOR = Colors.green;
+  Color WRONG_ANSWERE_COLOR = Colors.red;
 
   _buildAnswerButtons(List<String> answers) {
     List<Widget> answerButtons = [];
@@ -23,16 +27,17 @@ class _AnswerFormState extends State<AnswerForm> {
       (index) => Container(
         padding: EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 20),
         child: RaisedButton(
+          shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(20.0),
+          ),
           child: Text(
             answers[index],
             textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white),
           ),
-          color: _selectedAnswer == index ? _selectedColor : _unselectedColor,
+          color: getColor(index),
           onPressed: () {
-            setState(() {
-              _selectedAnswer = index;
-              print("$index");
-            });
+            answerSelected(index);
           },
         ),
       ),
@@ -40,28 +45,48 @@ class _AnswerFormState extends State<AnswerForm> {
     return answerButtons;
   }
 
-  SnackBar _snackBar({bool success}) {
-    return success
-        ? SnackBar(
-            content: Row(
-              children: <Widget>[
-                Icon(Icons.check),
-                SizedBox(width: 20),
-                Text("Korrekt!"),
-              ],
-            ),
-            duration: Duration(seconds: 1),
-          )
-        : SnackBar(
-            content: Row(
-              children: <Widget>[
-                Icon(Icons.warning),
-                SizedBox(width: 20),
-                Text("Falsch!"),
-              ],
-            ),
-            duration: Duration(seconds: 1),
-          );
+  answerSelected(int selectedAnswerIndex) {
+    // Store selected answer
+    setState(() {
+      _selectedAnswer = selectedAnswerIndex;
+      print("$selectedAnswerIndex");
+    });
+    setState(() {
+      _answerGiven = true;
+      print("answer given: $_answerGiven");
+    });
+
+    print('Antwort #${this._selectedAnswer}, correct: ${widget.correctAnswerIndex} - answerGiven: ${_answerGiven}');
+  }
+
+  Color getColor(int answerIndex) {
+    // No answer given
+    if(!_answerGiven) {
+      // No answer given yet
+      return UNSELECTED_COLOR;
+    }
+
+    // Answered
+    if(answerIndex == widget.correctAnswerIndex) {
+      // This is the correct answer
+      return animatedRightAnswer();
+    }
+    else if(answerIndex == this._selectedAnswer) {
+      // Note the correct, but selected answere -> WRONG
+      return animatedWrongAnswer();
+    }
+    else {
+      // Neither correct nor selected -> Nothing changed
+      return UNSELECTED_COLOR;
+    }
+  }
+
+  animatedRightAnswer() {
+    return CORRECT_ANSWERE_COLOR;
+  }
+
+  animatedWrongAnswer() {
+    return WRONG_ANSWERE_COLOR;
   }
 
   @override
@@ -70,40 +95,75 @@ class _AnswerFormState extends State<AnswerForm> {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+
             GridView.count(
               shrinkWrap: true,
               crossAxisCount: 2,
               scrollDirection: Axis.vertical,
               children: _buildAnswerButtons(widget.answers),
             ),
-/*             Wrap(
-              alignment: WrapAlignment.spaceBetween,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: _buildAnswerButtons(widget.answers),
-            ), */
+
+            (_answerGiven ? RaisedButton(
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(20.0),
+              ),
+              child: Text(
+                'Details zur Antwort',
+                textAlign: TextAlign.center,
+              ),
+              color: Colors.blue[100],
+              onPressed: () {},
+            ) : Container()),
+/*
+            (_answerGiven
+                ? AlertDialog(
+                    title: Text('Beschreibung'),
+                    content: SingleChildScrollView(
+                      child: ListBody(
+                        children: <Widget>[
+                          Text('You will never be satisfied.'),
+                          Text('You\’re like me. I’m never satisfied.'),
+                        ],
+                      ),
+                    )
+                  )
+                  : Container()
+            ),
+*/
             ScopedModelDescendant<MainModel>(
-                builder: (BuildContext context, Widget child, MainModel model) {
-              return RaisedButton(
-                child: Text("Beantworten"),
-                onPressed: () {
-                  if (_selectedAnswer == widget.correctAnswerIndex) {
-                    Scaffold.of(context).showSnackBar(_snackBar(success: true));
-                    if (model.currentQuizPage + 1 < model.questionFlowLength) {
-                      _selectedAnswer = null;
-                      model.incrementCurrentQuizPage();
-                    } else {
-                      //Handle last Quiz page
-                    }
-                  } else {
-                    Scaffold.of(context)
-                        .showSnackBar(_snackBar(success: false));
-                  }
-                },
-              );
-            }),
+              builder: (BuildContext context, Widget child, MainModel model) {
+                  // Next question button
+                return (_answerGiven ? RaisedButton(
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(20.0),
+                    ),
+                    child: Text(
+                      'Nächste Frage',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    color: Colors.blue,
+                    onPressed: () {
+                      nextQuestion(model);
+                    },
+                  ) : Container())
+                ;
+              }
+            )
+
           ],
         ),
       ),
     );
+  }
+
+  void nextQuestion(model) {
+
+    // Reset variables
+    _selectedAnswer = null;
+    _answerGiven = false;
+
+    // Next page
+    model.incrementCurrentQuizPage();
   }
 }
