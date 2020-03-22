@@ -15,6 +15,7 @@ class HygienePage extends StatelessWidget {
             Container(
               child: RaisedButton(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Visibility(
                       child: Icon(Icons.check),
