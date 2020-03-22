@@ -38,6 +38,7 @@ class _HygienePageState extends State<HygienePage> {
               route: '/distance',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleDistanceIcon,
+              iconfilename: "Icons_Abstand.png",
             ),
             ActivityStartButton(
               label: "Smartphone Desinfektion",
