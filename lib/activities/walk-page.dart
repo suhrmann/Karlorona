@@ -26,7 +26,7 @@ class WalkPage extends StatelessWidget {
                       psychscore: 10),
                 );
                 //model.visibleIcon(true);
-                //ScopedModel.of<MainModel>(context).setVisibleWalkIcon(true);
+                ScopedModel.of<MainModel>(context).setVisibleWalkIcon(true);
               },
             ),
             RaisedButton(
