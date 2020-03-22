@@ -44,12 +44,13 @@ dev_dependencies:
 flutter_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/images/logo_head.png"
+  image_path: "assets/images/app_icon.png"
 
 # The following section is specific to Flutter.
 flutter:
   assets:
     - assets/images/
+    - assets/images/kater/
     - assets/sounds/
     - assets/questions.json
   # The following line ensures that the Material Icons font is
