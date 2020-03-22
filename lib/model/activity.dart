@@ -47,9 +47,9 @@ class Activity {
     return {
       'timestamp': timestamp,
       'activity': activity.toString(),
-      'hygienescore': hygienescore,
-      'healthscore': healthscore,
-      'psychscore': psychscore,
+      'currentHygienescore': hygienescore,
+      'currentHealthscore': healthscore,
+      'currentPsychscore': psychscore,
     };
   }
 }

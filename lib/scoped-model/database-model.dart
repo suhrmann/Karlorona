@@ -4,7 +4,7 @@ import '../database/db.dart';
 
 /// Wird von MainModel "importiert"
 mixin DatabaseModel on Model {
-  Future<bool> addRow() async {
+  Future<bool> addActivity() async {
     await DB.db.insertActivity(Activity(
         activity: Activities.cardio,
         hygienescore: 40,
@@ -19,5 +19,9 @@ mixin DatabaseModel on Model {
 
   Future retrieveData2() async {
     return await DB.db.getActivitiesOfType(Activities.cardio);
+  }
+
+  Future getLast() async {
+    return await DB.db.getLastActivity();
   }
 }

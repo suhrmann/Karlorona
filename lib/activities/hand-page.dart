@@ -26,7 +26,11 @@ class HandPage extends StatelessWidget {
                   ),
                   RaisedButton(
                     child: Text("Erledigt"),
-                    onPressed: () {},
+                    onPressed: () {
+                      model.addActivity();
+                      //ODER
+                      ScopedModel.of<MainModel>(context).addActivity();
+                    },
                   ),
                   RaisedButton(
                     child: Text("Info"),
