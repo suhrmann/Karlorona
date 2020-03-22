@@ -19,6 +19,8 @@ class _WelcomePageState extends State<WelcomePage>
   double dropdownMargin = 20.0;
   Color welcomeColor = Colors.grey;
 
+  TextEditingController _nameTextController = TextEditingController();
+
   String dropdownValue;
 
   Timer timer1;
@@ -61,6 +63,7 @@ class _WelcomePageState extends State<WelcomePage>
 
   @override
   Widget build(BuildContext context) {
+    _nameTextController.text = "";
     _controllerText.forward();
     return Container(
       child: ScopedModelDescendant<MainModel>(
@@ -98,7 +101,7 @@ class _WelcomePageState extends State<WelcomePage>
                   child: Title(
                     color: Theme.of(context).accentColor,
                     child: Text(
-                      "test",
+                      "Bitte gib deinen Namen ein!",
                       style: TextStyle(
                         color: welcomeColor,
                         fontWeight: FontWeight.w400,
@@ -112,47 +115,23 @@ class _WelcomePageState extends State<WelcomePage>
               FadeTransition(
                 opacity: _animationDropdown,
                 child: AnimatedContainer(
-                  duration: Duration(seconds: 1),
-                  curve: Curves.decelerate,
-                  margin: EdgeInsets.all(dropdownMargin),
-                  alignment: Alignment.center,
-                  child: DropdownButton<String>(
-                    value: dropdownValue,
-                    icon: Icon(Icons.arrow_downward),
-                    iconSize: 24,
-                    elevation: 16,
-                    style: TextStyle(color: Colors.deepPurple),
-                    underline: Container(
-                      height: 2,
-                      color: Colors.deepPurpleAccent,
-                    ),
-                    onChanged: (String newValue) {
-                      setState(() {
-                        dropdownValue = newValue;
-                        newValue == 'English'
-                            ? chosenLanguage = "en"
-                            : chosenLanguage = "de";
-                      });
-                    },
-                    items: <String>[
-                      'English',
-                      'German',
-                    ].map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                  ),
-                  //, style: TextStyle,),
-                ),
+                    duration: Duration(seconds: 1),
+                    curve: Curves.decelerate,
+                    margin: EdgeInsets.all(dropdownMargin),
+                    alignment: Alignment.center,
+                    child: TextField(
+                      controller: _nameTextController,
+                    )),
+                //, style: TextStyle,),
               ),
               Container(
                 child: FractionallySizedBox(
                   widthFactor: 0.5,
-                  child: dropdownValue != null
+                  child: _nameTextController.text != null
                       ? RaisedButton(
                           onPressed: () async {
+                            await model.changeFirstStartupState(false);
+                            await model.addName(_nameTextController.text);
                             Navigator.pushNamed(context, '/');
                           },
                           child: Text("Los!"),

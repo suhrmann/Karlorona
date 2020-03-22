@@ -6,8 +6,8 @@ import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
 
 class SecondPage extends StatelessWidget {
-
-  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+      FlutterLocalNotificationsPlugin();
 
   Future<void> _showNotification() async {
     var androidPlatformChannelSpecifics = AndroidNotificationDetails(
@@ -23,12 +23,12 @@ class SecondPage extends StatelessWidget {
 
   Future<void> _scheduleNotification() async {
     var scheduledNotificationDateTime =
-    DateTime.now().add(Duration(seconds: 5));
-    var androidPlatformChannelSpecifics =
-    AndroidNotificationDetails('your other channel id',
-        'your other channel name', 'your other channel description');
-    var iOSPlatformChannelSpecifics =
-    IOSNotificationDetails();
+        DateTime.now().add(Duration(seconds: 5));
+    var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+        'your other channel id',
+        'your other channel name',
+        'your other channel description');
+    var iOSPlatformChannelSpecifics = IOSNotificationDetails();
     NotificationDetails platformChannelSpecifics = NotificationDetails(
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.schedule(
@@ -45,46 +45,43 @@ class SecondPage extends StatelessWidget {
         builder: (BuildContext context, Widget child, MainModel model) {
       return Container(
         child: 1 == 1
-          ? Column(
-          children: <Widget>[
-            Text("Dies ist die zweite Seite!"),
-
-            Row(
-              children: <Widget>[
-                RaisedButton(
-                  child: Text("Play Sound"),
-                  onPressed: () {
-                    model.play("haendewaschsongORF.mp3");
-                  },
-                ),
-                RaisedButton(
-                  child: Text("Stop Sound"),
-                  onPressed: () {
-                    model.stop();
-                  },
-                ),
-              ],
-            ),
-
-            Row(
-              children: <Widget>[
-                RaisedButton(
-                  child: Text("Test Notification"),
-                  onPressed: () {
-                    _showNotification();
-                  },
-                ),
-                RaisedButton(
-                  child: Text("Schedule Notification"),
-                  onPressed: () {
-                    _scheduleNotification();
-                  },
-                ),
-              ],
-            ),
-          ],
-        )
-
+            ? Column(
+                children: <Widget>[
+                  Text("Dies ist die zweite Seite!"),
+                  Row(
+                    children: <Widget>[
+                      RaisedButton(
+                        child: Text("Play Sound"),
+                        onPressed: () {
+                          model.play("haendewaschsongORF.mp3");
+                        },
+                      ),
+                      RaisedButton(
+                        child: Text("Stop Sound"),
+                        onPressed: () {
+                          model.stop();
+                        },
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      RaisedButton(
+                        child: Text("Test Notification"),
+                        onPressed: () {
+                          _showNotification();
+                        },
+                      ),
+                      RaisedButton(
+                        child: Text("Schedule Notification"),
+                        onPressed: () {
+                          _scheduleNotification();
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              )
             : Container(),
       );
     });

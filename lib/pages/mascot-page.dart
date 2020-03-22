@@ -19,7 +19,7 @@ class MascotPage extends StatelessWidget {
             decoration: BoxDecoration(color: Colors.grey),
             child: ListTile(
               title: Text(
-                "Hallo, Kater Karlo!",
+                "Hallo, ${ScopedModel.of<MainModel>(context).username}!",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white),
               ),
@@ -32,7 +32,7 @@ class MascotPage extends StatelessWidget {
               child: GestureDetector(
             child: Image.asset("assets/images/logo.png"),
             onTap: () {
-              print("change page!");
+              Navigator.pushNamed(context, "/activity");
             },
           )),
         ),

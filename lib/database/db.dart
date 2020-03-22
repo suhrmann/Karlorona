@@ -36,8 +36,9 @@ class DB {
         await db.execute(
           '''create table $metaTable (
           id integer primary key autoincrement,
-          timestampLastLogin text not null,
-          level integer not null)''',
+          first_startup integer not_null,
+          name text not_null,
+          level integer not_null)''',
         );
         await db.execute(
           /// Hier sollten die Scores !nach! dem Ausführen der activity protokolliert werden!
@@ -49,11 +50,34 @@ class DB {
           currentHealthscore integer not null,
           currentPsychscore integer not null)''',
         );
+        await db.insert(metaTable, {'first_startup': 1, 'level': 0});
       },
       version: 1,
     );
 
     return database;
+  }
+
+  Future<bool> changeFirstStartupState(bool newValue) async {
+    int updateWith;
+    newValue ? updateWith = 1 : updateWith = 0;
+    final Database db = await database;
+    db.update(metaTable, {'first_startup': updateWith}, where: 'id = 1');
+    return true;
+  }
+
+  updateName(String name) async {
+    final Database db = await database;
+    db.update(metaTable, {'name': name}, where: 'id = 1');
+    return true;
+  }
+
+  Future<bool> isFirstStartup() async {
+    final Database db = await database;
+    List<Map<String, dynamic>> lastRow =
+        await db.rawQuery('SELECT * FROM $metaTable ORDER BY id DESC LIMIT 1;');
+    if (lastRow[0]['first_startup'] == 0) return false;
+    return true;
   }
 
   Activity convertDataToActivity(Map<String, dynamic> activityData) {
@@ -118,5 +142,11 @@ class DB {
       return convertDataToActivity(activity);
     }).toList();
     return activities;
+  }
+
+  Future<Null> getMeta() async {
+    final db = await database;
+    List<Map<String, dynamic>> response = await db.query(metaTable);
+    print(response);
   }
 }
