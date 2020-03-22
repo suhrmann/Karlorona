@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../scoped-model/main-model.dart';
@@ -18,17 +19,18 @@ class HandPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     child: Text(
                       "Bitte wasche Deine Hände für mindestens 20 Sekunden!",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                   //Text("Bitte wasche Deine Hände für mindestens 20 Sekunden!"),
-                  RaisedButton(
+                  DesignedButton(
                     child: Text("Play Sound"),
                     onPressed: () {
                       model.play("haendewaschsongORF.mp3");
                     },
                   ),
-                  RaisedButton(
+                  DesignedButton(
                     child: Text("Stop Sound"),
                     onPressed: () {
                       model.stop();
