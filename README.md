@@ -1,6 +1,8 @@
 # Ich Mache es richtig, ODER?
 
-Unsere App "Ich Mache es richtig, ODER?" im Rahmen des Hackathon #WirvsVirus im Jahr 2020 gegen COVID-19
+Unsere App *"Ich Mache es richtig, ODER?"* im Rahmen des Hackathon **#WirvsVirus** im Jahr 2020 gegen COVID-19
+
+[![Link to DevPost project](https://raw.githubusercontent.com/suhrmann/IchMacheEsRichtig-ODER/master/DOCS/devpost-project.png)](https://devpost.com/software/ich-mache-es-richtig-oder)
 
 
 ### Problem Beschreibung
@@ -33,7 +35,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Team
 
-**Entwickler**
+**Entwicklung**
 - Tobias Luderer [@tluderer](https://github.com/tluderer)
 - Simon Uhrmann [@suhrmann](https://github.com/suhrmann)
 - Marcel Zimmermann [@marcellus1978](https://github.com/marcellus1978)
@@ -41,7 +43,10 @@ samples, guidance on mobile development, and a full API reference.
 **Design**
 - Ksenija Perovic
 
-**Fachlicher Input**
+**Konzept**
 - Christiane Terlinden
 - Hannah Uhrmann
+- Luise Wagner
+- Linda Waitz
 - Lars Weidner
+- Marcel Zimmermann

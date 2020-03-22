@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/designed-button.dart';
 import 'package:ich_mache_es_richtig_richtig_oder/activities/done-button.dart';
@@ -6,7 +8,13 @@ import '../scoped-model/main-model.dart';
 import '../model/activity.dart';
 import 'activity-start-button.dart';
 
-class HandPage extends StatelessWidget {
+class HandPage extends StatefulWidget {
+  @override
+  _HandPageState createState() => _HandPageState();
+}
+
+class _HandPageState extends State<HandPage> {
+  bool _showPraise = false;
   @override
   Widget build(BuildContext context) {
     return ScopedModelDescendant<MainModel>(
@@ -28,6 +36,12 @@ class HandPage extends StatelessWidget {
                     child: Text("Play Sound"),
                     onPressed: () {
                       model.play("haendewaschsongORF.mp3");
+                      Timer timer = Timer(Duration(seconds: 25), () {
+                        model.stop();
+                        setState(() {
+                          _showPraise = true;
+                        });
+                      });
                     },
                   ),
                   DesignedButton(
@@ -50,6 +64,12 @@ class HandPage extends StatelessWidget {
                     child: Text("Info"),
                     onPressed: () => Navigator.pushNamed(context, '/info_hand'),
                   ),
+                  _showPraise
+                      ? Text(
+                          "Sehr gut! Du kannst aufhören!",
+                          style: TextStyle(fontSize: 16),
+                        )
+                      : Container()
                 ],
               )
             : Container(),
