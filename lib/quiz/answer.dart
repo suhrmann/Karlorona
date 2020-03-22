@@ -149,7 +149,6 @@ class _AnswerFormState extends State<AnswerForm> {
                   child: Text(
                     'Erklärung anzeigen',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white),
                   ),
                   color: Colors.blue[100],
                   onPressed: () => showAnswereDetailsDialog()
