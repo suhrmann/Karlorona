@@ -9,33 +9,33 @@ import './app-container.dart';
 import './pages/first-page.dart';
 import './pages/second-page.dart';
 import './pages/database-tester.dart';
-import './pages/init-quiz-page.dart';
 import './pages/mascot-page.dart';
 import './pages/activity-page.dart';
-import './pages/hand-page.dart';
-import './pages/hygiene-page.dart';
-import './pages/info-hand-page.dart';
-import './pages/info-smartdes-page.dart';
-import './pages/smartdes-page.dart';
-import './pages/distance-page.dart';
-import './pages/info-distance-page.dart';
-import './pages/info-sneeze-page.dart';
-import './pages/sneeze-page.dart';
-import './pages/handsface-page.dart';
-import './pages/psych-page.dart';
-import './pages/health-page.dart';
-import './pages/gym-page.dart';
-import './pages/run-page.dart';
-import './pages/walk-page.dart';
-import './pages/drink-page.dart';
-import './pages/eat-page.dart';
-import './pages/sleep-page.dart';
-import './pages/ventilate-page.dart';
-import './pages/info-gym-page.dart';
-import './pages/info-drink-page.dart';
-import './pages/info-eat-page.dart';
-import './pages/info-sleep-page.dart';
-import './pages/info-ventilate-page.dart';
+import './pages/init-quiz-page.dart';
+import './activities/hand-page.dart';
+import './activities/hygiene-page.dart';
+import './activities/info-hand-page.dart';
+import './activities/info-smartdes-page.dart';
+import './activities/smartdes-page.dart';
+import './activities/distance-page.dart';
+import './activities/info-distance-page.dart';
+import './activities/info-sneeze-page.dart';
+import './activities/sneeze-page.dart';
+import './activities/handsface-page.dart';
+import './activities/psych-page.dart';
+import './activities/health-page.dart';
+import './activities/gym-page.dart';
+import './activities/run-page.dart';
+import './activities/walk-page.dart';
+import './activities/drink-page.dart';
+import './activities/eat-page.dart';
+import './activities/sleep-page.dart';
+import './activities/ventilate-page.dart';
+import './activities/info-gym-page.dart';
+import './activities/info-drink-page.dart';
+import './activities/info-eat-page.dart';
+import './activities/info-sleep-page.dart';
+import './activities/info-ventilate-page.dart';
 
 void main() => runApp(IchMacheEsRichtigODER());
 
@@ -66,35 +66,40 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/dbtester': (context) => AppContainer(body: DatabaseTester()),
             '/quiz': (context) => AppContainer(body: InitQuizPage()),
             '/mascot': (context) => AppContainer(body: MascotPage()),
-            '/activity':(context) => AppContainer(body: ActivityPage()),
-            '/infect':(context) => AppContainer(body: HygienePage()),
-            '/health':(context) => AppContainer(body: HealthPage()),
-            '/psych':(context) => AppContainer(body: PsychPage()),
-            '/hand':(context) => AppContainer(body: HandPage()),
-            '/distance':(context) => AppContainer(body: DistancePage()),
-            '/smartdes':(context) => AppContainer(body: SmartdesPage()),
-            '/sneeze':(context) => AppContainer(body: SneezePage()),
-            '/handsface':(context) => AppContainer(body: HandsFacePage()),
-            '/gym':(context) => AppContainer(body: GymPage()),
-            '/run':(context) => AppContainer(body: RunPage()),
-            '/walk':(context) => AppContainer(body: WalkPage()),
-            '/sleep':(context) => AppContainer(body: SleepPage()),
-            '/ventilate':(context) => AppContainer(body: VentilatePage()),
-            '/drink':(context) => AppContainer(body: DrinkPage()),
-            '/eat':(context) => AppContainer(body: EatPage()),
-            '/info_hand':(context) => AppContainer(body: InfoHandPage()),
-            '/info_distance':(context) => AppContainer(body: InfoDistancePage()),
-            '/info_smartdes':(context) => AppContainer(body: InfoSmartdesPage()),
-            '/info_sneeze':(context) => AppContainer(body: InfoSneezePage()),
-            '/info_gym':(context) => AppContainer(body: InfoGymPage()),
+            '/activity': (context) => AppContainer(body: ActivityPage()),
+            '/infect': (context) => AppContainer(body: HygienePage()),
+            '/health': (context) => AppContainer(body: HealthPage()),
+            '/psych': (context) => AppContainer(body: PsychPage()),
+            '/hand': (context) => AppContainer(body: HandPage()),
+            '/distance': (context) => AppContainer(body: DistancePage()),
+            '/smartdes': (context) => AppContainer(body: SmartdesPage()),
+            '/sneeze': (context) => AppContainer(body: SneezePage()),
+            '/handsface': (context) => AppContainer(body: HandsFacePage()),
+            '/gym': (context) => AppContainer(body: GymPage()),
+            '/run': (context) => AppContainer(body: RunPage()),
+            '/walk': (context) => AppContainer(body: WalkPage()),
+            '/sleep': (context) => AppContainer(body: SleepPage()),
+            '/ventilate': (context) => AppContainer(body: VentilatePage()),
+            '/drink': (context) => AppContainer(body: DrinkPage()),
+            '/eat': (context) => AppContainer(body: EatPage()),
+            '/info_hand': (context) => AppContainer(body: InfoHandPage()),
+            '/info_distance': (context) =>
+                AppContainer(body: InfoDistancePage()),
+            '/info_smartdes': (context) =>
+                AppContainer(body: InfoSmartdesPage()),
+            '/info_sneeze': (context) => AppContainer(body: InfoSneezePage()),
+            '/info_gym': (context) => AppContainer(body: InfoGymPage()),
             //'/info_run':(context) => AppContainer(body: InfoDistancePage()),
             //'/info_walk':(context) => AppContainer(body: InfoSmartdesPage()),
-            '/info_sleep':(context) => AppContainer(body: InfoSleepPage()),
-            '/info_ventilate':(context) => AppContainer(body: InfoVentilatePage()),
-            '/info_drink':(context) => AppContainer(body: InfoDrinkPage()),
-            '/info_eat':(context) => AppContainer(body: InfoEatPage()),
+            '/info_sleep': (context) => AppContainer(body: InfoSleepPage()),
+            '/info_ventilate': (context) =>
+                AppContainer(body: InfoVentilatePage()),
+            '/info_drink': (context) => AppContainer(body: InfoDrinkPage()),
+            '/info_eat': (context) => AppContainer(body: InfoEatPage()),
 
-            '/about':(context) => AppContainer(body: AboutPage(),)
+            '/about': (context) => AppContainer(
+                  body: AboutPage(),
+                )
           },
         ));
   }
