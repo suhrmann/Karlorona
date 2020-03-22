@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:ich_mache_es_richtig_richtig_oder/pages/about-page.dart';
+import 'package:ich_mache_es_richtig_richtig_oder/notification-manager.dart';
 
 import 'package:scoped_model/scoped_model.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import './scoped-model/main-model.dart';
 
 import './app-container.dart';
+import './pages/about-page.dart';
 import './pages/first-page.dart';
 import './pages/second-page.dart';
 import './pages/database-tester.dart';
@@ -40,8 +42,20 @@ import './activities/info-ventilate-page.dart';
 void main() => runApp(IchMacheEsRichtigODER());
 
 class IchMacheEsRichtigODER extends StatelessWidget {
+
+  final NotificationManager notificationManager = NotificationManager();
+
+  @override
+  StatelessElement createElement() {
+    return super.createElement();
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    // Init notifications
+    notificationManager.initNotifications(context);
+
     /// ScopedModel wird für Statemanagement verwendet.
     /// Das Widget ScopedModelDescendant<MainModel>
     /// und seine Subwidget können auf den State zugreifen
