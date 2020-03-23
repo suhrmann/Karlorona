@@ -3,11 +3,20 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/suhrmann/Karlorona/total)
 ![GitHub stars](https://img.shields.io/github/stars/suhrmann/Karlorona)
 
-Unsere App *"Ich Mache es richtig, ODER?"* im Rahmen des Hackathon **#WirvsVirus** im Jahr 2020 gegen COVID-19
+Unsere App *"Ich Mache es richtig, ODER?"* im Rahmen des Hackathon **#WirvsVirus** im Jahr 2020 gegen Corona / COVID-19
 
-<a href="https://devpost.com/software/ich-mache-es-richtig-oder" target="_blank">
- <img src="https://raw.githubusercontent.com/suhrmann/IchMacheEsRichtig-ODER/master/DOCS/devpost-project.png" alt="Link to DevPost project">
+[ ![Preview of Karlorona YouTube video](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/link-to-youtube-img%400.1x.jpg) <br>
+Pitchvideo von Karlorona [YouTube]
+](https://youtu.be/XefttHYpjo8)
+
+
+-----
+
+Unsere Dokumentation des Hackathon ist auf <a href="https://devpost.com/software/ich-mache-es-richtig-oder">
+  <img src="https://raw.githubusercontent.com/suhrmann/IchMacheEsRichtig-ODER/master/DOCS/devpost-logo.png" width="200" />
 </a>
+
+-----
 
 | Enter-Screen | Aktivitäten | Über uns |
 |     :---:      |     :---:      |     :---:      |
