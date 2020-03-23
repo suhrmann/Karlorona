@@ -1,8 +1,17 @@
 # Ich Mache es richtig, ODER?
 
+![GitHub All Releases](https://img.shields.io/github/downloads/suhrmann/Karlorona/total)
+![GitHub stars](https://img.shields.io/github/stars/suhrmann/Karlorona)
+
 Unsere App *"Ich Mache es richtig, ODER?"* im Rahmen des Hackathon **#WirvsVirus** im Jahr 2020 gegen COVID-19
 
-[![Link to DevPost project](https://raw.githubusercontent.com/suhrmann/IchMacheEsRichtig-ODER/master/DOCS/devpost-project.png)](https://devpost.com/software/ich-mache-es-richtig-oder)
+<a href="https://devpost.com/software/ich-mache-es-richtig-oder" target="_blank">
+ <img src="https://raw.githubusercontent.com/suhrmann/IchMacheEsRichtig-ODER/master/DOCS/devpost-project.png" alt="Link to DevPost project">
+</a>
+
+| Enter-Screen | Aktivitäten | Über uns |
+|     :---:      |     :---:      |     :---:      |
+| ![](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/Screenshot_1_welcome.png)   | ![](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/Screenshot_2_activites.png)     | ![](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/Screenshot_3_about.png)    |
 
 
 ### Problem Beschreibung
