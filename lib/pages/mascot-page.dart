@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:Karlorona/scoped-model/main-model.dart';
 
@@ -10,8 +12,15 @@ class MascotPage extends StatefulWidget {
 }
 
 class _MascotPageState extends State<MascotPage> {
+
+  var _diceThrow;
+
   @override
   void initState() {
+    setState(() {
+      _diceThrow = Random().nextInt(6);
+    });
+
     ScopedModel.of<MainModel>(context).getCurrentWellScore();
     super.initState();
   }
@@ -50,6 +59,42 @@ class _MascotPageState extends State<MascotPage> {
     );
   }
 
+  Widget _thinkBubble() {
+    // Throw the dice to decide to display thinking-bubble
+    debugPrint('_thinkBubble -> throwDice: $_diceThrow');
+    if(_diceThrow < 5) {
+      return Container();
+    }
+
+    // TODO Make it tap-able to directly go to activty
+    return Stack(
+      children: <Widget>[
+        // thinking bubble
+        Container(
+          width: MediaQuery.of(context).size.width * 0.4,
+          height: MediaQuery.of(context).size.width * 0.3,
+          child: Image.asset('assets/images/think-cloud_1t1.png'),
+        ),
+
+        // Activity icon
+        Container(
+          width: MediaQuery.of(context).size.width * 0.4,
+          height: MediaQuery.of(context).size.width * 0.25,
+          alignment: Alignment.center,
+          child: Container(
+            width: MediaQuery.of(context).size.width * 0.15,
+            child: _thinkBubbleActivityIcon(),
+          ),
+        )
+
+      ]
+    );
+  }
+
+  Widget _thinkBubbleActivityIcon() {
+    return Image.asset('assets/images/icons/Icons_Hande_400.png');
+  }
+
   @override
   Widget build(BuildContext context) {
     return ScopedModelDescendant<MainModel>(
@@ -67,7 +112,7 @@ class _MascotPageState extends State<MascotPage> {
                       decoration: BoxDecoration(color: Colors.grey),
                       child: ListTile(
                         title: Text(
-                          "Hallo, ${model.username}!",
+                          "Hallo ${model.username}!",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ),
@@ -89,16 +134,32 @@ class _MascotPageState extends State<MascotPage> {
                   ),
                   Flexible(
                     flex: 16,
-                    child: Container(
-                      child: GestureDetector(
-                        child: Image.asset(_getRightCat(
-                            ScopedModel.of<MainModel>(context)
-                                .currentWellScore)),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/activity");
-                        },
-                      ),
-                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          alignment: Alignment.center,
+
+                          // Karlorona
+                          child: GestureDetector(
+                            child: Image.asset(_getRightCat(
+                              ScopedModel.of<MainModel>(context)
+                                  .currentWellScore)),
+                            onTap: () {
+                              Navigator.pushNamed(context, "/activity");
+                            },
+                          ),
+                        ),
+
+                        // Think bubble to indicate notifications or todos
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: _thinkBubble(),
+                        )
+
+                      ]
+                    )
                   ),
                   Flexible(
                     flex: 4,
