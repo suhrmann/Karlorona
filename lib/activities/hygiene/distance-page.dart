@@ -18,7 +18,7 @@ class DistancePage extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
                 "Bleib Zuhause!!\nWenn Du raus mußt, halte mindestens einen Abstand von 2 Metern zu anderen Menschen!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center
               ),
             ),            /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(

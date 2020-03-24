@@ -28,7 +28,7 @@ class _HandPageState extends State<HandPage> {
                     child: Text(
                       "Bitte wasche Deine Hände für mindestens 20 Sekunden!",
                       style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),textAlign: TextAlign.center
                     ),
                   ),
                   //Text("Bitte wasche Deine Hände für mindestens 20 Sekunden!"),

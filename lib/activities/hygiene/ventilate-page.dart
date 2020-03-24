@@ -16,7 +16,7 @@ class VentilatePage extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
                 "Lüfte mindestens jede Stunde für 5 Minuten Dein Zimmer!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),textAlign: TextAlign.center
               ),
             ),
 

@@ -7,9 +7,12 @@ class InfoSleepPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Center(
-              child: Text("Schlafen und Schlafrythmus....",textAlign: TextAlign.left,
-                  overflow: TextOverflow.clip),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                  "Schlafen und Schlafrythmus....",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),textAlign: TextAlign.center
+              ),
             ),
           ],
         ),

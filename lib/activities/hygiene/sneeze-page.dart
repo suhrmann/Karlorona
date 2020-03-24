@@ -15,8 +15,8 @@ class SneezePage extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                "Wenn Du Niesen oder Husten mußt, dann benutze nicht Deine Hände, sondern die Armbeuge!!!\nBeim Naseputzen nimm ein Papiertaschentuch!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                "Wenn Du Niesen oder Husten mußt, dann benutze nicht Deine Hände, sondern die Armbeuge!!!\nBeim Naseputzen benutze ein Papiertaschentuch und wirf es in einen Mülleimer mit Deckel!!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),textAlign: TextAlign.center
               ),
             ),
 

@@ -15,8 +15,8 @@ class SmartdesPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                "Desinfiziere bitte Dein Handy oder Tablet!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                "Desinfiziere bitte regelmäßig Dein Handy, Tablet oder PC!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),textAlign: TextAlign.center
               ),
             ),
 
