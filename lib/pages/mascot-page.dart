@@ -60,39 +60,54 @@ class _MascotPageState extends State<MascotPage> {
   }
 
   Widget _thinkBubble() {
-    // Throw the dice to decide to display thinking-bubble
-    debugPrint('_thinkBubble -> throwDice: $_diceThrow');
-    if(_diceThrow < 5) {
-      return Container();
-    }
-
     // TODO Make it tap-able to directly go to activty
-    return Stack(
-      children: <Widget>[
-        // thinking bubble
-        Container(
-          width: MediaQuery.of(context).size.width * 0.4,
-          height: MediaQuery.of(context).size.width * 0.3,
-          child: Image.asset('assets/images/think-cloud_1t1.png'),
-        ),
+    return ScopedModelDescendant<MainModel>(
+      builder: (BuildContext context, Widget child, MainModel model) {
 
-        // Activity icon
-        Container(
-          width: MediaQuery.of(context).size.width * 0.4,
-          height: MediaQuery.of(context).size.width * 0.25,
-          alignment: Alignment.center,
-          child: Container(
-            width: MediaQuery.of(context).size.width * 0.15,
-            child: _thinkBubbleActivityIcon(),
-          ),
-        )
+        debugPrint('_thinkBubble -> throwDice: $_diceThrow');
 
-      ]
+        return _diceThrow < 5
+          ? Container()
+          : GestureDetector( // GestureDetector: On tap -> Open activity
+              onTap: () => _openActivityOfThinkingBubble(),
+              child: Stack( // Stack: Display an icon over the bubble
+                children: <Widget>[
+
+                  // thinking bubble
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    height: MediaQuery.of(context).size.width * 0.3,
+                    child: Image.asset('assets/images/think-cloud_1t1.png'),
+                  ),
+
+                  // Activity icon
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    height: MediaQuery.of(context).size.width * 0.25,
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.15,
+                      child: _thinkBubbleActivityIcon(),
+                    ),
+                  )
+
+                ]
+              )
+        );
+      }
     );
   }
 
+  /// Select and display the icon of the activity.
   Widget _thinkBubbleActivityIcon() {
+    // TODO Implement me!
     return Image.asset('assets/images/icons/Icons_Hande_400.png');
+  }
+
+  /// Thinking bubble was taped, so now open the corresponding activity.
+  _openActivityOfThinkingBubble() {
+    // TODO Implement me! :)
+    print('-> Open Activity {}');
   }
 
   @override
