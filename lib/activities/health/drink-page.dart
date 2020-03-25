@@ -1,3 +1,4 @@
+import 'package:Karlorona/activities/activity-headline.dart';
 import 'package:flutter/material.dart';
 import 'package:Karlorona/activities/designed-button.dart';
 import 'package:Karlorona/activities/done-button.dart';
@@ -14,17 +15,14 @@ class DrinkPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                "Drinke mindestens 1,5 Liter pro Tag!!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+            ActivityHeadline(
+              text: "Trinke mindestens 1,5 Liter pro Tag!!!",
             ),
+
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
               color: Colors.lime,
-                  activityToAdd: Activity(
+              activityToAdd: Activity(
                   activity: Activities.washhands,
                   healthscore: 20,
                   hygienescore: 10,
