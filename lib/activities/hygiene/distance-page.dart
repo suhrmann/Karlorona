@@ -4,6 +4,7 @@ import 'package:Karlorona/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';
+import '../activity-headline.dart';
 import '../activity-start-button.dart';
 
 class DistancePage extends StatelessWidget {
@@ -14,13 +15,10 @@ class DistancePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
 
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                "Bleib Zuhause!!\nWenn Du raus mußt, halte mindestens einen Abstand von 2 Metern zu anderen Menschen!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center
-              ),
-            ),            /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
+            ActivityHeadline(
+              text: "Bleib bitte Zuhause!!\nWenn Du spazieren gehst, halte mindestens einen Abstand von 1,5 Metern zu anderen Menschen!!",
+            ),
+            /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
               color: Colors.orange,
               activityToAdd: Activity(

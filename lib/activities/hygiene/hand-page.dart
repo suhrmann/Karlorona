@@ -6,6 +6,7 @@ import 'package:Karlorona/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';
+import '../activity-headline.dart';
 import '../activity-start-button.dart';
 
 class HandPage extends StatefulWidget {
@@ -23,13 +24,8 @@ class _HandPageState extends State<HandPage> {
         child: 1 == 1
             ? Column(
                 children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    child: Text(
-                      "Bitte wasche Deine Hände für mindestens 20 Sekunden!",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),textAlign: TextAlign.center
-                    ),
+                  ActivityHeadline(
+                    text: "Bitte wasche Deine Hände für mindestens 20 Sekunden!",
                   ),
                   //Text("Bitte wasche Deine Hände für mindestens 20 Sekunden!"),
                   DesignedButton(

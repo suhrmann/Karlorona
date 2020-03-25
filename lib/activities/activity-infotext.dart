@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ActivityHeadline extends StatelessWidget {
+class ActivityInfotext extends StatelessWidget {
   String text;
 
-  ActivityHeadline({this.text});
+  ActivityInfotext({this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class ActivityHeadline extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Text(
         text,
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),textAlign: TextAlign.center
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal),
       ),
     );
   }

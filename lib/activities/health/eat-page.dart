@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:Karlorona/activities/designed-button.dart';
-import 'package:Karlorona/activities/done-button.dart';
+import '../../activities/designed-button.dart';
+import '../../activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';
+import '../activity-headline.dart';
 
 class EatPage extends StatelessWidget {
   @override
@@ -12,12 +13,8 @@ class EatPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                "Achte auf eine ausgewogene Ernährung mit Obst und Gemüse!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+            ActivityHeadline(
+              text: "Achte auf eine ausgewogene Ernährung mit Obst und Gemüse!!",
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
