@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:Karlorona/components/think-bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:Karlorona/scoped-model/main-model.dart';
 
@@ -13,14 +14,8 @@ class MascotPage extends StatefulWidget {
 
 class _MascotPageState extends State<MascotPage> {
 
-  var _diceThrow;
-
   @override
   void initState() {
-    setState(() {
-      _diceThrow = Random().nextInt(6);
-    });
-
     ScopedModel.of<MainModel>(context).getCurrentWellScore();
     super.initState();
   }
@@ -57,57 +52,6 @@ class _MascotPageState extends State<MascotPage> {
         progressColor: color,
       ),
     );
-  }
-
-  Widget _thinkBubble() {
-    // TODO Make it tap-able to directly go to activty
-    return ScopedModelDescendant<MainModel>(
-      builder: (BuildContext context, Widget child, MainModel model) {
-
-        debugPrint('_thinkBubble -> throwDice: $_diceThrow');
-
-        return _diceThrow < 5
-          ? Container()
-          : GestureDetector( // GestureDetector: On tap -> Open activity
-              onTap: () => _openActivityOfThinkingBubble(),
-              child: Stack( // Stack: Display an icon over the bubble
-                children: <Widget>[
-
-                  // thinking bubble
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    height: MediaQuery.of(context).size.width * 0.3,
-                    child: Image.asset('assets/images/think-cloud_1t1.png'),
-                  ),
-
-                  // Activity icon
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    height: MediaQuery.of(context).size.width * 0.25,
-                    alignment: Alignment.center,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.15,
-                      child: _thinkBubbleActivityIcon(),
-                    ),
-                  )
-
-                ]
-              )
-        );
-      }
-    );
-  }
-
-  /// Select and display the icon of the activity.
-  Widget _thinkBubbleActivityIcon() {
-    // TODO Implement me!
-    return Image.asset('assets/images/icons/Icons_Hande_400.png');
-  }
-
-  /// Thinking bubble was taped, so now open the corresponding activity.
-  _openActivityOfThinkingBubble() {
-    // TODO Implement me! :)
-    print('-> Open Activity {}');
   }
 
   @override
@@ -170,7 +114,7 @@ class _MascotPageState extends State<MascotPage> {
                         Positioned(
                           top: 0,
                           right: 0,
-                          child: _thinkBubble(),
+                          child: ThinkBubble(),
                         )
 
                       ]
