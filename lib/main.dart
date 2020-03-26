@@ -75,9 +75,12 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/': (context) => AppContainer(body: MascotPage()),
             '/about': (context) => AppContainer(body: AboutPage()),
             '/secondpage': (context) => AppContainer(body: SecondPage()),
-            '/dbtester': (context) => AppContainer(body: DatabaseTester()),
+
             '/quiz': (context) => AppContainer(body: InitQuizPage()),
+
+            // ACTIVITY pages
             '/activity': (context) => AppContainer(body: ActivityPage()),
+            //activities
             '/infect': (context) => AppContainer(body: HygienePage()),
             '/health': (context) => AppContainer(body: HealthPage()),
             '/psych': (context) => AppContainer(body: PsychPage()),
@@ -93,23 +96,23 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/ventilate': (context) => AppContainer(body: VentilatePage()),
             '/drink': (context) => AppContainer(body: DrinkPage()),
             '/eat': (context) => AppContainer(body: EatPage()),
+
+            // INFO pages
             '/info_hand': (context) => AppContainer(body: InfoHandPage()),
-            '/info_distance': (context) =>
-                AppContainer(body: InfoDistancePage()),
-            '/info_smartdes': (context) =>
-                AppContainer(body: InfoSmartdesPage()),
+            '/info_distance': (context) => AppContainer(body: InfoDistancePage()),
+            '/info_smartdes': (context) => AppContainer(body: InfoSmartdesPage()),
             '/info_sneeze': (context) => AppContainer(body: InfoSneezePage()),
             '/info_gym': (context) => AppContainer(body: InfoGymPage()),
             //'/info_run':(context) => AppContainer(body: InfoDistancePage()),
             //'/info_walk':(context) => AppContainer(body: InfoSmartdesPage()),
             '/info_sleep': (context) => AppContainer(body: InfoSleepPage()),
-            '/info_ventilate': (context) =>
-                AppContainer(body: InfoVentilatePage()),
+            '/info_ventilate': (context) => AppContainer(body: InfoVentilatePage()),
             '/info_drink': (context) => AppContainer(body: InfoDrinkPage()),
             '/info_eat': (context) => AppContainer(body: InfoEatPage()),
 
             // DEBUGGIN
             '/test_page': (context) => AppContainer(body: TestPage()),
+            '/dbtester': (context) => AppContainer(body: DatabaseTester()),
           },
         ));
   }
