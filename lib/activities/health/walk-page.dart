@@ -4,6 +4,7 @@ import 'package:Karlorona/activities/done-button.dart';
 import 'package:Karlorona/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../model/activity.dart';
+import '../activity-headline.dart';
 
 class WalkPage extends StatelessWidget {
   @override
@@ -12,16 +13,10 @@ class WalkPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                "Gehe Spazieren, schnappe frische Luft und genieße die Natur!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+            ActivityHeadline(
+              text: "Gehe Spazieren, schnappe frische Luft und genieße die Natur!!",
             ),
-
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
-
             DoneButton(
               color: Colors.lime,
               activityToAdd: Activity(

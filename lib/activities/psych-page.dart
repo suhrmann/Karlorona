@@ -21,7 +21,7 @@ class PsychPage extends StatelessWidget {
             ),
 
             ActivityStartButton(
-              label: "Spaziergang",
+              label: "Sozialkontakt",
               route: '/social',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getvisibleWalkIcon,

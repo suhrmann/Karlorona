@@ -4,6 +4,7 @@ import 'package:Karlorona/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';
+import '../activity-headline.dart';
 
 class SleepPage extends StatelessWidget {
   @override
@@ -12,12 +13,8 @@ class SleepPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                "Schlafe mindestens 7 Stunden und gehe nicht zu spät ins Bett!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+            ActivityHeadline(
+              text: "Schlafe mindestens 7 Stunden und gehe nicht zu spät ins Bett!!",
             ),
 
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
