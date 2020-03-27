@@ -30,7 +30,7 @@ class PsychPage extends StatelessWidget {
             ),
             ActivityStartButton(
               label: "Medienkonsum",
-              route: '/gym',
+              route: '/medien',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleGymIcon,
               iconfilename: "Icons_Abstand_400px.png",
@@ -38,7 +38,7 @@ class PsychPage extends StatelessWidget {
             ),
             ActivityStartButton(
               label: "Yoga",
-              route: '/run',
+              route: '/yoga',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleRunIcon,
               iconfilename: "Icons_Abstand_400px.png",
@@ -46,7 +46,7 @@ class PsychPage extends StatelessWidget {
             ),
             ActivityStartButton(
               label: "Alltag strukturieren",
-              route: '/sleep',
+              route: '/daystruct',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleSleepIcon,
               iconfilename: "Icons_Schlafen_400px.png",
@@ -54,7 +54,7 @@ class PsychPage extends StatelessWidget {
             ),
             ActivityStartButton(
               label: "Tagesziel",
-              route: '/ventilate',
+              route: '/goal',
               visibilityStateVariable:
                   ScopedModel.of<MainModel>(context).getVisibleVentilateIcon,
               iconfilename: "Icons_Obst_400px.png",

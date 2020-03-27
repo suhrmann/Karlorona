@@ -25,7 +25,7 @@ import './activities/hygiene/sneeze-page.dart';
 import './activities/hygiene/handsface-page.dart';
 import './activities/psych-page.dart';
 import './activities/health-page.dart';
-import './activities/gym-page.dart';
+import './activities/health/gym-page.dart';
 import './activities/health/run-page.dart';
 import './activities/health/walk-page.dart';
 import './activities/health/drink-page.dart';
@@ -37,6 +37,11 @@ import './activities/Info/info-drink-page.dart';
 import './activities/Info/info-eat-page.dart';
 import './activities/Info/info-sleep-page.dart';
 import './activities/Info/info-ventilate-page.dart';
+import 'activities/psych/daystruct-page.dart';
+import 'activities/psych/goal-page.dart';
+import 'activities/psych/medien-page.dart';
+import 'activities/psych/social-page.dart';
+import 'activities/psych/yoga-page.dart';
 
 void main() => runApp(IchMacheEsRichtigODER());
 
@@ -96,6 +101,11 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/ventilate': (context) => AppContainer(body: VentilatePage()),
             '/drink': (context) => AppContainer(body: DrinkPage()),
             '/eat': (context) => AppContainer(body: EatPage()),
+            '/daystruct': (context) => AppContainer(body: DaystructPage()),
+            '/goal': (context) => AppContainer(body: GoalPage()),
+            '/medien': (context) => AppContainer(body: MedienPage()),
+            '/social': (context) => AppContainer(body: SocialPage()),
+            '/yoga': (context) => AppContainer(body: YogaPage()),
 
             // INFO pages
             '/info_hand': (context) => AppContainer(body: InfoHandPage()),
