@@ -1,9 +1,11 @@
+import 'package:Karlorona/model/activity.dart';
 import 'package:flutter/material.dart';
 import 'package:Karlorona/activities/designed-button.dart';
 import 'package:Karlorona/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
-import '../scoped-model/main-model.dart';
-import '../model/activity.dart';
+import '../../scoped-model/main-model.dart';
+import '../../model/activity.dart';
+import '../activity-headline.dart';
 
 class GymPage extends StatelessWidget {
   @override
@@ -12,12 +14,8 @@ class GymPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                "Mache ein paar anstrengende Übungen, wie Liegestütze. Besitz Du handeln, dann benutze diese.",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+            ActivityHeadline(
+              text: "Mache ein paar anstrengende Übungen, wie Liegestütze. Besitz Du Handeln, dann benutze diese.",
             ),
             DoneButton(
               color: Colors.lime,

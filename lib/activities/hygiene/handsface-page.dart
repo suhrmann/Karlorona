@@ -4,6 +4,7 @@ import 'package:Karlorona/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';
+import '../activity-headline.dart';
 
 class HandsFacePage extends StatelessWidget {
   @override
@@ -12,14 +13,9 @@ class HandsFacePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                "Versuche Dir so wenig wie möglich in Dein Gesicht zu fassen!!!",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),textAlign: TextAlign.center
-              ),
+            ActivityHeadline(
+              text: "Versuche Dir so wenig wie möglich in Dein Gesicht zu fassen!!!",
             ),
-
             /// Mit der Klasse Navigator kann auf die routes aus der main.dart navigiert werden
             DoneButton(
               color: Colors.orange,
