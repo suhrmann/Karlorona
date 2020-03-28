@@ -37,6 +37,11 @@ import './activities/Info/info-drink-page.dart';
 import './activities/Info/info-eat-page.dart';
 import './activities/Info/info-sleep-page.dart';
 import './activities/Info/info-ventilate-page.dart';
+import 'activities/Info/info-daystruct-page.dart';
+import 'activities/Info/info-goal-page.dart';
+import 'activities/Info/info-medien-page.dart';
+import 'activities/Info/info-social-page.dart';
+import 'activities/Info/info-yoga-page.dart';
 import 'activities/psych/daystruct-page.dart';
 import 'activities/psych/goal-page.dart';
 import 'activities/psych/medien-page.dart';
@@ -119,6 +124,11 @@ class IchMacheEsRichtigODER extends StatelessWidget {
             '/info_ventilate': (context) => AppContainer(body: InfoVentilatePage()),
             '/info_drink': (context) => AppContainer(body: InfoDrinkPage()),
             '/info_eat': (context) => AppContainer(body: InfoEatPage()),
+            '/info_social': (context) => AppContainer(body: InfoSocialPage()),
+            '/info_daystruct': (context) => AppContainer(body: InfoDaystructPage()),
+            '/info_goal': (context) => AppContainer(body: InfoGoalPage()),
+            '/info_medien': (context) => AppContainer(body: InfoMedienPage()),
+            '/info_yoga': (context) => AppContainer(body: InfoYogaPage()),
 
             // DEBUGGIN
             '/test_page': (context) => AppContainer(body: TestPage()),

@@ -22,16 +22,16 @@ class GoalPage extends StatelessWidget {
             DoneButton(
               color: Colors.orange,
               activityToAdd: Activity(
-                  activity: Activities.safetydistance,
-                  healthscore: 20,
-                  hygienescore: 40,
-                  psychscore: 0),
+                  activity: Activities.goal,
+                  healthscore: 0,
+                  hygienescore: 0,
+                  psychscore: 30),
               onTap: () => ScopedModel.of<MainModel>(context)
-                  .setVisibleDistanceIcon(true),
+                  .setVisibleGoalIcon(true),
             ),
             DesignedButton(
               child: Text("Info"),
-              onPressed: () => Navigator.pushNamed(context, '/info_distance'),
+              onPressed: () => Navigator.pushNamed(context, '/info_goal'),
             ),
           ],
         ),

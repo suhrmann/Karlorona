@@ -13,6 +13,67 @@ mixin VisibleStateModel on Model {
   bool _checkSleep = false;
   bool _checkDistance = false;
   bool _checkRun = false;
+  bool _checkSocial = false;
+  bool _checkMedien = false;
+bool _checkYoga = false;
+bool _checkDaystruct = false;
+bool _checkGoal = false;
+
+
+void setVisibleGoalIcon(bool newValue) {
+  print("SetVisible");
+  _checkGoal = newValue;
+}
+
+bool get getVisibleGoalIcon {
+  print("GetVisible");
+  return _checkGoal;
+  //_checkHand = newValue;
+}
+
+void setVisibleDaystructIcon(bool newValue) {
+  print("SetVisible");
+  _checkDaystruct = newValue;
+}
+
+bool get getVisibleDaystructIcon {
+  print("GetVisible");
+  return _checkDaystruct;
+  //_checkHand = newValue;
+}
+
+void setVisibleYogaIcon(bool newValue) {
+  print("SetVisible");
+  _checkYoga = newValue;
+}
+
+bool get getVisibleYogaIcon {
+  print("GetVisible");
+  return _checkYoga;
+  //_checkHand = newValue;
+}
+
+void setVisibleMedienIcon(bool newValue) {
+  print("SetVisible");
+  _checkMedien = newValue;
+}
+
+bool get getVisibleMedienIcon {
+  print("GetVisible");
+  return _checkMedien;
+  //_checkHand = newValue;
+}
+
+void setVisibleSocialIcon(bool newValue) {
+  print("SetVisible");
+  _checkSocial = newValue;
+}
+
+bool get getvisibleSocialIcon {
+  print("GetVisible");
+  return _checkSocial;
+  //_checkHand = newValue;
+}
 
 
 void setVisibleRunIcon(bool newValue) {

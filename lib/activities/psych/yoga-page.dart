@@ -22,16 +22,16 @@ class YogaPage extends StatelessWidget {
             DoneButton(
               color: Colors.orange,
               activityToAdd: Activity(
-                  activity: Activities.safetydistance,
+                  activity: Activities.yoga,
                   healthscore: 20,
-                  hygienescore: 40,
-                  psychscore: 0),
+                  hygienescore: 0,
+                  psychscore: 40),
               onTap: () => ScopedModel.of<MainModel>(context)
-                  .setVisibleDistanceIcon(true),
+                  .setVisibleYogaIcon(true),
             ),
             DesignedButton(
               child: Text("Info"),
-              onPressed: () => Navigator.pushNamed(context, '/info_distance'),
+              onPressed: () => Navigator.pushNamed(context, '/info_yoga'),
             ),
           ],
         ),

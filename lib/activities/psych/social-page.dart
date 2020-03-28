@@ -49,16 +49,16 @@ class _SocialPageState extends State<SocialPage> {
                 DoneButton(
                   color:Colors.orange,
                   activityToAdd: Activity(
-                      activity: Activities.washhands,
-                      healthscore: 20,
-                      hygienescore: 40,
-                      psychscore: 10),
+                      activity: Activities.social,
+                      healthscore: 0,
+                      hygienescore: 0,
+                      psychscore: 20),
                   onTap: () => ScopedModel.of<MainModel>(context)
-                      .setVisibleHandIcon(true),
+                      .setVisibleSocialIcon(true),
                 ),
                 DesignedButton(
                   child: Text("Info"),
-                  onPressed: () => Navigator.pushNamed(context, '/info_hand'),
+                  onPressed: () => Navigator.pushNamed(context, '/info_social'),
                 ),
                 _showPraise
                     ? Text(

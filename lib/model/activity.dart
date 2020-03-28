@@ -15,6 +15,11 @@ enum Activities {
   drink,
   eatVeggies, //Obst,Gemüse essen
   sneeze,
+  social,
+  medien,
+  yoga,
+  goal,
+  daystruct,
 }
 
 class Activity {

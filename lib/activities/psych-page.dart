@@ -24,7 +24,7 @@ class PsychPage extends StatelessWidget {
               label: "Sozialkontakt",
               route: '/social',
               visibilityStateVariable:
-                  ScopedModel.of<MainModel>(context).getvisibleWalkIcon,
+                  ScopedModel.of<MainModel>(context).getvisibleSocialIcon,
               iconfilename: "Icons_Abstand_400px.png",
               color: buttonColor,
             ),
@@ -32,7 +32,7 @@ class PsychPage extends StatelessWidget {
               label: "Medienkonsum",
               route: '/medien',
               visibilityStateVariable:
-                  ScopedModel.of<MainModel>(context).getVisibleGymIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleMedienIcon,
               iconfilename: "Icons_Abstand_400px.png",
               color: buttonColor,
             ),
@@ -40,7 +40,7 @@ class PsychPage extends StatelessWidget {
               label: "Yoga",
               route: '/yoga',
               visibilityStateVariable:
-                  ScopedModel.of<MainModel>(context).getVisibleRunIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleYogaIcon,
               iconfilename: "Icons_Abstand_400px.png",
               color: buttonColor,
             ),
@@ -48,7 +48,7 @@ class PsychPage extends StatelessWidget {
               label: "Alltag strukturieren",
               route: '/daystruct',
               visibilityStateVariable:
-                  ScopedModel.of<MainModel>(context).getVisibleSleepIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleDaystructIcon,
               iconfilename: "Icons_Schlafen_400px.png",
               color: buttonColor,
             ),
@@ -56,7 +56,7 @@ class PsychPage extends StatelessWidget {
               label: "Tagesziel",
               route: '/goal',
               visibilityStateVariable:
-                  ScopedModel.of<MainModel>(context).getVisibleVentilateIcon,
+                  ScopedModel.of<MainModel>(context).getVisibleGoalIcon,
               iconfilename: "Icons_Obst_400px.png",
               color: buttonColor,
             ),

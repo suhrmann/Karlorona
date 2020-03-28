@@ -22,16 +22,16 @@ class DaystructPage extends StatelessWidget {
             DoneButton(
               color: Colors.orange,
               activityToAdd: Activity(
-                  activity: Activities.safetydistance,
-                  healthscore: 20,
-                  hygienescore: 40,
-                  psychscore: 0),
+                  activity: Activities.daystruct,
+                  healthscore: 10,
+                  hygienescore: 0,
+                  psychscore: 20),
               onTap: () => ScopedModel.of<MainModel>(context)
-                  .setVisibleDistanceIcon(true),
+                  .setVisibleDaystructIcon(true),
             ),
             DesignedButton(
               child: Text("Info"),
-              onPressed: () => Navigator.pushNamed(context, '/info_distance'),
+              onPressed: () => Navigator.pushNamed(context, '/info_daystruct'),
             ),
           ],
         ),
