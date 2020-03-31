@@ -58,7 +58,7 @@ class _AnswerFormState extends State<AnswerForm> {
   }
 
   answerSelected(int selectedAnswerIndex) {
-    if(_answerGiven) {
+    if (_answerGiven) {
       // Answere already given -> do nothing
       return;
     }
@@ -87,7 +87,7 @@ class _AnswerFormState extends State<AnswerForm> {
         setState(() {
           _explanationDismissed = true;
         });
-        }, // Close Dialog
+      }, // Close Dialog
     );
 
     // set up the AlertDialog
@@ -149,14 +149,14 @@ class _AnswerFormState extends State<AnswerForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
 
             GridView.count(
               shrinkWrap: true,
               crossAxisCount: 2,
-              scrollDirection: Axis.vertical,
+              // physics: Disable scrolling in GridView! See https://github.com/flutter/flutter/issues/18503#issuecomment-405394352
+              physics: new NeverScrollableScrollPhysics(),
               children: _buildAnswerButtons(widget.answers),
             ),
 
@@ -199,7 +199,6 @@ class _AnswerFormState extends State<AnswerForm> {
 
           ],
         ),
-      ),
     );
   }
 
