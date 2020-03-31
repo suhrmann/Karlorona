@@ -49,7 +49,7 @@ import 'activities/psych/social-page.dart';
 import 'activities/psych/yoga-page.dart';
 
 void main() => runApp(IchMacheEsRichtigODER());
-
+//Hello Worldgit config --global user.email johndoe@example.comv
 class IchMacheEsRichtigODER extends StatelessWidget {
   final NotificationManager notificationManager = NotificationManager();
 
