@@ -96,10 +96,12 @@ class _AnswerFormState extends State<AnswerForm> {
       content: Column(
         children: <Widget>[
           Text(widget.explanation),
+          /*
           InkWell(
               child: new Text(widget.sourceText, style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline)),
               onTap: () => _launchURL(widget.sourceURL)
           ),
+          */
         ],
       ),
       actions: [
