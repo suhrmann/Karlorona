@@ -7,9 +7,11 @@ class QuestionPage extends StatelessWidget {
   final List<String> answers;
   final int correctAnswerIndex;
   final String explanation;
+  final String sourceText;
+  final String sourceURL;
 
   QuestionPage(
-      {this.question, this.answers, this.correctAnswerIndex, this.explanation});
+      {this.question, this.answers, this.correctAnswerIndex, this.explanation, this.sourceText, this.sourceURL});
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +47,8 @@ class QuestionPage extends StatelessWidget {
               answers: answers,
               correctAnswerIndex: correctAnswerIndex,
               explanation: explanation,
+              sourceText: sourceText,
+              sourceURL: sourceURL,
             )
           ],
         ),

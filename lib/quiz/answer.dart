@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../scoped-model/main-model.dart';
 
 class AnswerForm extends StatefulWidget {
   final List<String> answers;
   final int correctAnswerIndex;
   final String explanation;
+  final String sourceText;
+  final String sourceURL;
 
-  AnswerForm({this.answers, this.correctAnswerIndex, this.explanation});
+  AnswerForm({this.answers, this.correctAnswerIndex, this.explanation, this.sourceText, this.sourceURL});
   @override
   _AnswerFormState createState() => _AnswerFormState();
 }
@@ -20,6 +23,14 @@ class _AnswerFormState extends State<AnswerForm> {
   Color UNSELECTED_COLOR = Colors.grey[800];
   Color CORRECT_ANSWERE_COLOR = Colors.green;
   Color WRONG_ANSWERE_COLOR = Colors.red;
+
+  _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   _buildAnswerButtons(List<String> answers) {
     List<Widget> answerButtons = [];
@@ -82,7 +93,15 @@ class _AnswerFormState extends State<AnswerForm> {
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
       title: Text("Beschreibung"),
-      content: Text(widget.explanation),
+      content: Column(
+        children: <Widget>[
+          Text(widget.explanation),
+          InkWell(
+              child: new Text(widget.sourceText, style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline)),
+              onTap: () => _launchURL(widget.sourceURL)
+          ),
+        ],
+      ),
       actions: [
         okButton,
       ],

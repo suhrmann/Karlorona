@@ -14,6 +14,7 @@ class QuizWidget extends StatefulWidget {
 }
 
 class _QuizWidgetState extends State<QuizWidget> {
+
   @override
   void initState() {
     ScopedModel.of<MainModel>(context).resetCurrentQuizPage();
@@ -28,6 +29,8 @@ class _QuizWidgetState extends State<QuizWidget> {
         answers: List.castFrom(questionset['answers']),
         correctAnswerIndex: questionset['correct_answer_index'],
         explanation: questionset['explanation'],
+        sourceText: 'sourceText!', // questionset[],
+        sourceURL: 'sourceURL', // questionset[],
       );
     }).toList();
     return questionFlow;
