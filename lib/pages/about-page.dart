@@ -78,7 +78,37 @@ class AboutPage extends StatelessWidget {
               Text(''),
               Text(''),
 
-              // Mitwirkende
+              // project lary
+              Center(
+                child: Column(children: <Widget>[
+                  Text(
+                    'Danke!',
+                    style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
+                  ),
+                  Text(''),
+
+                  // Project Lary GmbH
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(minWidth: double.infinity),
+                    child: RaisedButton(
+                      child: Image.asset("assets/images/logos/project-lary.png"),
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(''),
+                  Text('Besonderer Dank geht an Project Lary (lary tech GmbH)!'),
+                  InkWell(
+                      child: new Text('project-lary.com', style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline)),
+                      onTap: () => _launchURL('https://project-lary.com')
+                  ),
+                ]),
+              ),
+
+              Text(''),
+              Text(''),
+              Text(''),
+
+              // Händewaschen-Song
               Center(
                 child: Column(
                   children: <Widget>[
