@@ -51,6 +51,7 @@ flutter_icons:
 flutter:
   assets:
     - assets/images/
+    - assets/images/logos/
     - assets/images/kater/
     - assets/images/icons/
     - assets/sounds/

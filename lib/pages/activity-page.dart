@@ -38,7 +38,7 @@ class ActivityPage extends StatelessWidget {
               iconfilename: "Icons_Schlafen_400px.png",
               color: Colors.teal,
             ),
-            Image.asset("assets/images/logo.png"),
+            Image.asset("assets/images/logos/logo.png"),
           ],
         ),
       ),

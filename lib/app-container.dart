@@ -33,7 +33,7 @@ class _AppContainerState extends State<AppContainer> {
             decoration: BoxDecoration(
               color: const Color(0xff7c94b6),
               image: const DecorationImage(
-                image: AssetImage('assets/images/logo_head.png'),
+                image: AssetImage('assets/images/logos/logo_head.png'),
                 fit: BoxFit.cover,
               ),
             ),

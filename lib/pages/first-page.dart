@@ -7,7 +7,7 @@ class FirstPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Image.asset("assets/images/logo.png"),
+            Image.asset("assets/images/logos/logo.png"),
           ],
         ),
       ),

@@ -22,7 +22,7 @@ class AboutPage extends StatelessWidget {
               Text(''),
               // #WirvsCorona
               Center(
-                child: Image.asset("assets/images/wirvsvirus_logo.png"),
+                child: Image.asset("assets/images/logos/wirvsvirus_logo.png"),
               ),
               Text(''),
               Container(
