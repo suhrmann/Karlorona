@@ -86,21 +86,31 @@ class AboutPage extends StatelessWidget {
                     style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),
                   ),
                   Text(''),
+                ]),
+              ),
 
-                  // Project Lary GmbH
-                  ConstrainedBox(
-                    constraints: const BoxConstraints(minWidth: double.infinity),
-                    child: RaisedButton(
-                      child: Image.asset("assets/images/logos/project-lary.png"),
-                      color: Colors.white,
-                    ),
+              // Project Lary GmbH
+              Container(
+                color: Color(0xff1c2734), // Background color of project-lary.com
+                child: Center(
+                  child: Container(
+                    margin: EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(10.0),
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    child: Image.asset("assets/images/logos/project-lary_texted.png"),
                   ),
+                ),
+              ),
+
+              Center(
+                child: Column(children: <Widget>[
                   Text(''),
-                  Text('Besonderer Dank geht an Project Lary (lary tech GmbH)!'),
+                  Text('Besonderer Dank geht an '),
                   InkWell(
-                      child: new Text('project-lary.com', style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline)),
+                      child: Text('project lary', style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline)),
                       onTap: () => _launchURL('https://project-lary.com')
                   ),
+                  Text(' für das Veröffentlichen im App Store (Apple)!'),
                 ]),
               ),
 
