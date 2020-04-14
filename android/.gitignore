@@ -5,3 +5,6 @@ gradle-wrapper.jar
 /gradlew.bat
 /local.properties
 GeneratedPluginRegistrant.java
+
+# Warning: Keep the key.properties file private; do not check it into public source control.
+key.properties

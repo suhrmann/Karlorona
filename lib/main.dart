@@ -1,111 +1,138 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+import './notification-manager.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+import './scoped-model/main-model.dart';
+
+import './app-container.dart';
+import './pages/test-page.dart';
+import './pages/about-page.dart';
+import './pages/second-page.dart';
+import './pages/database-tester.dart';
+import './pages/mascot-page.dart';
+import './pages/activity-page.dart';
+import './pages/init-quiz-page.dart';
+import './activities/hygiene/hand-page.dart';
+import './activities/hygiene-page.dart';
+import './activities/Info/info-hand-page.dart';
+import './activities/Info/info-smartdes-page.dart';
+import './activities/hygiene/smartdes-page.dart';
+import './activities/hygiene/distance-page.dart';
+import './activities/Info/info-distance-page.dart';
+import './activities/Info/info-sneeze-page.dart';
+import './activities/hygiene/sneeze-page.dart';
+import './activities/hygiene/handsface-page.dart';
+import './activities/psych-page.dart';
+import './activities/health-page.dart';
+import './activities/health/gym-page.dart';
+import './activities/health/run-page.dart';
+import './activities/health/walk-page.dart';
+import './activities/health/drink-page.dart';
+import './activities/health/eat-page.dart';
+import './activities/health/sleep-page.dart';
+import './activities/hygiene/ventilate-page.dart';
+import './activities/Info/info-gym-page.dart';
+import './activities/Info/info-drink-page.dart';
+import './activities/Info/info-eat-page.dart';
+import './activities/Info/info-sleep-page.dart';
+import './activities/Info/info-ventilate-page.dart';
+import 'activities/Info/info-daystruct-page.dart';
+import 'activities/Info/info-goal-page.dart';
+import 'activities/Info/info-medien-page.dart';
+import 'activities/Info/info-social-page.dart';
+import 'activities/Info/info-yoga-page.dart';
+import 'activities/psych/daystruct-page.dart';
+import 'activities/psych/goal-page.dart';
+import 'activities/psych/medien-page.dart';
+import 'activities/psych/social-page.dart';
+import 'activities/psych/yoga-page.dart';
+
+void main() => runApp(IchMacheEsRichtigODER());
+class IchMacheEsRichtigODER extends StatelessWidget {
+  final NotificationManager notificationManager = NotificationManager();
+
+  @override
+  StatelessElement createElement() {
+    return super.createElement();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
+    // Init notifications
+    notificationManager.initNotifications(context);
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+    /// ScopedModel wird für Statemanagement verwendet.
+    /// Das Widget ScopedModelDescendant<MainModel>
+    /// und seine Subwidget können auf den State zugreifen
+    /// Das ScopedModel wird im Ordner /lib/scoped-model definiert
+    /// "Ausgangspunkt" dabei ist das MainModel
+    ///
+    /// Scoped Model Dokumentation/API:
+    /// https://pub.dev/packages/scoped_model
+    return ScopedModel<MainModel>(
+        model: MainModel(),
+        child: MaterialApp(
+          title: 'Ich Mache es richtig, ODER?',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+          /// Eindeutige "Addressen" für die jeweiligen pages
+          /// Bitte diese Struktur bei allen Standardpages mit dem AppContainer beibehalten, um eine Abstraktion des Layouts zu ermöglichen
+          routes: {
+            '/': (context) => AppContainer(body: MascotPage()),
+            '/about': (context) => AppContainer(body: AboutPage()),
+            '/secondpage': (context) => AppContainer(body: SecondPage()),
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+            '/quiz': (context) => AppContainer(body: InitQuizPage()),
 
-  final String title;
+            // ACTIVITY pages
+            '/activity': (context) => AppContainer(body: ActivityPage()),
+            //activities
+            '/infect': (context) => AppContainer(body: HygienePage()),
+            '/health': (context) => AppContainer(body: HealthPage()),
+            '/psych': (context) => AppContainer(body: PsychPage()),
+            '/hand': (context) => AppContainer(body: HandPage()),
+            '/distance': (context) => AppContainer(body: DistancePage()),
+            '/smartdes': (context) => AppContainer(body: SmartdesPage()),
+            '/sneeze': (context) => AppContainer(body: SneezePage()),
+            '/handsface': (context) => AppContainer(body: HandsFacePage()),
+            '/gym': (context) => AppContainer(body: GymPage()),
+            '/run': (context) => AppContainer(body: RunPage()),
+            '/walk': (context) => AppContainer(body: WalkPage()),
+            '/sleep': (context) => AppContainer(body: SleepPage()),
+            '/ventilate': (context) => AppContainer(body: VentilatePage()),
+            '/drink': (context) => AppContainer(body: DrinkPage()),
+            '/eat': (context) => AppContainer(body: EatPage()),
+            '/daystruct': (context) => AppContainer(body: DaystructPage()),
+            '/goal': (context) => AppContainer(body: GoalPage()),
+            '/medien': (context) => AppContainer(body: MedienPage()),
+            '/social': (context) => AppContainer(body: SocialPage()),
+            '/yoga': (context) => AppContainer(body: YogaPage()),
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+            // INFO pages
+            '/info_hand': (context) => AppContainer(body: InfoHandPage()),
+            '/info_distance': (context) => AppContainer(body: InfoDistancePage()),
+            '/info_smartdes': (context) => AppContainer(body: InfoSmartdesPage()),
+            '/info_sneeze': (context) => AppContainer(body: InfoSneezePage()),
+            '/info_gym': (context) => AppContainer(body: InfoGymPage()),
+            //'/info_run':(context) => AppContainer(body: InfoDistancePage()),
+            //'/info_walk':(context) => AppContainer(body: InfoSmartdesPage()),
+            '/info_sleep': (context) => AppContainer(body: InfoSleepPage()),
+            '/info_ventilate': (context) => AppContainer(body: InfoVentilatePage()),
+            '/info_drink': (context) => AppContainer(body: InfoDrinkPage()),
+            '/info_eat': (context) => AppContainer(body: InfoEatPage()),
+            '/info_social': (context) => AppContainer(body: InfoSocialPage()),
+            '/info_daystruct': (context) => AppContainer(body: InfoDaystructPage()),
+            '/info_goal': (context) => AppContainer(body: InfoGoalPage()),
+            '/info_medien': (context) => AppContainer(body: InfoMedienPage()),
+            '/info_yoga': (context) => AppContainer(body: InfoYogaPage()),
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+            // DEBUGGIN
+            '/test_page': (context) => AppContainer(body: TestPage()),
+            '/dbtester': (context) => AppContainer(body: DatabaseTester()),
+          },
+        ));
   }
 }
