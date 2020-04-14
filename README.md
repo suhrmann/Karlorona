@@ -1,7 +1,7 @@
 # Ich Mache es richtig, ODER?
 
-![GitHub All Releases](https://img.shields.io/github/downloads/suhrmann/Karlo/total)
-![GitHub stars](https://img.shields.io/github/stars/suhrmann/Karlo)
+![GitHub All Releases](https://img.shields.io/github/downloads/suhrmann/Karlorona/total)
+![GitHub stars](https://img.shields.io/github/stars/suhrmann/Karlorona)
 
 Unsere App *"Ich Mache es richtig, ODER?"* im Rahmen des Hackathon **#WirvsVirus** im Jahr 2020 gegen Corona / COVID-19
 
