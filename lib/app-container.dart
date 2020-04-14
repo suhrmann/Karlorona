@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart'; // To check for Debug/Release-Mode
 import 'package:flutter/material.dart';
 import 'package:Karlo/pages/welcome-page.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -60,15 +61,14 @@ class _AppContainerState extends State<AppContainer> {
             onTap: () => navigateTo('/about', context),
           ),
 
-/*
-          // DEBUGGING Shit
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.warning),
-            title: Text('DEBUGGING'),
-            onTap: () => navigateTo('/test_page', context),
-          ),
- */
+          // DEBUGGING
+          kDebugMode ? Divider() : Container(),
+          kDebugMode ? ListTile(
+              leading: Icon(Icons.warning),
+              title: Text('DEBUGGING'),
+              onTap: () => navigateTo('/test_page', context),
+            )
+            : Container(),
         ],
       ),
     );
