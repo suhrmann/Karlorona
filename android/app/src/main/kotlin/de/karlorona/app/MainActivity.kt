@@ -1,4 +1,4 @@
-package org.wirvsvirushackathon.karlorona
+package de.karlorona.app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

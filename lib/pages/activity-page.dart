@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:Karlo/activities/activity-start-button.dart';
-import 'package:Karlo/scoped-model/main-model.dart';
+import 'package:Karlorona/activities/activity-start-button.dart';
+import 'package:Karlorona/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class ActivityPage extends StatelessWidget {

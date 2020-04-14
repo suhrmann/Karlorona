@@ -1,4 +1,4 @@
-import 'package:Karlo/model/activity.dart';
+import 'package:Karlorona/model/activity.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../database/db.dart';
 

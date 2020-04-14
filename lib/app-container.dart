@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart'; // To check for Debug/Release-Mode
 import 'package:flutter/material.dart';
-import 'package:Karlo/pages/welcome-page.dart';
+import 'package:Karlorona/pages/welcome-page.dart';
 import 'package:scoped_model/scoped_model.dart';
 import './scoped-model/main-model.dart';
 

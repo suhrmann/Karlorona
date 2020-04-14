@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:Karlo/scoped-model/main-model.dart';
+import 'package:Karlorona/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class ThinkBubble extends StatefulWidget {

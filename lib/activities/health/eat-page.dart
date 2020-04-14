@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../activities/designed-button.dart';
-import '../../activities/done-button.dart';
+import 'package:Karlorona/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';

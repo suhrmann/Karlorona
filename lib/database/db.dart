@@ -1,4 +1,4 @@
-import 'package:Karlo/model/activity.dart';
+import 'package:Karlorona/model/activity.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
