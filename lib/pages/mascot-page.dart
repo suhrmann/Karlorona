@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:Karlorona/components/think-bubble.dart';
+import 'package:Karlo/components/think-bubble.dart';
 import 'package:flutter/material.dart';
-import 'package:Karlorona/scoped-model/main-model.dart';
+import 'package:Karlo/scoped-model/main-model.dart';
 
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -99,7 +99,7 @@ class _MascotPageState extends State<MascotPage> {
                           width: MediaQuery.of(context).size.width,
                           alignment: Alignment.center,
 
-                          // Karlorona
+                          // Karlo
                           child: GestureDetector(
                             child: Image.asset(_getRightCat(
                               ScopedModel.of<MainModel>(context)

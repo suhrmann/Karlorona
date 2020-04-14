@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Karlorona/pages/welcome-page.dart';
+import 'package:Karlo/pages/welcome-page.dart';
 import 'package:scoped_model/scoped_model.dart';
 import './scoped-model/main-model.dart';
 
@@ -78,7 +78,7 @@ class _AppContainerState extends State<AppContainer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Karlorona"),
+        title: const Text("Karlo"),
       ),
       body: ScopedModelDescendant<MainModel>(
           builder: (BuildContext context, Widget child, MainModel model) {
