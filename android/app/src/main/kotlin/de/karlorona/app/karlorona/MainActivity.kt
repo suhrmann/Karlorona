@@ -1,4 +1,4 @@
-package de.karlorona.app.karlorona
+package de.karlorona.app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
