@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:Karlo/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import 'activity-start-button.dart';
+import '../scoped-model/main-model.dart';
 
 class HealthPage extends StatefulWidget {
   const HealthPage({Key key}) : super(key: key);

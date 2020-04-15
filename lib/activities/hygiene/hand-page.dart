@@ -1,13 +1,12 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:Karlo/activities/designed-button.dart';
-import 'package:Karlo/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
+
+import '../../activities/designed-button.dart';
+import '../../activities/done-button.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';
 import '../activity-headline.dart';
-import '../activity-start-button.dart';
 
 class HandPage extends StatefulWidget {
   @override
