@@ -1,12 +1,12 @@
-import 'package:Karlorona/activities/activity-headline.dart';
+import 'package:Karlo/activities/activity-headline.dart';
 import 'package:flutter/material.dart';
-import 'package:Karlorona/activities/designed-button.dart';
-import 'package:Karlorona/activities/done-button.dart';
+import 'package:Karlo/activities/designed-button.dart';
+import 'package:Karlo/activities/done-button.dart';
 import 'package:scoped_model/scoped_model.dart';
 import '../../scoped-model/main-model.dart';
 import '../../model/activity.dart';
 
-import 'package:Karlorona/activities/done-button.dart';
+import 'package:Karlo/activities/done-button.dart';
 
 class DrinkPage extends StatelessWidget {
   @override

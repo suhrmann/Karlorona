@@ -1,15 +1,15 @@
- Karlorona
+ Karlo
 ===========
 
 **Kategorie: Ich Mache es richtig, ODER?**
 
-![GitHub All Releases](https://img.shields.io/github/downloads/suhrmann/Karlorona/total)
-![GitHub stars](https://img.shields.io/github/stars/suhrmann/Karlorona)
+![GitHub All Releases](https://img.shields.io/github/downloads/suhrmann/Karlo/total)
+![GitHub stars](https://img.shields.io/github/stars/suhrmann/Karlo)
 
 Unsere App *"Ich Mache es richtig, ODER?"* im Rahmen des Hackathon **#WirvsVirus** im Jahr 2020 gegen Corona / COVID-19
 
-[ ![Preview of Karlorona YouTube video](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/link-to-youtube-img%400.1x.jpg) <br>
-Pitchvideo von Karlorona [YouTube]
+[ ![Preview of Karlo YouTube video](https://raw.githubusercontent.com/suhrmann/Karlo/master/DOCS/link-to-youtube-img%400.1x.jpg) <br>
+Pitchvideo von Karlo [YouTube]
 ](https://youtu.be/XefttHYpjo8)
 
 
@@ -23,7 +23,7 @@ Unsere Dokumentation des Hackathon ist auf <a href="https://devpost.com/software
 
 | Enter-Screen | Aktivitäten | Über uns |
 |     :---:      |     :---:      |     :---:      |
-| ![](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/Screenshot_1_welcome.png)   | ![](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/Screenshot_2_activites.png)     | ![](https://raw.githubusercontent.com/suhrmann/Karlorona/master/DOCS/Screenshot_3_about.png)    |
+| ![](https://raw.githubusercontent.com/suhrmann/Karlo/master/DOCS/Screenshot_1_welcome.png)   | ![](https://raw.githubusercontent.com/suhrmann/Karlo/master/DOCS/Screenshot_2_activites.png)     | ![](https://raw.githubusercontent.com/suhrmann/Karlo/master/DOCS/Screenshot_3_about.png)    |
 
 
 ### Problem Beschreibung

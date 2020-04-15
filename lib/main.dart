@@ -48,8 +48,8 @@ import 'activities/psych/medien-page.dart';
 import 'activities/psych/social-page.dart';
 import 'activities/psych/yoga-page.dart';
 
-void main() => runApp(Karlorona());
-class Karlorona extends StatelessWidget {
+void main() => runApp(Karlo());
+class Karlo extends StatelessWidget {
   final NotificationManager notificationManager = NotificationManager();
 
   @override
