@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:Karlorona/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import 'activity-start-button.dart';
+import '../scoped-model/main-model.dart';
 
 class PsychPage extends StatelessWidget {
   final Color buttonColor = Colors.teal;

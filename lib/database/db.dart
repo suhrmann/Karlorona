@@ -1,6 +1,6 @@
-import 'package:Karlorona/model/activity.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import '../model/activity.dart';
 
 /// SQFLite Dokumentation/API:
 /// https://pub.dev/packages/sqflite

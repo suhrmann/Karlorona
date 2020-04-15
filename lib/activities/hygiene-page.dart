@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:Karlorona/activities/activity-start-button.dart';
-import 'package:Karlorona/scoped-model/main-model.dart';
 import 'package:scoped_model/scoped_model.dart';
+
+import '../activities/activity-start-button.dart';
+import '../scoped-model/main-model.dart';
 
 class HygienePage extends StatefulWidget {
   const HygienePage({Key key}) : super(key: key);
